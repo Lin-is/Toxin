@@ -3,5 +3,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: BeerMoney;
 }
 
+h1 {
+    color: darkblue;
+}
+
+@import './blocks/base_blocks/fonts_enable/fonts_enable.scss'
