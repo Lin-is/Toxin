@@ -1,0 +1,37 @@
+include ../base_blocks/color-item/color-item.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet" href="./ui-kit.scss")
+        title Document
+    body 
+        div(class='colorsAndType__container')
+            div(class='colorsAndType__palette')
+                +colorItem('#1F2041', 'Dark Shade 100%', '#1F2041')
+                +colorItem('rgba(31, 32, 65, 0.75)', 'Dark Shade 75%', '#1F2041')
+                +colorItem('rgba(31, 32, 65, 0.50)', 'Dark Shade 50%', '#1F2041')
+                +colorItem('rgba(31, 32, 65, 0.25)', 'Dark Shade 25%', '#1F2041')
+                +colorItem('rgba(31, 32, 65, 0.05)', 'Dark Shade 5%', '#1F2041')
+                +colorItem('#BC9CFF', 'Purple', '#BC9CFF')
+                +colorItem('#6FCF97', 'Green', '#6FCF97')
+
+            div(class='colorAndTypes__headers')
+                div(class='colorsAndType__fontExampleItem')
+                    h1(class='colorsAndType__fontExampleTag') h1
+                    h1(class='colorsAndType__fontExampleText') This one is the sub-section or widget title
+                div(class='colorsAndType__fontExampleItem')
+                    h2(class='colorsAndType__fontExampleTag') h2
+                    h2(class='colorsAndType__fontExampleText') Next one is the item title inside widgets
+                div(class='colorsAndType__fontExampleItem')
+                    h3(class='colorsAndType__fontExampleTag') h3
+                    h3(class='colorsAndType__fontExampleText') This is a label or CTA text 
+                div(class='colorsAndType__fontExampleItem')
+                    p(class='colorsAndType__fontExampleTag') body
+                    p(class='colorsAndType__fontExampleText') This is the body text which is used for most of the design, like paragraphs, lists, etc.
+
+          
+

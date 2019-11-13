@@ -1,0 +1,25 @@
+.colorItem__container {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 270px;
+}
+
+.colorItem__colorExample {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px;
+}
+
+.colorItem__colorDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    line-height: 29px;
+    height: 57px;
+}
+
+.colorItem__colorNumber {
+    font-weight: normal;
+}

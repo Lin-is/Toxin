@@ -1,0 +1,6 @@
+mixin colorItem (color, colorName, colorNumber)
+  div(class='colorItem__container')
+    div(class='colorItem__colorExample' style='background-color:' + `${color}`)
+    div(class='colorItem__colorDescription')
+      h2(class='colorItem__colorName')= colorName
+      h2(class='colorItem__colorNumber')= colorNumber

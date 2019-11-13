@@ -1,13 +1,40 @@
+@import "blocks/base_blocks/scss-basic/vars.scss";
+@import "blocks/base_blocks/scss-basic/reset.scss";
+@import "blocks/pages/ui-kit.scss";
+@import "blocks/base_blocks/fonts_enable/fonts_enable.scss";
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: BeerMoney;
+
+}
+
+h1, h2 {
+    font-family: 'Quicksand';
+    font-weight: bold;
+    color: $main-header-color;
+}
+
+h3, p {
+    font-family: 'Montserrat';
 }
 
 h1 {
-    color: darkblue;
+    font-size: 24px;  
 }
 
-@import './blocks/base_blocks/fonts_enable/fonts_enable.scss'
+h2 {
+    font-size: 19px;
+}
+
+h3 {
+    color: $main-header-color;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+p {
+    font-weight: normal;
+    color: $main-text-color;
+    font-size: 14px;
+}
+

@@ -1,0 +1,33 @@
+.colorsAndType__container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.colorsAndType__palette {
+    height: 610px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;  
+}
+
+.colorAndTypes__headers{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 403px;
+    height: 321px;
+}
+.colorsAndType__fontExampleItem {
+    display: flex;
+}
+
+.colorsAndType__fontExampleTag {
+  margin-right: 30px;
+  text-transform: capitalize;
+  color: rgba(31, 32, 65, 0.25);
+  font-family: Montserrat;
+  font-weight: normal;
+}
+
+@import './blocks/base_blocks/fonts_enable/fonts_enable.scss';
+@import '../base_blocks/color-item/color-item.scss';
