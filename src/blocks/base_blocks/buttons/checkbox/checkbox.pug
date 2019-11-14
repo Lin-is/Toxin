@@ -1,0 +1,5 @@
+mixin checkbox (text, name, value)
+    div(class='checkbox__container')
+        input(class='checkbox__input' type='checkbox' name= name, value= value id='checkbox-' + `${name}` + '-' + `${value}`)
+        label(class='checkbox__label' for='checkbox-' + `${name}` + '-' + `${value}`)
+            p(class='checkbox__labelText')= text

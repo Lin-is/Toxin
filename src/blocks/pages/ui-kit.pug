@@ -1,4 +1,10 @@
-include ../base_blocks/color-item/color-item.pug
+include ../base_blocks/colorItem/colorItem.pug
+include ../base_blocks/inputs/textField/textField.pug
+include ../base_blocks/inputs/textFieldMasked/textFieldMasked.pug
+include ../base_blocks/inputs/dateDropdown/dateDropdown.pug
+include ../base_blocks/buttons/radioButton/radioButton.pug
+include ../base_blocks/buttons/checkbox/checkbox.pug
+
 
 <!DOCTYPE html>
 html(lang="en")
@@ -32,6 +38,28 @@ html(lang="en")
                 div(class='colorsAndType__fontExampleItem')
                     p(class='colorsAndType__fontExampleTag') body
                     p(class='colorsAndType__fontExampleText') This is the body text which is used for most of the design, like paragraphs, lists, etc.
+        
+        div(class='formElements__container')
+            div(class= 'formElements__buttonsContainer')
+                div(class= 'formElements__inputContainer')
+                    +textField('Email', 'Text Field', 'default')
+                    +textFieldMasked('masked text feld', 'default')
+                    +dateDropdown('date dropdown')
+                div(class= 'formElements__checkboxContainer')
+                    div(class= 'formElements__checkboxesArea')
+                        h3 Checkbox Buttons
+                        div(class='formElements__checkboxesContainer')
+                            +checkbox('Можно курить', 'allowed', '1')
+                            +checkbox('Можно с питомцами', 'allowed', '2')
+                            +checkbox('Можно пригласить гостей (до 10 человек)', 'allowed', '3')
+
+                    div(class= 'formElements__radiobuttonsArea')
+                        h3 Radio Buttons
+                        div(class= 'formElements__radiobuttonsContainer')
+                            +radioButton('Мужчина', 'sex', '0')
+                            +radioButton('Женщина', 'sex', '1')
+
+            
 
           
 

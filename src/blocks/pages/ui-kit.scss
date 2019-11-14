@@ -1,6 +1,11 @@
 .colorsAndType__container {
+    height: 900px;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
+    padding-top: 145px;
+    padding-left: 150px;
+    background-color: #FFFFFF;
 }
 
 .colorsAndType__palette {
@@ -8,6 +13,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;  
+    margin-right: 435px;
 }
 
 .colorAndTypes__headers{
@@ -23,11 +29,72 @@
 
 .colorsAndType__fontExampleTag {
   margin-right: 30px;
+  width: 37px;
+  text-align: right;
   text-transform: capitalize;
   color: rgba(31, 32, 65, 0.25);
   font-family: Montserrat;
   font-weight: normal;
 }
 
-@import './blocks/base_blocks/fonts_enable/fonts_enable.scss';
-@import '../base_blocks/color-item/color-item.scss';
+.formElements__container {
+    width: 100%;
+    height: 1853px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #FFFFFF;
+}
+
+.formElements__buttonsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.formElements__inputContainer {
+    height: 633px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.formElements__radiobuttonsArea {
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formElements__radiobuttonsContainer {
+    width: 221px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.formElements__checkboxesArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 222px;
+    height: 130px;
+}
+.formElements__checkboxesContainer {
+    height: 98px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+
+
+
+@import './blocks/base_blocks/scss-basic/fonts.scss';
+@import '../base_blocks/colorItem/colorItem.scss';
+@import '../base_blocks/inputs/textField/textField.scss';
+@import '../base_blocks/inputs/textFieldMasked/textFieldMasked.scss';
+@import '../base_blocks/inputs/dateDropdown/dateDropdown.scss';
+@import '../base_blocks/buttons/radioButton/radioButton.scss';
+@import '../base_blocks/buttons/checkbox/checkbox.scss';

@@ -1,0 +1,8 @@
+mixin textField (placeholder, name, condition)
+    div(class= 'textField__container')
+        div(class='textField__labelsContainer')
+            label(for= 'textField-' + `${name}`)
+                h3= name
+            label(class='textField__conditionLabel')
+                h3(class='textField__conditionLabel')= condition
+        input(type= 'text' class= 'textField__input' placeholder= placeholder id= 'textField-' + `${name}`)

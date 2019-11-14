@@ -1,10 +1,10 @@
 @import "blocks/base_blocks/scss-basic/vars.scss";
 @import "blocks/base_blocks/scss-basic/reset.scss";
 @import "blocks/pages/ui-kit.scss";
-@import "blocks/base_blocks/fonts_enable/fonts_enable.scss";
+@import "blocks/base_blocks/scss-basic/fonts.scss";
 
 body {
-
+    background-color: #E5E5E5;
 }
 
 h1, h2 {

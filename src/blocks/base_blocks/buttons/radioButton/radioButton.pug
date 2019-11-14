@@ -1,0 +1,5 @@
+mixin radioButton (text, name, value)
+    div(class='radioButton__container')
+        input(class='radioButton__input' type='radio' name= name, value= value id='radioButton-' + `${name}` + '-' + `${value}`)
+        label(class='radioButton__label' for='radioButton-' + `${name}` + '-' + `${value}`)
+            p(class='radioButton__labelText')= text
