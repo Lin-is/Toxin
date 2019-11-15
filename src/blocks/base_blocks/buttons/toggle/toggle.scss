@@ -1,0 +1,55 @@
+.toggle__container {
+    display: flex;
+    align-content: center;
+}
+.toggle__input {
+    display: none;
+}
+.toggle__label {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    max-height: 20px;
+    color: rgba(31, 32, 65, 0.5);
+    
+      
+    &::before {
+        content: '';
+        width: 40px;
+        height: 20px;
+        margin-right: 10px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 12px;
+        height: 12px;
+        background: rgba(31, 32, 65, 0.25);
+        border-radius: 10px; 
+        transition: left 0.4s ease;
+        cursor: pointer;
+    }
+}
+
+.toggle__input:checked + .toggle__label {
+    &::before {
+        border-color: #BC9CFF;
+        transition: border-color 0.4s ease;   
+    }
+    &::after {
+        left: 24px;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        transition: all 0.4s ease;
+    }
+}
+.toggle__labelText {
+    max-width: calc(100% - 50px);
+    line-height: 18px;
+}

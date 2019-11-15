@@ -1,0 +1,7 @@
+
+
+mixin likeButton (text, name, value)
+    div(class='likeButton__container')
+        input(class='likeButton__input' type='checkbox' name= name, value= value id='likeButton-' + `${name}` + '-' + `${value}`)
+        label(class='likeButton__label' for='likeButton-' + `${name}` + '-' + `${value}`)
+            p(class='likeButton__labelText')= text

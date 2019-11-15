@@ -1,0 +1,5 @@
+mixin toggle (text, name, value)
+    div(class='toggle__container')
+        input(class='toggle__input' type='checkbox' name= name, value= value id='toggle-' + `${name}` + '-' + `${value}`)
+        label(class='toggle__label' for='toggle-' + `${name}` + '-' + `${value}`)
+            p(class='toggle__labelText')= text

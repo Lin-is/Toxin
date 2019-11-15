@@ -1,0 +1,16 @@
+mixin rateButton (name)
+    div(class='rateButton__container')
+        input(type='radio' class='rateButton__scaleSelect' name= name value='5' id= 'rateButton-' + `${name}` + '-5')
+        label(class='rateButton__symbol' for='rateButton-' + `${name}` + '-5')
+            
+        input(type='radio' class='rateButton__scaleSelect' name= name value='4' id= 'rateButton-' + `${name}` + '-4')
+        label(class='rateButton__symbol' for='rateButton-' + `${name}` + '-4')
+            
+        input(type='radio' class='rateButton__scaleSelect' name= name value='3' id= 'rateButton-' + `${name}` + '-3')
+        label(class='rateButton__symbol' for='rateButton-' + `${name}` + '-3')
+            
+        input(type='radio' class='rateButton__scaleSelect' name= name value='2' id= 'rateButton-' + `${name}` + '-2')
+        label(class='rateButton__symbol' for='rateButton-' + `${name}` + '-2')
+            
+        input(type='radio' class='rateButton__scaleSelect' name= name value='1' id= 'rateButton-' + `${name}` + '-1')
+        label(class='rateButton__symbol' for='rateButton-' + `${name}` + '-1')

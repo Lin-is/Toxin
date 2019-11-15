@@ -1,0 +1,48 @@
+// TODO: add border gradient, add counter
+
+.likeButton__container {
+    display: flex;
+    align-content: center;
+}
+.likeButton__input {
+    display: none;
+}
+.likeButton__label {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 40px;
+    height: 20px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: rgba(31, 32, 65, 0.25);
+
+    cursor: pointer;
+
+    &::before {
+        font-family: 'Material Icons';
+        content: 'favorite_border';
+        font-size: 10px;
+    }
+}
+.likeButton__input:checked + .likeButton__label {
+    position: relative;
+    color: #BC9CFF;
+    border-color: #BC9CFF;
+    transition: border-color 0.4s ease;
+    &::before {
+        font-family: 'Material Icons';
+        content: 'favorite';
+        color: #BC9CFF;
+        transition: all 0.4s ease;
+    }
+}
+.likeButton__labelText {
+    max-width: 192px;
+    line-height: 18px;
+    color: inherit;
+    font-size: 10px;
+    line-height: 12px;
+}

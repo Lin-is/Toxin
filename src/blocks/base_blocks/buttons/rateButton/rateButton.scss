@@ -1,0 +1,33 @@
+.rateButton__container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-content: center;
+    width: 120px;
+    height: 24px;
+}
+
+.rateButton__scaleSelect {
+    display: none;
+}
+
+.rateButton__symbol {
+    font-size: 24px;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    &::before{
+        font-family: 'Material Icons';
+        content: 'star_border';
+        cursor: pointer;
+    }
+}
+
+ .rateButton__symbol:hover, .rateButton__symbol:hover ~ .rateButton__symbol, .rateButton__scaleSelect:checked ~ .rateButton__symbol  {
+    &::before {
+        content:'star';
+        transition: all 0.4s ease;
+    }
+}
+
+

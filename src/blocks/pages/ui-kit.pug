@@ -4,6 +4,9 @@ include ../base_blocks/inputs/textFieldMasked/textFieldMasked.pug
 include ../base_blocks/inputs/dateDropdown/dateDropdown.pug
 include ../base_blocks/buttons/radioButton/radioButton.pug
 include ../base_blocks/buttons/checkbox/checkbox.pug
+include ../base_blocks/buttons/toggle/toggle.pug
+include ../base_blocks/buttons/likeButton/likeButton.pug
+include ../base_blocks/buttons/rateButton/rateButton.pug
 
 
 <!DOCTYPE html>
@@ -13,6 +16,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         link(rel="stylesheet" href="./ui-kit.scss")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
         title Document
     body 
         div(class='colorsAndType__container')
@@ -24,7 +28,6 @@ html(lang="en")
                 +colorItem('rgba(31, 32, 65, 0.05)', 'Dark Shade 5%', '#1F2041')
                 +colorItem('#BC9CFF', 'Purple', '#BC9CFF')
                 +colorItem('#6FCF97', 'Green', '#6FCF97')
-
             div(class='colorAndTypes__headers')
                 div(class='colorsAndType__fontExampleItem')
                     h1(class='colorsAndType__fontExampleTag') h1
@@ -40,24 +43,39 @@ html(lang="en")
                     p(class='colorsAndType__fontExampleText') This is the body text which is used for most of the design, like paragraphs, lists, etc.
         
         div(class='formElements__container')
-            div(class= 'formElements__buttonsContainer')
-                div(class= 'formElements__inputContainer')
+            div(class= 'formElements__buttonsNatureContainer')
+                div(class= 'formElements__TypeContainer formElements__inputTypeContainer')
                     +textField('Email', 'Text Field', 'default')
                     +textFieldMasked('masked text feld', 'default')
                     +dateDropdown('date dropdown')
-                div(class= 'formElements__checkboxContainer')
-                    div(class= 'formElements__checkboxesArea')
+                div(class= 'formElements__TypeContainer formElements__checkboxTypeContainer')
+                    div(class= 'formElements__ElementContainer formElements__checkboxesArea')
                         h3 Checkbox Buttons
                         div(class='formElements__checkboxesContainer')
                             +checkbox('Можно курить', 'allowed', '1')
                             +checkbox('Можно с питомцами', 'allowed', '2')
                             +checkbox('Можно пригласить гостей (до 10 человек)', 'allowed', '3')
-
-                    div(class= 'formElements__radiobuttonsArea')
+                    div(class= 'formElements__ElementContainer formElements__radiobuttonsArea')
                         h3 Radio Buttons
                         div(class= 'formElements__radiobuttonsContainer')
                             +radioButton('Мужчина', 'sex', '0')
                             +radioButton('Женщина', 'sex', '1')
+                    div(class= 'formElements__ElementContainer formElements__toggleArea')
+                        h3 toggle
+                        div(class= 'formElements__toggleContainer')
+                            +toggle('Получать спецпредложения', 'specialOffers', '1')
+                    div(class= 'formElements__ElementContainer formElements__likeButtonArea')
+                        h3 like Button
+                        div(class= 'formElements__likeButtonContainer')
+                            +likeButton('2', 'likeNumber', '1')
+                            +likeButton('12', 'likeNumber', '2')
+                    div(class= 'formElements__ElementContainer formElements__rateButtonArea')
+                        h3 rate Button
+                        div(class= 'formElements__rateButtonContainer')
+                            +rateButton('room-123')
+                            +rateButton('room-135')
+
+
 
             
 

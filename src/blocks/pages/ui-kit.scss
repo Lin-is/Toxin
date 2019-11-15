@@ -37,6 +37,8 @@
   font-weight: normal;
 }
 
+
+
 .formElements__container {
     width: 100%;
     height: 1853px;
@@ -46,36 +48,33 @@
     background-color: #FFFFFF;
 }
 
-.formElements__buttonsContainer {
+.formElements__buttonsNatureContainer {
     width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
-.formElements__inputContainer {
-    height: 633px;
+.formElements__inputTypeContainer {
+    height: 589px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.formElements__radiobuttonsArea {
-    height: 55px;
+.formElements__checkboxTypeContainer {
+    height: 100%;
+    width: 260px;
+}
+
+.formElements__ElementContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.formElements__radiobuttonsContainer {
-    width: 221px;
-    display: flex;
-    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .formElements__checkboxesArea {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     width: 222px;
     height: 130px;
 }
@@ -84,8 +83,40 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;  
+}
+
+.formElements__radiobuttonsArea {
+    height: 55px;
+}
+.formElements__radiobuttonsContainer {
+    width: 221px;
+    display: flex;
     justify-content: space-between;
-    
+}
+
+.formElements__toggleArea {
+    width: 100%;
+    height: 51px;
+}
+
+.formElements__likeButtonArea {
+    height: 51px;
+} 
+.formElements__likeButtonContainer {
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.formElements__rateButtonArea{
+    height: 55px;
+    width: 100%;
+}
+.formElements__rateButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 
@@ -98,3 +129,6 @@
 @import '../base_blocks/inputs/dateDropdown/dateDropdown.scss';
 @import '../base_blocks/buttons/radioButton/radioButton.scss';
 @import '../base_blocks/buttons/checkbox/checkbox.scss';
+@import '../base_blocks/buttons/toggle/toggle.scss';
+@import '../base_blocks/buttons/likeButton/likeButton.scss';
+@import '../base_blocks/buttons/rateButton/rateButton.scss';
