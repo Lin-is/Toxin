@@ -1,0 +1,24 @@
+.regularButton_short_white__container {
+    width: 99px;
+    height: 44px;
+    padding: 2px;
+    color: #FFFFFF;
+    background: linear-gradient(180deg, rgb(188, 156, 255) 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    &:hover {
+        background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+    }
+}
+.regularButton_short_white__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border-radius: 22px;
+}
+.regularButton_short_white__text {
+    text-transform: uppercase;
+    color: #BC9CFF;
+}

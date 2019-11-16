@@ -7,6 +7,7 @@ include ../base_blocks/buttons/checkbox/checkbox.pug
 include ../base_blocks/buttons/toggle/toggle.pug
 include ../base_blocks/buttons/likeButton/likeButton.pug
 include ../base_blocks/buttons/rateButton/rateButton.pug
+include ../base_blocks/buttons/regularButton/regularButton.pug
 
 
 <!DOCTYPE html>
@@ -15,10 +16,10 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(rel="stylesheet" href="./ui-kit.scss")
         link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
         title Document
     body 
+        script(src="../base_blocks/inputs/dateDropdown/dateDropdown.js")
         div(class='colorsAndType__container')
             div(class='colorsAndType__palette')
                 +colorItem('#1F2041', 'Dark Shade 100%', '#1F2041')
@@ -74,6 +75,14 @@ html(lang="en")
                         div(class= 'formElements__rateButtonContainer')
                             +rateButton('room-123')
                             +rateButton('room-135')
+                div(class= 'formElements__TypeContainer formElements__buttonTypeContainer')
+                    div(class= 'formElements__ElementContainer formElements__regularButtonsArea')
+                        h3 Buttons
+                        div(class= 'formElements__regularButtonContainer')
+                            +regularButton('CLICK ME', 'clickMe', '#', true, false)
+                            +regularButton('CLICK ME', 'clickMe', '#', true, true)
+                            +regularButton('перейти к оплате', 'goToPayment', '#', false, false)
+                           
 
 
 

@@ -1,0 +1,11 @@
+mixin regularButton (text, name, href, short, white)
+    if short
+        -var className = 'regularButton_short'
+        if white
+            -var className = 'regularButton_short_white'
+    else
+        -var className = 'regularButton'
+
+    div(class= className + '__container')
+        a(class= className + '__link' name= name href= href)
+            h3(class= className + '__text')= text

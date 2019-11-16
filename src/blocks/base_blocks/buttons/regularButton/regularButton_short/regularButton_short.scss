@@ -1,0 +1,16 @@
+.regularButton_short__link {
+    width: 99px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    &:hover {
+        opacity: 0.5;
+    }  
+}
+.regularButton_short__text {
+    text-transform: uppercase;
+    color: #FFFFFF;
+}

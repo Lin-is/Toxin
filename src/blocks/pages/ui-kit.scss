@@ -119,6 +119,16 @@
     justify-content: space-between;
 }
 
+.formElements__regularButtonsArea {
+    height: 269px;
+    width: 320px;
+}
+.formElements__regularButtonContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
 
 
 
@@ -132,3 +142,4 @@
 @import '../base_blocks/buttons/toggle/toggle.scss';
 @import '../base_blocks/buttons/likeButton/likeButton.scss';
 @import '../base_blocks/buttons/rateButton/rateButton.scss';
+@import '../base_blocks/buttons/regularButton/regularButton.scss';
