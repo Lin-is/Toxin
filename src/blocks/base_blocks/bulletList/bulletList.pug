@@ -1,0 +1,8 @@
+mixin bulletList (...items)
+    div(class='bulletList__container') 
+        ul(class='bulletList__list')
+            each item in items
+                li(class='bulletList__listElem')
+                    p(class='bulletList__listElemText')= item
+            
+                

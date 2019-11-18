@@ -1,0 +1,5 @@
+mixin textFieldSubscription (placeholder, name)
+    div(class= 'textFieldSubscription__container')
+        label(class='textFieldSubscription__label' for= 'textFieldSubscription-' + `${name}`)
+            h3= name
+        input(type='text' class='textFieldSubscription__input' placeholder= placeholder id= 'textFieldSubscription-' + `${name}`)

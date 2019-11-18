@@ -1,19 +1,14 @@
-function changeDateLabel() {
-    var date = document.getElementById('dateDropdown-' + `${name}`).value;
-
-    var year, month, day;
-
-    if (date != '') {
-        for (i = 0; i < 4; i++) { 
-            year = year + date[i];
-        }
-        for (i = 5; i < 8; i++) {
-            month = month + date[i];
-        }
-        for (i=9; i<10; i++) {
-            day += day + date[i];
-        } 
-    alert(day + '.' + month + '.' + year);
-    document.getElementsByClassName('dateDropdown__label').value = date;//day + '.' + month + '.' + year;
+function changeDateLabel() { 
+    let date = document.querySelector(".dateDropdown__input").value.toString(); 
+    console.log(date);
+    console.log(3 + 5);
+    var year = date.slice(0,4);
+    var month = date.slice(5,7);
+    var day = date.slice(8, date.length);
+    var newDate = day + '.' + month + '.' + year;
+    console.log(newDate);
+    document.querySelector('.dateDropdown__label').innerHTML = newDate;
 }
-}
+
+document.querySelector(".dateDropdown__input").addEventListener("change", changeDateLabel());
+document.querySelector(".dateDropdown__input").addEventListener("click", document.querySelector(".dateDropdown__input").removeEventListener());

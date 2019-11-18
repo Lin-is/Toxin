@@ -1,3 +1,3 @@
 import './main.css'
 import './main.scss'
-import './blocks/base_blocks/inputs/dateDropdown/dateDropdown.js'
+import './blocks/pages/ui-kit.js'

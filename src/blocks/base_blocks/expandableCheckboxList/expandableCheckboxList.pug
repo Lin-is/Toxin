@@ -1,0 +1,15 @@
+mixin expandableCheckboxList (header, name, ...list)
+    div(class='expandableCheckboxList__container')
+        div(class='expandableCheckboxList__headerContainer')
+            input(class='expandableCheckboxList__headerInput' type='checkbox' value='1' name= 'showList' id='expandableCheckboxList__header-' + `${name}` + '-showList')
+            label(class= 'expandableCheckboxList__headerLabel' for='expandableCheckboxList__header-' + `${name}` + '-showList')
+                h3= header
+            div(class='expandableCheckboxList__listContainer')
+                ul(class='expandableCheckboxList__list')
+                    each val, index in list
+                        li(class='expandableCheckboxList__listItem')
+                            div(class='expandableCheckboxList__inputContainer')
+                                input(class='expandableCheckboxList__input' type='checkbox' name= name, value= index id='expandableCheckboxList-' + `${name}` + '-' + `${index}`)
+                                label(class='expandableCheckboxList__label' for='expandableCheckboxList-' + `${name}` + '-' + `${index}`)
+                                    p(class='expandableCheckboxList__labelText')= val
+                

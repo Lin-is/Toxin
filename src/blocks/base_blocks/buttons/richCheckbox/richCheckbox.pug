@@ -1,0 +1,7 @@
+mixin richCheckbox (text, text2, name, value)
+    div(class='richCheckbox__container')
+        input(class='richCheckbox__input' type='checkbox' name= name, value= value id='richCheckbox-' + `${name}` + '-' + `${value}`)
+        label(class='richCheckbox__label' for='richCheckbox-' + `${name}` + '-' + `${value}`)
+            div(class='richCheckbox__textContainer')
+                p(class='richCheckbox__labelText')= text
+                p(class='richCheckbox__additionalText')= text2
