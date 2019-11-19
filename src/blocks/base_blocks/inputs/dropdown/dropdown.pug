@@ -1,0 +1,25 @@
+mixin dropdown (header, name, short, label, condition, ...list)
+    if short
+       -var className  = 'dropdown_short dropdown'
+    else    
+       -var className = 'dropdown'
+
+    div(class= className + '__container')
+        div(class= className + '__lablesContainer')
+            h3(class= className + '__mainLabel')= label
+            h3(class= className + '__conditionLabel')= condition
+        div(class= className + '__headerContainer')
+            input(class= className + '__headerInput' type='checkbox' value='1' name= 'showList' id= className + '__header-' + `${name}` + '-showList')
+            label(class= className + '__headerLabel' for= className + '__header-' + `${name}` + '-showList')
+                p(class= classNmae + '__text')= header
+            div(class= className + '__listContainer')
+                ul(class= className +'__list')
+                    each val, index in list
+                        li(class= className + '__listItem')
+                            h3(class= className + '__itemName')= val
+                            div(class= className + '__counterContainer')
+                                button(type='button' class= className + '__counterButton ' + className + '__counterDecrement' value='-')
+                                    p= '-'
+                                h3(class= className + '__counterLabel')= 0
+                                button(type='button' class= className + '__counterButton ' + className + '__counterIncrement')
+                                    p= '+'

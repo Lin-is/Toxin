@@ -1,0 +1,28 @@
+.dropdown_short.dropdown__container {
+    max-height: 182px;
+    width: 268px;
+}
+
+.dropdown_short.dropdown__lablesContainer {
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.dropdown_short.dropdown__headerContainer {
+    height: 164px;
+    width: 100%;
+}
+
+.dropdown_short.dropdown__listContainer {     
+    height: 119px;
+    width: 100%;
+}
+
+.dropdown_short.dropdown__listItem {
+    &:last-child {
+        margin-bottom: 7px;
+        width: 100%;
+    }
+}
+
+

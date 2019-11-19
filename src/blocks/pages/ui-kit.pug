@@ -3,6 +3,7 @@ include ../base_blocks/inputs/textField/textField.pug
 include ../base_blocks/inputs/textFieldSubscription/textFieldSubscription.pug
 include ../base_blocks/inputs/textFieldMasked/textFieldMasked.pug
 include ../base_blocks/inputs/dateDropdown/dateDropdown.pug
+include ../base_blocks/inputs/dropdown/dropdown.pug
 include ../base_blocks/buttons/radioButton/radioButton.pug
 include ../base_blocks/buttons/checkbox/checkbox.pug
 include ../base_blocks/buttons/richCheckbox/richCheckbox.pug
@@ -54,11 +55,16 @@ html(lang="en")
                     div(class='formElements__inputTypeElement')
                         +textField('Email', 'Text Field', 'default')
                     div(class='formElements__inputTypeElement')
+                        +dropdown('Сколько гостей', 'guestsNumber', false, 'dropdown', 'default', 'Взрослые', 'Дети', 'Младенцы')
+                    div(class='formElements__inputTypeElement')
                         +textFieldMasked('masked text feld', 'default')
                     div(class='formElements__inputTypeElement')
                         +dateDropdown('date dropdown')
                     div(class='formElements__inputTypeElement')
                         +textFieldSubscription('Email', 'subscription text field')
+                    
+                    div(class='formElements__inputTypeElement')
+                        +dropdown('Сколько гостей', 'guestsNumber', true, 'dropdown', 'default', 'спальни', 'кровати', 'ванные комнаты')
                 div(class= 'formElements__TypeContainer formElements__checkboxTypeContainer')
                     div(class= 'formElements__ElementContainer formElements__checkboxesArea')
                         h3(class='formElements__areaHeader') Checkbox Buttons
