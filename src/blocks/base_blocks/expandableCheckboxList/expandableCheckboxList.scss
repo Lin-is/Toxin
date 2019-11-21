@@ -1,6 +1,7 @@
 .expandableCheckboxList__container {
     width: 266px;
-    height: 277px;
+    height: 24px;
+    transition: height 0.6s ease;
 }
 .expandableCheckboxList__headerContainer {
     width: 100%;

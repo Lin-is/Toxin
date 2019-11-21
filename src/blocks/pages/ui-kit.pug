@@ -59,12 +59,13 @@ html(lang="en")
                     div(class='formElements__inputTypeElement')
                         +textFieldMasked('masked text feld', 'default')
                     div(class='formElements__inputTypeElement')
+                        +dropdown('Сколько гостей', 'guestsNumber', true, 'dropdown', 'default', 'спальни', 'кровати', 'ванные комнаты')
+                    div(class='formElements__inputTypeElement')
                         +dateDropdown('date dropdown')
                     div(class='formElements__inputTypeElement')
                         +textFieldSubscription('Email', 'subscription text field')
                     
-                    div(class='formElements__inputTypeElement')
-                        +dropdown('Сколько гостей', 'guestsNumber', true, 'dropdown', 'default', 'спальни', 'кровати', 'ванные комнаты')
+                    
                 div(class= 'formElements__TypeContainer formElements__checkboxTypeContainer')
                     div(class= 'formElements__ElementContainer formElements__checkboxesArea')
                         h3(class='formElements__areaHeader') Checkbox Buttons

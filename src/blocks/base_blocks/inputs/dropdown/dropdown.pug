@@ -18,7 +18,7 @@ mixin dropdown (header, name, short, label, condition, ...list)
                         li(class= className + '__listItem')
                             h3(class= className + '__itemName')= val
                             div(class= className + '__counterContainer')
-                                button(type='button' class= className + '__counterButton ' + className + '__counterDecrement' value='-')
+                                button(type='button' class= className + '__counterButton ' + className + '__counterDecrement dropdown__counterButton_disabled' value='-')
                                     p= '-'
                                 h3(class= className + '__counterLabel')= 0
                                 button(type='button' class= className + '__counterButton ' + className + '__counterIncrement')
