@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -102,6 +103,16 @@ module.exports = {
     }),
     new CleanWebpackPlugin({
       dry: true,
+    }),
+    new webpack.ProvidePlugin({
+    $: 'jquery',
+      '$': 'jquery',
+      jquery: 'jquery',
+      jQuery: 'jquery',
+      'window.jquery': 'jquery',
+      'window.jQuery': 'jquery',
+      'window.$': 'jquery',
+
     }),
     /* HtmlWebpackPlugin({
       hash: false,
