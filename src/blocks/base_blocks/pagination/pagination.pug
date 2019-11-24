@@ -1,5 +1,5 @@
 mixin pagination(...pageLinks)
-    div(class='pagination_container')
+    div(class='pagination__container')
         ul(class='pagination__list')
             li(class='pagination__listItem pagination__navButtonContainer pagination__navButton_disabled')
                 a(class='pagination__navButton pagination__navButton_prev' href='#')= 'arrow_back'
@@ -12,9 +12,10 @@ mixin pagination(...pageLinks)
                         span(class='pagination__linkNumber')= index + 1
             li(class='pagination__listItem pagination__navButtonContainer')
                 a(class='pagination__navButton pagination__navButton_next' href='#')= 'arrow_forward'
-            
-            
-            
-            
-                      
-            
+        p(class='pagination__text').
+            #[span(class='pagination__minimalOptonOnThePageNumber') 1]
+            -
+            #[span(class='pagination__maximalOptonOnThePageNumber') 12]
+            из 
+            #[span(class='pagination__totalVariantsNumber') 100+]
+             вариантов аренды
