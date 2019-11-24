@@ -1,0 +1,20 @@
+mixin pagination(...pageLinks)
+    div(class='pagination_container')
+        ul(class='pagination__list')
+            li(class='pagination__listItem pagination__navButtonContainer pagination__navButton_disabled')
+                a(class='pagination__navButton pagination__navButton_prev' href='#')= 'arrow_back'
+            each pageLink, index in pageLinks
+                if index === pageLinks.length - 1 
+                    li(class='pagination__listItem pagination__navButtonContainer')    
+                        a(class='pagination__link pagination__ellipsis')= '...'
+                li(class='pagination__listItem')
+                    a(class='pagination__link' href= pageLink)
+                        span(class='pagination__linkNumber')= index + 1
+            li(class='pagination__listItem pagination__navButtonContainer')
+                a(class='pagination__navButton pagination__navButton_next' href='#')= 'arrow_forward'
+            
+            
+            
+            
+                      
+            
