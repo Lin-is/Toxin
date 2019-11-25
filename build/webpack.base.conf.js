@@ -105,6 +105,9 @@ module.exports = {
       dry: true,
     }),
     new webpack.ProvidePlugin({
+      noUiSlider: 'nouislider'
+    }),
+    new webpack.ProvidePlugin({
     $: 'jquery',
       '$': 'jquery',
       jquery: 'jquery',

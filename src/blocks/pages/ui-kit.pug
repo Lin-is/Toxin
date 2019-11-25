@@ -16,6 +16,7 @@ include ../base_blocks/bulletList/bulletList.pug
 include ../base_blocks/roomFeature/roomFeature.pug
 include ../base_blocks/expandableCheckboxList/expandableCheckboxList.pug
 include ../base_blocks/pagination/pagination.pug
+include ../base_blocks/rangeSlider/rangeSlider.pug
 
 
 <!DOCTYPE html>
@@ -96,7 +97,12 @@ html(lang="en")
                         div(class= 'formElements__rateButtonContainer')
                             +rateButton('room-123')
                             +rateButton('room-135')
+
                 div(class= 'formElements__TypeContainer formElements__buttonTypeContainer')
+                    div(class= 'formElements__ElementContainer formElements__rangeSliderArea')
+                        h3(class='formElements__areaHeader') range Slider
+                        div(class= 'formElements__rangeSliderContainer')
+                            +rangeSlider('amount')
                     div(class= 'formElements__ElementContainer formElements__regularButtonsArea')
                         h3(class='formElements__areaHeader') Buttons
                         div(class= 'formElements__regularButtonContainer')
@@ -128,7 +134,7 @@ html(lang="en")
                     div(class='formElements__roomFeaturesContainer')
                         +roomFeature('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
                         +roomFeature('location_city', 'Удобство', 'Окно в каждой из спален')
-                
+                      
             
 
           
