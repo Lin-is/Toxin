@@ -78,6 +78,10 @@
         margin-bottom: none;
     }
 }
+.formElements__dateDropdownArea {
+    display: flex;
+    justify-content: space-between;
+}
 
 .formElements__checkboxTypeContainer {
     height: 100%;
@@ -190,6 +194,16 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.formElements__rangeSliderArea {
+    height: 48px;
+    width: 266px;
+}
+
+.formElements__rangeSliderArea h3 {
+    margin-bottom: 23px;
+}
+
+
 
 
 
@@ -200,6 +214,7 @@
 @import '../base_blocks/inputs/textFieldSubscription/textFieldSubscription.scss';
 @import '../base_blocks/inputs/textFieldMasked/textFieldMasked.scss';
 @import '../base_blocks/inputs/dateDropdown/dateDropdown.scss';
+@import '../base_blocks/inputs/filterDateDropdown/filterDateDropdown.scss';
 @import '../base_blocks/inputs/dropdown/dropdown.scss';
 @import '../base_blocks/buttons/radioButton/radioButton.scss';
 @import '../base_blocks/buttons/checkbox/checkbox.scss';
@@ -213,3 +228,5 @@
 @import '../base_blocks/roomFeature/roomFeature.scss';
 @import '../base_blocks/expandableCheckboxList/expandableCheckboxList.scss';
 @import '../base_blocks/pagination/pagination.scss';
+@import '../base_blocks/rangeSlider/rangeSlider.scss';
+@import '../base_blocks/reviewField/reviewField.scss';

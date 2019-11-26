@@ -3,6 +3,7 @@ include ../base_blocks/inputs/textField/textField.pug
 include ../base_blocks/inputs/textFieldSubscription/textFieldSubscription.pug
 include ../base_blocks/inputs/textFieldMasked/textFieldMasked.pug
 include ../base_blocks/inputs/dateDropdown/dateDropdown.pug
+include ../base_blocks/inputs/filterDateDropdown/filterDateDropdown.pug
 include ../base_blocks/inputs/dropdown/dropdown.pug
 include ../base_blocks/buttons/radioButton/radioButton.pug
 include ../base_blocks/buttons/checkbox/checkbox.pug
@@ -16,6 +17,8 @@ include ../base_blocks/bulletList/bulletList.pug
 include ../base_blocks/roomFeature/roomFeature.pug
 include ../base_blocks/expandableCheckboxList/expandableCheckboxList.pug
 include ../base_blocks/pagination/pagination.pug
+include ../base_blocks/rangeSlider/rangeSlider.pug
+include ../base_blocks/reviewField/reviewField.pug
 
 
 <!DOCTYPE html>
@@ -52,6 +55,7 @@ html(lang="en")
         
         div(class='formElements__container')
             div(class= 'formElements__buttonsNatureContainer')
+            
                 div(class= 'formElements__TypeContainer formElements__inputTypeContainer')
                     div(class='formElements__inputTypeElement')
                         +textField('Email', 'Text Field', 'default')
@@ -59,12 +63,16 @@ html(lang="en")
                         +dropdown('Сколько гостей', 'guestsNumber', false, 'dropdown', 'default', 'Взрослые', 'Дети', 'Младенцы')
                     div(class='formElements__inputTypeElement')
                         +textFieldMasked('masked text feld', 'default')
+                    div(class='formElements__inputTypeElement formElements__dateDropdownArea')
+                        +dateDropdown('date dropdown', 'first_date_dropdown')
+                        +dateDropdown('date dropdown', 'second_date_dropdown')
+                    div(class='formElements__inputTypeElement formElements__filterDateDropdownArea')
+                        +filterDateDropdown('filter date dropdown', 'first_filterDateDropdown')
                     div(class='formElements__inputTypeElement')
                         +dropdown('Сколько гостей', 'guestsNumber', true, 'dropdown', 'default', 'спальни', 'кровати', 'ванные комнаты')
                     div(class='formElements__inputTypeElement')
-                        +dateDropdown('date dropdown')
-                    div(class='formElements__inputTypeElement')
                         +textFieldSubscription('Email', 'subscription text field')
+                        
                     
                     
                 div(class= 'formElements__TypeContainer formElements__checkboxTypeContainer')
@@ -96,7 +104,12 @@ html(lang="en")
                         div(class= 'formElements__rateButtonContainer')
                             +rateButton('room-123')
                             +rateButton('room-135')
+
                 div(class= 'formElements__TypeContainer formElements__buttonTypeContainer')
+                    div(class= 'formElements__ElementContainer formElements__rangeSliderArea')
+                        h3(class='formElements__areaHeader') range Slider
+                        div(class= 'formElements__rangeSliderContainer')
+                            +rangeSlider('amount')
                     div(class= 'formElements__ElementContainer formElements__regularButtonsArea')
                         h3(class='formElements__areaHeader') Buttons
                         div(class= 'formElements__regularButtonContainer')
@@ -128,7 +141,10 @@ html(lang="en")
                     div(class='formElements__roomFeaturesContainer')
                         +roomFeature('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
                         +roomFeature('location_city', 'Удобство', 'Окно в каждой из спален')
-                
+                div(class='formElements__ElementContainer formElements__reviewFieldArea')
+                    div(class='formElements__reviewFieldContainer')
+                        +reviewField('Мурад Сарафанов', '5 дней назад', 'muradreview', '../src/img/images.png', '11', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+                      
             
 
           
