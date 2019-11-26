@@ -18,6 +18,7 @@ include ../base_blocks/roomFeature/roomFeature.pug
 include ../base_blocks/expandableCheckboxList/expandableCheckboxList.pug
 include ../base_blocks/pagination/pagination.pug
 include ../base_blocks/rangeSlider/rangeSlider.pug
+include ../base_blocks/reviewField/reviewField.pug
 
 
 <!DOCTYPE html>
@@ -140,6 +141,9 @@ html(lang="en")
                     div(class='formElements__roomFeaturesContainer')
                         +roomFeature('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
                         +roomFeature('location_city', 'Удобство', 'Окно в каждой из спален')
+                div(class='formElements__ElementContainer formElements__reviewFieldArea')
+                    div(class='formElements__reviewFieldContainer')
+                        +reviewField('Мурад Сарафанов', '5 дней назад', 'muradreview', '../src/img/images.png', '11', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
                       
             
 

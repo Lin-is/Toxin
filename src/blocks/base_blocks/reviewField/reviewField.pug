@@ -1,0 +1,13 @@
+mixin reviewField (name, time, id, img, likeNumber, text)
+    div(class='reviewField__container')
+        div(class='reviewField__headerContainer')
+            img(class='reviewField__photo' src= img id='reviewField__photo-' + id alt='img')
+            div(class='reviewField__personInfoContainer')
+                p(class='reviewField__personName' id='reviewField__personName-' + id)= name 
+                p(class='reviewField__publicationTime' id='reviewField__publicationTime-' + id)= time
+        div(class='reviewField__contentContainer')
+            div(class='reviewField__likeButtonArea')
+                +likeButton(likeNumber, name, '1')
+            div(class='reviewField__reviewTextArea')
+                p(class='reviewField__text' id='reviewField__text-' + id)= text
+            
