@@ -1,6 +1,7 @@
+
 import 'air-datepicker'
 
-let elements = document.querySelectorAll('.dateDropdown__input')
+let elements = document.querySelectorAll('.filterDateDropdown__input')
 console.log(elements)
 let dateDropdowns = []
 for (let elem of elements) {
@@ -9,7 +10,10 @@ for (let elem of elements) {
 console.log(dateDropdowns)
 for(let elem of dateDropdowns){
     $('#' + elem.getAttribute('id')).datepicker({
-        classes: 'added_datepicker',
+        range: true,
+        multipleDatesSeparator: ' - ',
+        toggleSelected: false,
+        dateFormat: 'd M'
     })
     console.log('SSSSSSSSSSS')
 }

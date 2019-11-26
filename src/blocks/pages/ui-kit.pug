@@ -3,6 +3,7 @@ include ../base_blocks/inputs/textField/textField.pug
 include ../base_blocks/inputs/textFieldSubscription/textFieldSubscription.pug
 include ../base_blocks/inputs/textFieldMasked/textFieldMasked.pug
 include ../base_blocks/inputs/dateDropdown/dateDropdown.pug
+include ../base_blocks/inputs/filterDateDropdown/filterDateDropdown.pug
 include ../base_blocks/inputs/dropdown/dropdown.pug
 include ../base_blocks/buttons/radioButton/radioButton.pug
 include ../base_blocks/buttons/checkbox/checkbox.pug
@@ -61,12 +62,16 @@ html(lang="en")
                         +dropdown('Сколько гостей', 'guestsNumber', false, 'dropdown', 'default', 'Взрослые', 'Дети', 'Младенцы')
                     div(class='formElements__inputTypeElement')
                         +textFieldMasked('masked text feld', 'default')
+                    div(class='formElements__inputTypeElement formElements__dateDropdownArea')
+                        +dateDropdown('date dropdown', 'first_date_dropdown')
+                        +dateDropdown('date dropdown', 'second_date_dropdown')
+                    div(class='formElements__inputTypeElement formElements__filterDateDropdownArea')
+                        +filterDateDropdown('filter date dropdown', 'first_filterDateDropdown')
                     div(class='formElements__inputTypeElement')
                         +dropdown('Сколько гостей', 'guestsNumber', true, 'dropdown', 'default', 'спальни', 'кровати', 'ванные комнаты')
                     div(class='formElements__inputTypeElement')
-                        +dateDropdown('date dropdown')
-                    div(class='formElements__inputTypeElement')
                         +textFieldSubscription('Email', 'subscription text field')
+                        
                     
                     
                 div(class= 'formElements__TypeContainer formElements__checkboxTypeContainer')

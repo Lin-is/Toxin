@@ -78,6 +78,10 @@
         margin-bottom: none;
     }
 }
+.formElements__dateDropdownArea {
+    display: flex;
+    justify-content: space-between;
+}
 
 .formElements__checkboxTypeContainer {
     height: 100%;
@@ -210,6 +214,7 @@
 @import '../base_blocks/inputs/textFieldSubscription/textFieldSubscription.scss';
 @import '../base_blocks/inputs/textFieldMasked/textFieldMasked.scss';
 @import '../base_blocks/inputs/dateDropdown/dateDropdown.scss';
+@import '../base_blocks/inputs/filterDateDropdown/filterDateDropdown.scss';
 @import '../base_blocks/inputs/dropdown/dropdown.scss';
 @import '../base_blocks/buttons/radioButton/radioButton.scss';
 @import '../base_blocks/buttons/checkbox/checkbox.scss';
