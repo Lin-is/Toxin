@@ -1,6 +1,10 @@
-mixin dateDropdown (name)
-    div(class= 'dateDropdown__container')
+mixin dateDropdown (name, id)
+    //- div(class= 'dateDropdown__container')
         div(class='dateDropdown__labelsContainer' )
             h3(class='dateDropdown__nameText' )= name
         label(for='dateDropdown-' + `${name}` class='dateDropdown__label')= 'ДД.ММ.ГГГГ'
-            input(type= 'date' class="dateDropdown__input" pattern= '[1-3]{1}[0-9]{1}.[0-1]{1}[0-9]{1}.[0-2]{1}[0-9]{3}' id='dateDropdown-' + `${name}`)
+            input(type= 'date' class="dateDropdown__input" pattern= '[1-3]{1}[0-9]{1}.[0-1]{1}[0-9]{1}.[0-2]{1}[0-9]{3}' id='dateDropdown-' + `${name}`)-//dateDropdown.js
+    div(class= 'dateDropdown__container')
+        div(class='dateDropdown__labelsContainer' )
+            h3(class='dateDropdown__nameText' )= name
+        div(class='dateDropdown__datepicker' id= id)

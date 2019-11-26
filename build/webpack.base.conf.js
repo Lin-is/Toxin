@@ -115,7 +115,6 @@ module.exports = {
       'window.jquery': 'jquery',
       'window.jQuery': 'jquery',
       'window.$': 'jquery',
-
     }),
     /* HtmlWebpackPlugin({
       hash: false,

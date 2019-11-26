@@ -1,4 +1,4 @@
-function changeDateLabel() { 
+/*function changeDateLabel() { 
     let date = document.querySelector(".dateDropdown__input").value.toString(); 
     console.log(date);
     console.log(3 + 5);
@@ -11,4 +11,7 @@ function changeDateLabel() {
 }
 
 document.querySelector(".dateDropdown__input").addEventListener("change", changeDateLabel());
-document.querySelector(".dateDropdown__input").addEventListener("click", document.querySelector(".dateDropdown__input").removeEventListener());
+document.querySelector(".dateDropdown__input").addEventListener("click", document.querySelector(".dateDropdown__input").removeEventListener());*/
+$('.dateDropdown__datepicker').datepicker([{
+    dateFormat: "dd.mm.yyyy",
+}])
