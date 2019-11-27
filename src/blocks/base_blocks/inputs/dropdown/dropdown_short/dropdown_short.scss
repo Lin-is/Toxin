@@ -24,5 +24,16 @@
         width: 100%;
     }
 }
-
+.dropdown_short.dropdown__textContainer {
+    height: 24px;
+    width: 160px;
+    display: flex;
+    vertical-align: middle;
+    margin-top: 6px;
+}
+.dropdown_short.dropdown__text{
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; 
+}
 

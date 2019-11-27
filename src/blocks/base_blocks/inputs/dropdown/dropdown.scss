@@ -3,6 +3,8 @@
     width: 320px;
     height: 64px;
     transition: height 0.4s ease; 
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    
 }
 .dropdown__lablesContainer {
     display: flex;
@@ -18,6 +20,7 @@
     width: 100%;
     overflow: hidden;
     transition: height 0.4s ease;
+    
 }
 .dropdown__headerInput{
     display: none;
@@ -65,6 +68,7 @@
     transform: translateY(0%);
     transition: transform 0.4s ease, border-color 0.5s ease-in;
     border-color: rgba(31, 32, 65, 0.5);
+    
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     
@@ -74,9 +78,11 @@
     border-top: none;
     border-radius: 4px;
     width: 100%;
+    height: 100%;
     overflow: hidden;
     transform: translateY(-100%);
     transition: transform 0.4s ease;
+   // box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     z-index: 0;
 }
 .dropdown__listItem {
@@ -125,6 +131,37 @@
 .dropdown__counterButton_disabled {
     color: rgba(31, 32, 65, 0.25);
     border-color: rgba(31, 32, 65, 0.25);
+}
+
+.dropdown__buttonsContainer {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 15px;
+    margin-top: 19px;
+    margin-bottom: 13px;
+}
+
+.dropdown__button{
+    position: absolute;
+    top: 0px;
+    background: transparent;
+    cursor: pointer;
+}
+.dropdown__buttonReset {
+    left: 7px;
+    color: rgba(31, 32, 65, 0.5);
+}
+.dropdown__buttonApply {
+    right: 0px;
+    color: #BC9CFF;
+}
+.dropdown__buttonName{
+    color: inherit;
+}
+.dropdown__buttonReset_disable {
+    display: none;
 }
 
 @import './dropdown_short/dropdown_short.scss';

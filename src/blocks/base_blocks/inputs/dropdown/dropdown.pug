@@ -11,7 +11,8 @@ mixin dropdown (header, name, short, label, condition, ...list)
         div(class= className + '__headerContainer')
             input(class= className + '__headerInput' type='checkbox' value='1' name= 'showList' id= className + '__header-' + `${name}` + '-showList')
             label(class= className + '__headerLabel' for= className + '__header-' + `${name}` + '-showList')
-                p(class= classNmae + '__text')= header
+                div(class= className + '__textContainer')
+                    p(class= className + '__text')= header
             div(class= className + '__listContainer')
                 ul(class= className +'__list')
                     each val, index in list
@@ -23,3 +24,9 @@ mixin dropdown (header, name, short, label, condition, ...list)
                                 h3(class= className + '__counterLabel')= 0
                                 button(type='button' class= className + '__counterButton ' + className + '__counterIncrement')
                                     p= '+'
+                if !short
+                    div(class='dropdown__buttonsContainer')
+                        button(type='button' class='dropdown__button dropdown__buttonReset' name='reset')
+                            h3(class='dropdown__buttonName')= 'очистить'
+                        button(type='button' class='dropdown__button dropdown__buttonApply' name='apply')
+                            h3(class='dropdown__buttonName')= 'применить'
