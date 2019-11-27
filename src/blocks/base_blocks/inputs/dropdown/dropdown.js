@@ -123,7 +123,6 @@ for (let list of lists) {
             let badsNumber = 0
             let bathsNumber = 0
             let message = ''
-            
             let textRooms = $(list).parent().siblings('.dropdown_short.dropdown__headerLabel').children('.dropdown_short.dropdown__textContainer').children('.dropdown_short.dropdown__text')
 
             for(let listItem of listItems){
