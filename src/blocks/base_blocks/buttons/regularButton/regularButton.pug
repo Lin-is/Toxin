@@ -1,4 +1,4 @@
-mixin regularButton (text, name, href, short, white)
+mixin regularButton (text, id, href, short, white)
     if short
         -var className = 'regularButton_short'
         if white
@@ -7,5 +7,5 @@ mixin regularButton (text, name, href, short, white)
         -var className = 'regularButton'
 
     div(class= className + '__container')
-        a(class= className + '__link' name= name href= href)
+        a(class= className + '__link' id= id href= href)
             h3(class= className + '__text')= text

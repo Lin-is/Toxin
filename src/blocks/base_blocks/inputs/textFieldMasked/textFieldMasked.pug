@@ -1,8 +1,8 @@
-mixin textFieldMasked (name, condition)
+mixin textFieldMasked (label, id, condition)
     div(class= 'textFieldMasked__container')
         div(class='textFieldMasked__labelsContainer')
-            label(for= 'textFieldMasked-' + `${name}`)
-                h3= name
+            label(for= 'textFieldMasked-' + `${id}`)
+                h3= label
             label(class='textFieldMasked__conditionLabel')
                 h3(class='textFieldMasked__conditionLabel')= condition
-        input(type= 'text' class= 'textFieldMasked__input' placeholder= 'ДД.ММ.ГГГГ' pattern= '[1-3]{1}[0-9]{1}.[0-1]{1}[0-9]{1}.[0-2]{1}[0-9]{3}' id= 'textFieldMasked-' + `${name}`)
+        input(type= 'text' class= 'textFieldMasked__input' placeholder= 'ДД.ММ.ГГГГ' pattern= '[0-3]{1}[0-9]{1}.[0-1]{1}[0-9]{1}.[0-2]{1}[0-9]{3}' id= 'textFieldMasked-' + `${id}`)

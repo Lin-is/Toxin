@@ -19,6 +19,10 @@ include ../base_blocks/expandableCheckboxList/expandableCheckboxList.pug
 include ../base_blocks/pagination/pagination.pug
 include ../base_blocks/rangeSlider/rangeSlider.pug
 include ../base_blocks/reviewField/reviewField.pug
+include ../base_blocks/cards/roomSearch/roomSearch.pug
+include ../base_blocks/cards/registrationCard/registrationCard.pug
+include ../base_blocks/cards/entryCard/entryCard.pug
+include ../base_blocks/cards/roomReservation/roomReservation.pug
 
 
 <!DOCTYPE html>
@@ -58,11 +62,11 @@ html(lang="en")
             
                 div(class= 'formElements__TypeContainer formElements__inputTypeContainer')
                     div(class='formElements__inputTypeElement')
-                        +textField('Email', 'Text Field', 'default')
+                        +textField('Email', 'Text Field', 'text', 'default')
                     div(class='formElements__inputTypeElement')
                         +dropdown('Сколько гостей', 'guestsNumber', false, 'dropdown', 'default', 'Взрослые', 'Дети', 'Младенцы')
                     div(class='formElements__inputTypeElement')
-                        +textFieldMasked('masked text feld', 'default')
+                        +textFieldMasked('masked text feld', 'masked-1', 'default')
                     div(class='formElements__inputTypeElement formElements__dateDropdownArea')
                         +dateDropdown('date dropdown', 'first_date_dropdown')
                         +dateDropdown('date dropdown', 'second_date_dropdown')
@@ -152,7 +156,21 @@ html(lang="en")
                     div(class='formElements__modifiteComponentContainer formElements__reviewFieldArea')
                         div(class='formElements__reviewFieldContainer')
                             +reviewField('Мурад Сарафанов', '5 дней назад', 'muradreview', '/assets/img/images.png', '11', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
-                      
+        
+        div(class='cards__container') 
+            div(class='cards__containersColumn') 
+                div(class='cards__elementContainer cards__roomSearchContainer')
+                    +roomSearch('219')   
+                div(class='cards__elementContainer cards__registrationCardContainer')
+                    +registrationCard('219')
+            div(class='cards__containersColumn')
+                div(class='cards__elementContainer cards__roomReservationContainer')
+                    +roomReservation('888', true, '9 990', '888')
+                div(class='cards__elementContainer cards__entryCardContainer')
+                    +entryCard('219')
+
+
+
             
 
           

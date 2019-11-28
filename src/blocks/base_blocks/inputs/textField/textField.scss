@@ -3,13 +3,14 @@
     flex-direction: column;
     justify-content: space-between;
     width: 320px;
-    height: 67px;
+    //height: 67px;
 }
 
 .textField__labelsContainer {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
 }
 
 .textField__input {

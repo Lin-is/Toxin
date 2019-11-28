@@ -238,9 +238,28 @@
     height: 48px;
     width: 266px;
 }
-
 .formElements__rangeSliderArea h3 {
     margin-bottom: 23px;
+}
+
+
+
+.cards__container {
+    width: 100%;
+    background-color: #E5E5E5;
+    padding: 150px 140px 140px;
+    display: flex;
+    flex-direction: row;
+
+}
+.cards__containersColumn {
+    min-height: calc(646px + 40px + 374px);
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+.cards__elementContainer {
+    margin-bottom: 40px;
 }
 
 
@@ -270,3 +289,7 @@
 @import '../base_blocks/pagination/pagination.scss';
 @import '../base_blocks/rangeSlider/rangeSlider.scss';
 @import '../base_blocks/reviewField/reviewField.scss';
+@import '../base_blocks/cards/roomSearch/roomSearch.scss';
+@import '../base_blocks/cards/registrationCard/registrationCard.scss';
+@import '../base_blocks/cards/entryCard/entryCard.scss';
+@import '../base_blocks/cards/roomReservation/roomReservation.scss';

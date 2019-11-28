@@ -1,0 +1,120 @@
+@import '../../buttons/regularButton/regularButton.scss';
+@import '../../inputs/dropdown/dropdown.scss';
+@import '../../inputs/dateDropdown/dateDropdown.scss';
+
+.roomReservation__container {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(61, 56, 56, 0.2);
+    border-radius: 4px;
+    padding: 40px 30px 30px;
+}
+.roomReservation__headerArea {
+    display: flex; 
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.roomReservation__roomNumberLabels {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.roomReservation__headerText span {
+    font-size: 14px;
+}
+.roomNumber__lux {
+    line-height: 100%;
+    vertical-align: bottom;
+    margin-left: 5px;
+    font-size: 12px;
+    color: #BC9CFF;
+}
+
+.roomReservation__priceText {
+    color: rgba(31, 32, 65, 0.5);
+    font-size: 12px;
+}
+.roomReservation__priceText span {
+    font-weight: bold;
+    font-size: 14px;
+}
+.roomReservation__dateDropdownsContainer {
+    margin: 20px 0px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.roomReservation__totalPriceCalculation {
+    margin: 20px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.roomReservation__pricePoint {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.roomReservation__pricePoint p {
+    color: rgba(31, 32, 65, 0.75);
+}
+.roomReservation__pricePoint p:first-child {
+    max-width: 214px;
+    vertical-align: middle;
+}
+.roomReservation__totalPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 14px;
+    height: 24px;
+}
+.roomReservation__separateLine {
+    width: 100%;
+    height: calc(100% - 10px);
+    margin-right: 5px;
+    margin-left: 5px;
+    border-bottom: 1px dashed rgba(31, 32, 65, 0.25); 
+}
+.roomReservation__totalPriceSumText{
+    height: 100%;
+}
+.roomReservation__totalPriceSumNumber{
+    height: 100%;
+    white-space: nowrap;
+}
+
+.roomReservation__pricePointHint{
+    &::after {
+        content: 'i';
+        width: 20px;
+        height: 20px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        box-sizing: border-box;
+        border-radius: 10px;
+        position: absolute;
+        top: -1px;
+        right: 79px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 14px;
+        color: rgba(31, 32, 65, 0.25);
+    }
+}

@@ -8,6 +8,10 @@ import '../base_blocks/expandableCheckboxList/expandableCheckboxList'
 import '../base_blocks/pagination/pagination'
 import '../base_blocks/buttons/likeButton/likeButton'
 import '../base_blocks/rangeSlider/rangeSlider'
+import '../base_blocks/cards/roomSearch/roomSearch'
+import '../base_blocks/cards/registrationCard/registrationCard'
+import '../base_blocks/cards/entryCard/entryCard'
+import '../base_blocks/cards/roomReservation/roomReservation'
 import 'nouislider'
 
 
