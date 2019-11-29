@@ -1,0 +1,21 @@
+include ../../buttons/rateButton/rateButton.pug
+
+mixin roomPreview (id, lux, price, roomNumber, reviewNumber, src)
+    div(class='roomPreview__container')
+        div(class='roomPreview__photoSliderContainer')
+            div(class='roomPreview__sliderSwitchersContainer')
+                div(class='roomPreview__sliderPrevSwitcher')
+                div(class='roomPreview__sliderNextSwitcher')
+            img(class='roomPreview__photo' alt= 'photo', src= src)
+            
+        header(class='roomPreview__headerArea')
+            div(class='roomPreview__roomNumberLabels')
+                h1(class='roomPreview__headerText') #[span № ]#{roomNumber}
+                if lux
+                    h3(class='roomPreview__roomNumberLux') люкс
+            p(class='roomPreview__priceText') #[span #{price}₽] в сутки
+        div(class='roomPreview__ratingInfoContainer')
+            div(class='roomPreview__rateButtonContainer')
+                +rateButton('room' + roomNumber)
+            div(class='roomPreview__reviewNumberContainer')
+                p(class='roomPreview__reviewNumber') #[span #{reviewNumber}] Отзывов

@@ -8,7 +8,7 @@ mixin roomReservation (id, lux, price, roomNumber)
             div(class='roomReservation__roomNumberLabels')
                 h1(class='roomReservation__headerText') #[span № ]#{roomNumber}
                 if lux
-                    h3(class='roomNumber__lux') люкс
+                    h3(class='roomReservation__roomNumberLux') люкс
             p(class='roomReservation__priceText') #[span #{price}₽] в сутки
         div(class='roomReservation__dateDropdownsContainer')
             +dateDropdown('прибытие', 'roomReservation__dateDropdown-arrival-' + id)

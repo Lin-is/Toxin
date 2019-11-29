@@ -1,0 +1,161 @@
+@import '../../buttons/rateButton/rateButton.scss';
+
+.roomPreview__container {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    //border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(61, 56, 56, 0.2);
+    border-radius: 4px;
+    //padding: 0px 30px 30px;
+}
+
+.roomPreview__photoSliderContainer {
+    position: relative;
+    width: 100%;
+    height: 151px;
+    align-items: center;
+    // transform: background 0.4s;
+    overflow: hidden;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px; 
+}
+.roomPreview__sliderSwitchersContainer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: calc(100% + 2px);
+    height: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+    opacity: 0;
+    transform: opacity 0.4s;
+    &:hover {
+        opacity: 1; 
+        transform: opacity 0.4s;
+    }
+}
+
+.roomPreview__sliderPrevSwitcher{
+    height: 100%;
+    position: relative;
+    width: 42px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+    z-index: 5;
+    transform: background 0.4s;
+    &::before {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // position: absolute;
+        content: 'expand_more';
+        font-family: Material Icons;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 24px;
+        // background-color: yellowgreen;
+        color: #FFFFFF;
+        transform: rotate(90deg);
+        margin-top: 53px;
+        // top: 53px;
+        // left: 0px;
+    }
+}
+.roomPreview__sliderNextSwitcher {
+    height: 100%;
+    position: relative;
+    width: 42px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    z-index: 5;
+    transform: background 0.4s;
+    &::after {
+        width: 44px;
+        height: 44px;
+        // position: absolute;
+        content: 'expand_more';
+        font-family: Material Icons;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+        transform: rotate(-270deg);
+        margin-top: 53px;
+        // top: 53px;
+        // right: 0px;
+        // background-color: yellowgreen;
+    }
+}
+
+.roomPreview__photo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px; 
+}
+
+.roomPreview__headerArea{
+    display: flex; 
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 100%;
+    margin: 20px 20px 0px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);  
+}
+.roomPreview__roomNumberLabels {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.roomPreview__headerText span {
+    font-size: 14px;
+}
+.roomPreview__roomNumberLux {
+    line-height: 100%;
+    vertical-align: bottom;
+    margin-left: 5px;
+    font-size: 12px;
+    color: #BC9CFF;
+}
+.roomPreview__priceText {
+    color: rgba(31, 32, 65, 0.5);
+    font-size: 12px;
+}
+.roomPreview__priceText span {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.roomPreview__ratingInfoContainer{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px 20px;
+}
+
+.roomPreview__reviewNumber {
+    color: rgba(31, 32, 65, 0.5);
+    font-size: 14px;
+}
+.roomPreview__reviewNumber span {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+

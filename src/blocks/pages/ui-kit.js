@@ -12,6 +12,7 @@ import '../base_blocks/cards/roomSearch/roomSearch'
 import '../base_blocks/cards/registrationCard/registrationCard'
 import '../base_blocks/cards/entryCard/entryCard'
 import '../base_blocks/cards/roomReservation/roomReservation'
+import '../base_blocks/cards/roomPreview/roomPreview'
 import 'nouislider'
 
 

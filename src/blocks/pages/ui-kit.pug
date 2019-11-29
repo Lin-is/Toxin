@@ -23,6 +23,7 @@ include ../base_blocks/cards/roomSearch/roomSearch.pug
 include ../base_blocks/cards/registrationCard/registrationCard.pug
 include ../base_blocks/cards/entryCard/entryCard.pug
 include ../base_blocks/cards/roomReservation/roomReservation.pug
+include ../base_blocks/cards/roomPreview/roomPreview.pug
 
 
 <!DOCTYPE html>
@@ -168,6 +169,12 @@ html(lang="en")
                     +roomReservation('888', true, '9 990', '888')
                 div(class='cards__elementContainer cards__entryCardContainer')
                     +entryCard('219')
+            div(class='cards__containersColumn')
+                div(class='cards__elementContainer cards__roomPreviewContainer')
+                    +roomPreview('888', true, '9 990', '888', '145', '/assets/img/room888.png')
+                div(class='cards__elementContainer cards__roomPreviewContainer')
+                    +roomPreview('840', false, '9 900', '840', '65', '/assets/img/room880.png')
+                
 
 
 
