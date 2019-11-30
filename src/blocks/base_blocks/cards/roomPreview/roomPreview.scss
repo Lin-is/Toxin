@@ -5,11 +5,9 @@
     display: flex;
     flex-direction: column;
     background: #FFFFFF;
-    //border: 1px solid rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(61, 56, 56, 0.2);
     border-radius: 4px;
-    //padding: 0px 30px 30px;
 }
 
 .roomPreview__photoSliderContainer {
@@ -17,12 +15,64 @@
     width: 100%;
     height: 151px;
     align-items: center;
-    // transform: background 0.4s;
     overflow: hidden;
     border-top-left-radius: 4px;
-    border-top-right-radius: 4px; 
+    border-top-right-radius: 4px;
+   
 }
-.roomPreview__sliderSwitchersContainer {
+
+.roomPreview__slidesContainer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1080px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: lightsteelblue;
+}
+
+.roomPreview__sliderRadioSwitcherContainer{
+    width: 100%;
+    height: 100%;
+}
+
+.roomPreview__photoSliderContainer input {
+     display: none;
+}
+
+.roomPreview__photo{
+     width: 270px;
+     height: 100%;
+ }
+
+.roomPreview__sliderRadioLabelContainer {
+    margin-left: 214px;
+    margin-top: 128px;
+    width: 42px;
+    height: 8px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 6;
+    cursor: pointer;
+     
+}
+
+.roomPreview__sliderRadioLabel {
+    width: 7.5px;
+    height: 7.5px;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 50%;
+    box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+    z-index: 6;
+    cursor: pointer;  
+}
+
+.roomPreview__sliderArrowSwitchersContainer {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -31,7 +81,6 @@
     background: transparent;
     display: flex;
     justify-content: space-between;
-    z-index: 5;
     opacity: 0;
     transform: opacity 0.4s;
     &:hover {
@@ -40,46 +89,56 @@
     }
 }
 
-.roomPreview__sliderPrevSwitcher{
+.roomPreview__sliderArrowPrevSwitcher{
     height: 100%;
-    position: relative;
     width: 42px;
+    display: flex;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
-    z-index: 5;
     transform: background 0.4s;
+    
+}
+.roomPreview__sliderArrowNextSwitcher {
+    height: 100%;
+    width: 42px;
+    display: flex;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    transform: background 0.4s;
+}
+
+.roomPreview__prevArrowSwitcherLabel{
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: transparent;
+    cursor: pointer; 
     &::before {
         width: 44px;
         height: 44px;
         display: flex;
         align-items: center;
         justify-content: center;
-        // position: absolute;
         content: 'expand_more';
         font-family: Material Icons;
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
         line-height: 24px;
-        // background-color: yellowgreen;
         color: #FFFFFF;
         transform: rotate(90deg);
         margin-top: 53px;
-        // top: 53px;
-        // left: 0px;
     }
 }
-.roomPreview__sliderNextSwitcher {
+
+.roomPreview__nextArrowSwitcherLabel {
+    width: 100%;
     height: 100%;
-    position: relative;
-    width: 42px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-    z-index: 5;
-    transform: background 0.4s;
+    display: none;
+    background: transparent;
+    cursor: pointer;
     &::after {
         width: 44px;
         height: 44px;
-        // position: absolute;
         content: 'expand_more';
         font-family: Material Icons;
         font-style: normal;
@@ -92,19 +151,66 @@
         color: #FFFFFF;
         transform: rotate(-270deg);
         margin-top: 53px;
-        // top: 53px;
-        // right: 0px;
-        // background-color: yellowgreen;
     }
 }
 
-.roomPreview__photo{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px; 
+
+
+
+
+// 
+//
+//  slider animation
+
+.roomPreview__photoSliderContainer input:nth-of-type(1):checked ~ .roomPreview__slidesContainer {
+    transform: translateX(0px);
+    transition: transform 0.4s;
 }
+.roomPreview__photoSliderContainer input:nth-of-type(2):checked ~ .roomPreview__slidesContainer {
+    transform: translateX(-270px);
+    transition: transform 0.4s;
+}
+.roomPreview__photoSliderContainer input:nth-of-type(3):checked ~ .roomPreview__slidesContainer {
+    transform: translateX(-540px);
+    transition: transform 0.4s;
+} 
+.roomPreview__photoSliderContainer input:nth-of-type(4):checked ~ .roomPreview__slidesContainer {
+    transform: translateX(-810px);
+    transition: transform 0.4s;
+}
+
+// 
+
+.roomPreview__photoSliderContainer input:nth-of-type(1):checked ~ .roomPreview__sliderRadioLabelContainer label:nth-of-type(1),
+.roomPreview__photoSliderContainer input:nth-of-type(2):checked ~ .roomPreview__sliderRadioLabelContainer label:nth-of-type(2),
+.roomPreview__photoSliderContainer input:nth-of-type(3):checked ~ .roomPreview__sliderRadioLabelContainer label:nth-of-type(3),
+.roomPreview__photoSliderContainer input:nth-of-type(4):checked ~ .roomPreview__sliderRadioLabelContainer label:nth-of-type(4) {
+    background: #FFFFFF;
+}
+
+// 
+
+.roomPreview__photoSliderContainer input:nth-of-type(1):checked ~ .roomPreview__sliderArrowSwitchersContainer .roomPreview__sliderArrowNextSwitcher label:nth-of-type(2),
+.roomPreview__photoSliderContainer input:nth-of-type(2):checked ~ .roomPreview__sliderArrowSwitchersContainer .roomPreview__sliderArrowNextSwitcher label:nth-of-type(3),
+.roomPreview__photoSliderContainer input:nth-of-type(3):checked ~ .roomPreview__sliderArrowSwitchersContainer .roomPreview__sliderArrowNextSwitcher label:nth-of-type(4),
+.roomPreview__photoSliderContainer input:nth-of-type(4):checked ~ .roomPreview__sliderArrowSwitchersContainer .roomPreview__sliderArrowNextSwitcher label:nth-of-type(1) {
+    display: block;
+}
+
+// 
+
+.roomPreview__photoSliderContainer input:nth-of-type(1):checked ~ .roomPreview__sliderArrowSwitchersContainer .roomPreview__sliderArrowPrevSwitcher label:nth-of-type(4),
+.roomPreview__photoSliderContainer input:nth-of-type(2):checked ~ .roomPreview__sliderArrowSwitchersContainer .roomPreview__sliderArrowPrevSwitcher label:nth-of-type(1),
+.roomPreview__photoSliderContainer input:nth-of-type(3):checked ~ .roomPreview__sliderArrowSwitchersContainer .roomPreview__sliderArrowPrevSwitcher label:nth-of-type(2),
+.roomPreview__photoSliderContainer input:nth-of-type(4):checked ~ .roomPreview__sliderArrowSwitchersContainer .roomPreview__sliderArrowPrevSwitcher label:nth-of-type(3) {
+    display: block;
+}
+
+// 
+//
+// 
+
+
 
 .roomPreview__headerArea{
     display: flex; 
