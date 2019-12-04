@@ -1,0 +1,63 @@
+include ../base_blocks/header/header.pug
+include ../base_blocks/roomFeature/roomFeature.pug
+include ../base_blocks/cards/roomReservation/roomReservation.pug
+include ../base_blocks/reviewField/reviewField.pug
+include ../base_blocks/bulletList/bulletList.pug
+include ../base_blocks/footers/footerWithNav/footerWithNav.pug
+
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        title Room Details
+    body
+        +header(true, false)
+        main(class='roomDetails__mainContainer')
+            div(class='roomDetails__roomPhotoContainer')
+                img(class='roomDetails__roomPhoto' src='/assets/img/room-888-image1.jpg' alt='roomPhoto')
+                div(class='roomDetails__asidePhotos')
+                    img(class='roomDetails__roomPhoto' src='/assets/img/room-888-image2.jpg' alt='roomPhoto')
+                    img(class='roomDetails__roomPhoto' src='/assets/img/room-888-image3.png' alt='roomPhoto')
+
+            div(class='roomDetails__roomDescriptionContainer')
+                div(class='roomDetails__roomDescriptionItemsContainer')
+                    div(class='roomDetails__roomInfoContainer roomDetails__roomDescriptionItemContainer')
+                        div(class='roomDetails__roomFeaturesContainer')
+                            h2(class='roomDetails__containerHeader') Сведения о номере
+                            div(class='roomDetails__roomFeatureItemContainer')
+                                +roomFeature('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
+                            div(class='roomDetails__roomFeatureItemContainer')
+                                +roomFeature('location_city', 'Удобство', 'Окно в каждой из спален')
+                            div(class='roomDetails__roomFeatureItemContainer')
+                                +roomFeature('whatshot', 'Уют', 'Номер оснащён камином')
+                        div(class='roomDetails__pieDiagramContainer')
+                            h2(class='roomDetails__containerHeader') Впечатления от номера
+                            div(class='roomDetails__pieDiagramAndLegend')
+                                div(class='roomDetails__pieDiagramBody')
+                                div(class='roomDetails__pieDiagramLegend')
+                                    ul(class='roomDetails__pieDiagramLegendList')
+                                        li(class='roomDetails__pieDiagramLegendListItem') Великолепно
+                                        li(class='roomDetails__pieDiagramLegendListItem') Хорошо
+                                        li(class='roomDetails__pieDiagramLegendListItem') Удовлетворительно
+                                        li(class='roomDetails__pieDiagramLegendListItem') Разочарован 
+                    div(class='roomDetails__reviewsContainer roomDetails__roomDescriptionItemContainer')
+                        div(class='roomDetails__reviewHeadersContainer')
+                            h2(class='roomDetails__containerHeader') Отзывы посетителей номера
+                            p(class='roomDetails__numberOfRewews') 2 отзыва
+                        div(class='roomDetails__reviewFieldContainer')
+                            +reviewField('Мурад Сарафанов', '5 дней назад', 'roomDetails__muradreview', '/assets/img/images.png', '11', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+                        div(class='roomDetails__reviewFieldContainer')
+                            +reviewField('Патрисия Стёклышкова', 'Неделю назад', 'roomDetails__patriciareview', '/assets/img/images.png', '2', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
+                    div(class='roomDetails__addInfoContainer roomDetails__roomDescriptionItemContainer')
+                        div(class='roomDetails__rulesListContainer')
+                            h2(class='roomDetails__containerHeader') Правила
+                            +bulletList('Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00')
+                        div(class='roomDetails__cancelRulesContainer')
+                            h2(class='roomDetails__containerHeader') Отмена
+                            p(class='roomDetails__cancelRules') Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+                div(class='roomDetails__roomReservationContainer')
+                    +roomReservation('888', true, '9 990', '888')
+        +footerWithNav(true)

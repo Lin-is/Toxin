@@ -10,15 +10,15 @@ for(let elem of inputs){
         if (elem.checked) {
             if ($(elem).parent().parent().children('.dropdown__lablesContainer').children('.dropdown__conditionLabel').text() != '') {
                 $(elem).parent().parent().children('.dropdown__lablesContainer').children('.dropdown__conditionLabel').text('expanded')}
-            if ($(elem).parents('.dropdown_short').length) {
-                $(elem).parent().parent().css('height', '182px')
-            } else {
-                $(elem).parent().parent().css('height', '222px')
-            }
+            // if ($(elem).parents('.dropdown_short').length) {
+            //     $(elem).parent().parent().css('height', '182px')
+            // } else {
+            //     $(elem).parent().parent().css('height', '222px')
+            // }
         } else {
             if ($(elem).parent().parent().children('.dropdown__lablesContainer').children('.dropdown__conditionLabel').text() != ''){
                 $(elem).parent().parent().children('.dropdown__lablesContainer').children('.dropdown__conditionLabel').text('default')}
-            $(elem).parent().parent().css('height', '64px')
+            // $(elem).parent().parent().css('height', '64px')
         }
     }
 }

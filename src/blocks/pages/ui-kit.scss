@@ -1,3 +1,8 @@
+
+body {
+    background-color: #E5E5E5;
+}
+
 .page__container {
     margin-bottom: 50px;
     position: relative;
@@ -297,7 +302,7 @@
 
 
 
-@import './blocks/base_blocks/scss-basic/fonts.scss';
+// @import './blocks/base_blocks/scss-basic/fonts.scss';
 @import '../base_blocks/colorItem/colorItem.scss';
 @import '../base_blocks/inputs/textField/textField.scss';
 @import '../base_blocks/inputs/textFieldSubscription/textFieldSubscription.scss';

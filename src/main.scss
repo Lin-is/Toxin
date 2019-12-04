@@ -4,12 +4,13 @@
 @import "./all.css";
 @import "blocks/base_blocks/scss-basic/reset.scss";
 @import "blocks/pages/ui-kit.scss";
+@import "blocks/pages/landingPage.scss";
+@import "blocks/pages/searchRoom.scss";
+@import 'blocks/pages/roomDetails.scss';
 @import "blocks/base_blocks/scss-basic/fonts.scss";
 
 
-body {
-    background-color: #E5E5E5;
-}
+
 
 h1, h2 {
     font-family: 'Quicksand', 'OpenSans', sans-serif;

@@ -76,7 +76,7 @@ html(lang="en")
                         +dateDropdown('date dropdown', 'first_date_dropdown')
                         +dateDropdown('date dropdown', 'second_date_dropdown')
                     div(class='formElements__inputTypeElement formElements__filterDateDropdownArea')
-                        +filterDateDropdown('filter date dropdown', 'first_filterDateDropdown')
+                        +filterDateDropdown('filter date dropdown', 'first_filterDateDropdown') //- (h3, id)
                     // div(class='formElements__inputTypeElement formElements__shortDropdownArea')
                         +dropdown('2 спальни, 2 кровати...', 'guestsNumber', true, 'dropdown', 'default', 'спальни', 'кровати', 'ванные комнаты')
                     div(class='formElements__inputTypeElement formElements__textFieldSubscriptionArea')
@@ -116,9 +116,9 @@ html(lang="en")
 
                 div(class= 'formElements__TypeContainer formElements__buttonTypeContainer')
                     div(class= 'formElements__ElementContainer formElements__rangeSliderArea')
-                        h3(class='formElements__areaHeader') range Slider
+                        //- h3(class='formElements__areaHeader') range Slider
                         div(class= 'formElements__rangeSliderContainer')
-                            +rangeSlider('amount')
+                            +rangeSlider('amount', 'range slider')
                     div(class= 'formElements__ElementContainer formElements__regularButtonsArea')
                         h3(class='formElements__areaHeader') Buttons
                         div(class= 'formElements__regularButtonContainer')
@@ -180,7 +180,6 @@ html(lang="en")
                     +roomPreview('888', true, '9 990', '888', '145', '/assets/img/room888.png', '/assets/img/room888-1.png', '/assets/img/room888-2.png', '/assets/img/room888-3.png')
                 div(class='cards__elementContainer cards__roomPreviewContainer')
                     +roomPreview('840', false, '9 900', '840', '65', '/assets/img/room880.png', '/assets/img/room880-1.png', '/assets/img/room880-2.png', '/assets/img/room880-3.png')
-
 
         div(class='headersAndFooters__container page__container')
             img(class='page__containerLogo' src='/assets/img/Group.png' alt='logo')

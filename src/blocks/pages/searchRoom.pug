@@ -1,0 +1,71 @@
+include ../base_blocks/header/header.pug
+include ../base_blocks/inputs/filterDateDropdown/filterDateDropdown.pug
+include ../base_blocks/inputs/dropdown/dropdown.pug
+include ../base_blocks/rangeSlider/rangeSlider.pug
+include ../base_blocks/buttons/checkbox/checkbox.pug
+include ../base_blocks/buttons/richCheckbox/richCheckbox.pug
+include ../base_blocks/expandableCheckboxList/expandableCheckboxList.pug
+include ../base_blocks/cards/roomPreview/roomPreview.pug
+include ../base_blocks/pagination/pagination.pug
+include ../base_blocks/footers/footerWithNav/footerWithNav.pug
+
+
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        title Search Room
+    body
+        +header(true, false)
+        main(class='searchRoom__mainContainer')
+            div(class='searchRoom__settingsContainer')
+                div(class='searchRoom__settingsItemContainer')
+                    +filterDateDropdown('даты пребывания в отеле', 'searchRoom__filterDateDropdown')
+                div(class='searchRoom__settingsItemContainer')
+                    +dropdown('Сколько гостей', 'searchRoom__guestsNumber', false, 'гости', '', 'Взрослые', 'Дети', 'Младенцы')
+                div(class='searchRoom__settingsItemContainer')
+                    +rangeSlider('searchRoom__rangeSlider', 'диапазон цены', 'Стоимость за сутки пребывания в номере')
+                div(class='searchRoom__checkboxButtonsContainer, searchRoom__settingsItemContainer')
+                    h3(class='searchRoom__checkboxContainerHeader') checkbox buttons
+                    div(class='searchRoom__checkboxItemsContainer')
+                        div(class='searchRoom__checkboxItem')
+                            +checkbox('Можно курить', 'searchRoom__allowed', '1')
+                        div(class='searchRoom__checkboxItem')    
+                            +checkbox('Можно с питомцами', 'searchRoom__allowed', '2')
+                        div(class='searchRoom__checkboxItem')
+                            +checkbox('Можно пригласить гостей (до 10 человек)', 'searchRoom__allowed', '3')
+                div(class='searchRoom__richCheckboxContainer, searchRoom__settingsItemContainer')
+                    h3(class='searchRoom__richCheckboContainerHeader') доступность
+                    div(class='searchRoom__richCheckboItemsContainer')
+                        div(class='searchRoom__richcheckboxItem')
+                            +richCheckbox('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'searchRoom__addOptions', '1')
+                        div(class='searchRoom__richcheckboxItem')
+                            +richCheckbox('Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера.', 'searchRoom__addOptions', '2')
+                div(class='searchRoom__settingsItemContainer')
+                    +dropdown('2 спальни, 2 кровати...', 'searchRoom__roomNumber', true, 'удобства номера', '', 'спальни', 'кровати', 'ванные комнаты')
+                div(class='searchRoom__settingsItemContainer')
+                    +expandableCheckboxList('дополнительные удобства', 'searchRoom__facilities', 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь')
+            div(class='searchRoom__roomCardsContainer')
+                h1(class='searchRoom__roomCardsContainerHeader') Номера, которые мы для вас подобрали
+                div(class='searchRoom__roomPreviewCardsContainer')
+                    +roomPreview('888', true, '9 990', '888', '145', '/assets/img/room888.png', '/assets/img/room888-1.png', '/assets/img/room888-2.png', '/assets/img/room888-3.png')
+                    +roomPreview('840', false, '9 900', '840', '65', '/assets/img/room880.png', '/assets/img/room880-1.png', '/assets/img/room880-2.png', '/assets/img/room880-3.png')
+                    +roomPreview('980', true, '8 500', '980', '35', '/assets/img/room-980.png', '/assets/img/room-980.png', '/assets/img/room-980.png', '/assets/img/room-980.png')
+
+                    +roomPreview('856', false, '7 300', '856', '19', '/assets/img/room-856.png', '/assets/img/room-856.png', '/assets/img/room-856.png', '/assets/img/room-856.png')
+                    +roomPreview('740', false, '6 000', '740', '44', '/assets/img/room-740.png', '/assets/img/room-740.png', '/assets/img/room-740.png', '/assets/img/room-740.png')
+                    +roomPreview('982', false, '5 800', '982', '56', '/assets/img/room-982.png', '/assets/img/room-982.png', '/assets/img/room-982.png', '/assets/img/room-982.png')
+
+                    +roomPreview('678', false, '5 500', '678', '45', '/assets/img/room-678.png', '/assets/img/room-678.png', '/assets/img/room-678.png', '/assets/img/room-678.png')
+                    +roomPreview('450', false, '5 300', '450', '39', '/assets/img/room-450.png', '/assets/img/room-450.png', '/assets/img/room-450.png', '/assets/img/room-450.png')
+                    +roomPreview('350', false, '5 000', '350', '77', '/assets/img/room-350.png', '/assets/img/room-350.png', '/assets/img/room-350.png', '/assets/img/room-350.png')
+
+                    +roomPreview('666', false, '5 000', '666', '25', '/assets/img/room-666.png', '/assets/img/room-666.png', '/assets/img/room-666.png', '/assets/img/room-666.png')
+                    +roomPreview('444', false, '5 000', '444', '15', '/assets/img/room-444.png', '/assets/img/room-444.png', '/assets/img/room-444.png', '/assets/img/room-444.png')
+                    +roomPreview('352', false, '5 000', '352', '55', '/assets/img/room-352.png', '/assets/img/room-352.png', '/assets/img/room-352.png', '/assets/img/room-352.png')
+                div(class='searchRoom__paginationContainer')
+                    +pagination('#', '#', '#', '#')
+        +footerWithNav(true)

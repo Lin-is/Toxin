@@ -1,0 +1,20 @@
+include ../base_blocks/header/header.pug
+include ../base_blocks/cards/roomSearch/roomSearch.pug
+include ../base_blocks/footers/footerWithNav/footerWithNav.pug
+
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        title Landing Page
+    body
+        div(class='')
+        +header(true, false)
+        main(class='landingPage__main')
+            div(class='landingPage__roomSearchContainer')
+                +roomSearch('111')
+            p(class='landingPage__text') Лучшие номера для вашей работы, отдыха и просто вдохновения
+        +footerWithNav(true)
