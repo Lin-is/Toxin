@@ -13,7 +13,10 @@ for(let elem of dateDropdowns){
         range: true,
         multipleDatesSeparator: ' - ',
         toggleSelected: false,
-        dateFormat: 'd M'
+        dateFormat: 'd M',
+        nextHtml: '<i class="material-icons">arrow_forward</i>',
+        prevHtml: '<i class="material-icons">arrow_back</i>',
+        clearButton: true,
     })
     console.log('SSSSSSSSSSS')
 }

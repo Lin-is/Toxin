@@ -24,7 +24,9 @@ include ../base_blocks/cards/registrationCard/registrationCard.pug
 include ../base_blocks/cards/entryCard/entryCard.pug
 include ../base_blocks/cards/roomReservation/roomReservation.pug
 include ../base_blocks/cards/roomPreview/roomPreview.pug
-
+include ../base_blocks/header/header.pug
+include ../base_blocks/footers/footerWithNav/footerWithNav.pug
+//- include ../base_blocks/footers/footerWithLogo/footerWithLogo.pug
 
 <!DOCTYPE html>
 html(lang="en")
@@ -170,11 +172,28 @@ html(lang="en")
                 div(class='cards__elementContainer cards__entryCardContainer')
                     +entryCard('219')
             div(class='cards__containersColumn')
+                div(class='cards__elementContainer cards__air-datepickerContainer datepicker-here' data-multiple-dates-aeparator=' - ', data-range='true', data-clear-button='true')
                 div(class='cards__elementContainer cards__roomPreviewContainer')
                     +roomPreview('888', true, '9 990', '888', '145', '/assets/img/room888.png', '/assets/img/room888-1.png', '/assets/img/room888-2.png', '/assets/img/room888-3.png')
                 div(class='cards__elementContainer cards__roomPreviewContainer')
                     +roomPreview('840', false, '9 900', '840', '65', '/assets/img/room880.png', '/assets/img/room880-1.png', '/assets/img/room880-2.png', '/assets/img/room880-3.png')
-                
+
+
+        div(class='headersAndFooters__container')
+            div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
+                +header(false)
+            div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
+                +header(true)
+            div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
+                +header(false, true, 'Cosmin Negoita')
+            div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
+                +header(true, true, 'Людмила Перова')
+            div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
+                +footerWithNav(false)
+            div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
+                +footerWithNav(true)
+
+
 
 
 

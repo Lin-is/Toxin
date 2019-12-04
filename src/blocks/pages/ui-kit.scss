@@ -262,6 +262,20 @@
     margin-bottom: 40px;
 }
 
+.headersAndFooters__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    padding-bottom: 130px; 
+    background: #F4F4F6;
+}
+.headersAndFooters__elementContainer{
+    margin-bottom: 40px;
+    &:last-child {
+        margin-bottom: none;
+    }
+}
 
 
 
@@ -294,3 +308,5 @@
 @import '../base_blocks/cards/entryCard/entryCard.scss';
 @import '../base_blocks/cards/roomReservation/roomReservation.scss';
 @import '../base_blocks/cards/roomPreview/roomPreview.scss';
+@import '../base_blocks/header/header.scss';
+@import '../base_blocks/footers/footerWithNav/footerWithNav.scss';

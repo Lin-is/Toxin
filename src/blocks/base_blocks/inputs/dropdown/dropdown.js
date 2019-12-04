@@ -8,14 +8,16 @@ for (let elem of elements) {
 for(let elem of inputs){
     elem.onchange = function(){
         if (elem.checked) {
-            $(elem).parent().parent().children('.dropdown__lablesContainer').children('.dropdown__conditionLabel').text('expanded')
-           if ($(elem).parents('.dropdown_short').length) {
+            if ($(elem).parent().parent().children('.dropdown__lablesContainer').children('.dropdown__conditionLabel').text() != '') {
+                $(elem).parent().parent().children('.dropdown__lablesContainer').children('.dropdown__conditionLabel').text('expanded')}
+            if ($(elem).parents('.dropdown_short').length) {
                 $(elem).parent().parent().css('height', '182px')
-           } else {
+            } else {
                 $(elem).parent().parent().css('height', '222px')
-           }
+            }
         } else {
-            $(elem).parent().parent().children('.dropdown__lablesContainer').children('.dropdown__conditionLabel').text('default')
+            if ($(elem).parent().parent().children('.dropdown__lablesContainer').children('.dropdown__conditionLabel').text() != ''){
+                $(elem).parent().parent().children('.dropdown__lablesContainer').children('.dropdown__conditionLabel').text('default')}
             $(elem).parent().parent().css('height', '64px')
         }
     }

@@ -13,6 +13,7 @@ import '../base_blocks/cards/registrationCard/registrationCard'
 import '../base_blocks/cards/entryCard/entryCard'
 import '../base_blocks/cards/roomReservation/roomReservation'
 import '../base_blocks/cards/roomPreview/roomPreview'
+import '../base_blocks/header/header'
 import 'nouislider'
 
 

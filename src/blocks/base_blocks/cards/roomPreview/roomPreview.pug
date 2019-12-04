@@ -5,7 +5,7 @@ mixin roomPreview (id, lux, price, roomNumber, reviewNumber, ...src)
     
         div(class='roomPreview__photoSliderContainer')
             each item, index in src 
-                    input(class='roomPreview__sliderRadioSwitcher' type='radio' name='roomPreview__sliderRadioSwitcher-' + id  id='roomPreview__sliderRadioSwitcher-' + id + '-' + (index + 1))
+                    input(checked= index==0 ? 'checked': 'false' class='roomPreview__sliderRadioSwitcher' type='radio' name='roomPreview__sliderRadioSwitcher-' + id  id='roomPreview__sliderRadioSwitcher-' + id + '-' + (index + 1))
             div(class='roomPreview__slidesContainer')
                 each item, index in src 
                     img(class='roomPreview__photo' alt= 'photo', src= item, id='roomPreview__photo-' + id + '-' + (index + 1) )

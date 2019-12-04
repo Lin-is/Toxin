@@ -10,6 +10,9 @@ console.log(dateDropdowns)
 for(let elem of dateDropdowns){
     $('#' + elem.getAttribute('id')).datepicker({
         classes: 'added_datepicker',
+        nextHtml: '<i class="material-icons">arrow_forward</i>',
+        prevHtml: '<i class="material-icons">arrow_back</i>',
+        clearButton: true,
     })
     console.log('SSSSSSSSSSS')
 }
