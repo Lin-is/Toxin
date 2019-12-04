@@ -1,3 +1,17 @@
+.page__container {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.page__containerLogo {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 30px;
+    left: 30px;
+
+}
+
 .colorsAndType__container {
     height: 900px;
     width: 100%;
@@ -6,6 +20,7 @@
     padding-top: 145px;
     padding-left: 150px;
     background-color: #FFFFFF;
+    margin-top: 50px;
 }
 
 .colorsAndType__palette {
@@ -45,8 +60,7 @@
     display: flex;
     flex-direction: column;
     background-color: #FFFFFF;
-    padding-left: 140px;
-    padding-right: 140px;
+    padding: 140px 140px 0px;
 }
 
 .formElements__buttonsNatureContainer {
@@ -246,7 +260,7 @@
 
 .cards__container {
     width: 100%;
-    background-color: #E5E5E5;
+    background-color: #F4F4F6;
     padding: 150px 140px 140px;
     display: flex;
     flex-direction: row;
@@ -261,6 +275,8 @@
 .cards__elementContainer {
     margin-bottom: 40px;
 }
+
+
 
 .headersAndFooters__container {
     width: 100%;
@@ -310,3 +326,4 @@
 @import '../base_blocks/cards/roomPreview/roomPreview.scss';
 @import '../base_blocks/header/header.scss';
 @import '../base_blocks/footers/footerWithNav/footerWithNav.scss';
+@import '../base_blocks/footers/footerWithLogo/footerWithLogo.scss';

@@ -11,33 +11,33 @@ mixin footerWithNav (rus)
         -var logoText = "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
         -var placeholder = "Your email address"
     footer(class="footerWithNav__container")
-        div(class='footer__navContaner')
-            div(class="footer__logoContainer")
-                img(class="footer__logoImg" src="/assets/img/Logo.png" alt="logo")
-                p(class="footer__logoText")= logoText
-            nav(class="footer_navigationContainer")
-                ul(class="footer__mainNavList")
+        div(class='footerWithNav__navContaner')
+            div(class="footerWithNav__logoContainer")
+                img(class="footerWithNav__logoImg" src="/assets/img/Logo.png" alt="logo")
+                p(class="footerWithNav__logoText")= logoText
+            nav(class="footerWithNav_navigationContainer")
+                ul(class="footerWithNav__mainNavList")
                     -for (var i = 0; i < navigation.length-1; i++)
-                        li(class="footer__mainNavListItem")
-                            ul(class="footer__navSectionList")
+                        li(class="footerWithNav__mainNavListItem")
+                            ul(class="footerWithNav__navSectionList")
                                 -for (var j = 0; j < navigation[i].length; j++)
-                                    li(class="footer__navSectionListItem")
-                                        a(class="footer__navSectionListItemText" href='#')= navigation[i][j]
-                    li(class='footer__mainNavListItem')
-                        div(class='footer__subscriptionContainer')
-                            h3(class='footer__subscriptionFieldHeader')= navigation[3][0]
-                            p(class="footer__subscriptionText")= navigation[3][1]
-                            div(class='footer__textFieldSubscriptionContainer')
+                                    li(class="footerWithNav__navSectionListItem")
+                                        a(class="footerWithNav__navSectionListItemText" href='#')= navigation[i][j]
+                    li(class='footerWithNav__mainNavListItem')
+                        div(class='footerWithNav__subscriptionContainer')
+                            h3(class='footerWithNav__subscriptionFieldHeader')= navigation[3][0]
+                            p(class="footerWithNav__subscriptionText")= navigation[3][1]
+                            div(class='footerWithNav__textFieldSubscriptionContainer')
                                 +textFieldSubscription(placeholder, '')
                 
-        div(class='footer__copyrightContainer')
-            p(class='footer_copyright__text')= copyright
-            div(class='footer__socialButtonsContainer')
-                a(class='footer__socialLink' href='#')
-                    i(class="footer__socialIcon fab fa-twitter")
-                a(class='footer__socialLink' href='#')
-                    i(class="footer__socialIcon fab fa-facebook-square")
-                a(class='footer__socialLink' href='#')
-                    i(class="footer__socialIcon fab fa-instagram")
+        div(class='footerWithNav__copyrightContainer')
+            p(class='footerWithNav__copyrightText')= copyright
+            div(class='footerWithNav__socialButtonsContainer')
+                a(class='footerWithNav__socialLink' href='#')
+                    i(class="footerWithNav__socialIcon fab fa-twitter")
+                a(class='footerWithNav__socialLink' href='#')
+                    i(class="footerWithNav__socialIcon fab fa-facebook-square")
+                a(class='footerWithNav__socialLink' href='#')
+                    i(class="footerWithNav__socialIcon fab fa-instagram")
                         
             

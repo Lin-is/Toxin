@@ -8,29 +8,29 @@
     flex-wrap: wrap;
 }
 
-.footer__navContaner{
+.footerWithNav__navContaner{
     width: 100%;
     height: 100%;
     padding: 100px 140px;
     box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
     display: flex;
 }
-.footer__logoContainer {
+.footerWithNav__logoContainer {
     margin-right: 40px;
 }
 
-.footer__logoImg {
+.footerWithNav__logoImg {
     width: 106px;
     height: 40px;
     margin-bottom: 20px;
 
 }
-.footer__logoText {
+.footerWithNav__logoText {
     width: 260px;
     line-height: 24px;
 }
 
-.footer__mainNavList{
+.footerWithNav__mainNavList{
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -39,7 +39,7 @@
 
 }
 
-.footer_navigationContainer {
+.footerWithNav_navigationContainer {
     display: flex;
     width: calc(100% - 300px);
     flex-direction: row;
@@ -48,7 +48,7 @@
     flex-wrap: nowrap;
 }
 
-.footer__navSectionListItem {
+.footerWithNav__navSectionListItem {
     color: rgba(31, 32, 65, 0.5);
     margin-bottom: 20px;
     &:first-child {
@@ -63,7 +63,7 @@
         margin-bottom: none;
     }
 }
-.footer__navSectionListItemText{
+.footerWithNav__navSectionListItemText{
     font-family: Montserrat;
     font-style: normal;
     font-weight: inherit;
@@ -73,17 +73,17 @@
     color: inherit; 
 }
 
-.footer__subscriptionContainer {
+.footerWithNav__subscriptionContainer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-.footer__subscriptionFieldHeader{
+.footerWithNav__subscriptionFieldHeader{
     margin-bottom: 21px;
     font-size: 12px;
     line-height: 15px;
 }
-.footer__subscriptionText{
+.footerWithNav__subscriptionText{
     display: flex;
     width: 260px;
     word-wrap: normal;
@@ -94,7 +94,7 @@
 }
 
 
-.footer__copyrightContainer{
+.footerWithNav__copyrightContainer{
     width: 100%;
     height: 70px;
     display: flex;
@@ -103,27 +103,33 @@
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     padding: 0px 140px;
 }
-.footer__socialButtonsContainer{
+.footerWithNav__socialButtonsContainer{
     display: flex;
     height: 100%;
     align-items: center;
 }
 
-.footer__socialLink {
+.footerWithNav__socialLink {
+    margin-left: 20px;
+    
     color: transparent;
     background-clip: text;
     background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    margin-left: 20px;
+    
     &:first-child {
         margin-left: none;
     }
 }
 
-.footer__socialIcon{
-    font-size: 24px;
-    line-height: 23px;
+.footerWithNav__socialIcon{
+    width: 24px;
+    height: 24px;
+
     display: flex;
     align-items: center;
     text-align: center;
+
+    font-size: 24px;
+    line-height: 23px;
     color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }

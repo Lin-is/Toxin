@@ -26,7 +26,7 @@ include ../base_blocks/cards/roomReservation/roomReservation.pug
 include ../base_blocks/cards/roomPreview/roomPreview.pug
 include ../base_blocks/header/header.pug
 include ../base_blocks/footers/footerWithNav/footerWithNav.pug
-//- include ../base_blocks/footers/footerWithLogo/footerWithLogo.pug
+include ../base_blocks/footers/footerWithLogo/footerWithLogo.pug
 
 <!DOCTYPE html>
 html(lang="en")
@@ -37,7 +37,8 @@ html(lang="en")
         link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
         title Document
     body 
-        div(class='colorsAndType__container')
+        div(class='colorsAndType__container page__container')
+            img(class='page__containerLogo' src='/assets/img/Group.png' alt='logo')
             div(class='colorsAndType__palette')
                 +colorItem('#1F2041', 'Dark Shade 100%', '#1F2041')
                 +colorItem('rgba(31, 32, 65, 0.75)', 'Dark Shade 75%', '#1F2041')
@@ -60,9 +61,10 @@ html(lang="en")
                     p(class='colorsAndType__fontExampleTag') body
                     p(class='colorsAndType__fontExampleText') This is the body text which is used for most of the design, like paragraphs, lists, etc.
         
-        div(class='formElements__container')
+        div(class='formElements__container page__container')
+            img(class='page__containerLogo' src='/assets/img/Group.png' alt='logo')
+
             div(class= 'formElements__buttonsNatureContainer')
-            
                 div(class= 'formElements__TypeContainer formElements__inputTypeContainer')
                     div(class='formElements__inputTypeElement')
                         +textField('Email', 'Text Field', 'text', 'default')
@@ -160,7 +162,8 @@ html(lang="en")
                         div(class='formElements__reviewFieldContainer')
                             +reviewField('Мурад Сарафанов', '5 дней назад', 'muradreview', '/assets/img/images.png', '11', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
         
-        div(class='cards__container') 
+        div(class='cards__container page__container') 
+            img(class='page__containerLogo' src='/assets/img/Group.png' alt='logo')
             div(class='cards__containersColumn') 
                 div(class='cards__elementContainer cards__roomSearchContainer')
                     +roomSearch('219')   
@@ -179,19 +182,16 @@ html(lang="en")
                     +roomPreview('840', false, '9 900', '840', '65', '/assets/img/room880.png', '/assets/img/room880-1.png', '/assets/img/room880-2.png', '/assets/img/room880-3.png')
 
 
-        div(class='headersAndFooters__container')
+        div(class='headersAndFooters__container page__container')
+            img(class='page__containerLogo' src='/assets/img/Group.png' alt='logo')
             div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
-                +header(false)
-            div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
-                +header(true)
+                +header(false, false)
             div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
                 +header(false, true, 'Cosmin Negoita')
             div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
-                +header(true, true, 'Людмила Перова')
-            div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
                 +footerWithNav(false)
             div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
-                +footerWithNav(true)
+                +footerWithLogo
 
 
 
