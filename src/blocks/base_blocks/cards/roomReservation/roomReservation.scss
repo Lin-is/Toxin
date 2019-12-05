@@ -45,17 +45,25 @@
     font-size: 14px;
 }
 .roomReservation__dateDropdownsContainer {
-    margin: 20px 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
+    height: 65px;
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
 }
+.roomReservation__dropdownContainer{
+    width: 100%;
+    height: 64px;
+    margin-bottom: 20px;
+}
 .roomReservation__totalPriceCalculation {
-    margin: 20px 0px;
+    margin-bottom: 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
+    
 }
 .roomReservation__pricePoint {
     position: relative;

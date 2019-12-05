@@ -1,6 +1,6 @@
 include ../../buttons/rateButton/rateButton.pug
 
-mixin roomPreview (id, lux, price, roomNumber, reviewNumber, href, ...src)
+mixin roomPreview (id, lux, score, price, roomNumber, reviewNumber, href, ...src)
     div(class='roomPreview__container')
     
         div(class='roomPreview__photoSliderContainer')
@@ -34,6 +34,6 @@ mixin roomPreview (id, lux, price, roomNumber, reviewNumber, href, ...src)
             p(class='roomPreview__priceText') #[span #{price}₽] в сутки
         div(class='roomPreview__ratingInfoContainer')
             div(class='roomPreview__rateButtonContainer')
-                +rateButton('room' + roomNumber)
+                +rateButton('room' + roomNumber, score)
             div(class='roomPreview__reviewNumberContainer')
                 p(class='roomPreview__reviewNumber') #[span #{reviewNumber}] Отзывов
