@@ -4,7 +4,7 @@ include ../../buttons/radioButton/radioButton.pug
 include ../../buttons/toggle/toggle.pug
 include ../../buttons/regularButton/regularButton.pug
 
-mixin registrationCard (id)
+mixin registrationCard (id, ...href)
     div(class='registrationCard__container')
         h1(class='registrationCard__header') Регистрация аккаунта
         div(class='registrationCard__personalDataContainer')
@@ -24,7 +24,7 @@ mixin registrationCard (id)
                 +textField('Пароль', 'registrationCard__textField-Password-' + id, '', 'password', '')
             +toggle('Получать спецпредложения', 'registrationCard__toggle-' + id, '1')
         div(class='registrationCard__buttonsContainer')
-            +regularButton('перейти к оплате', 'registrationCard__regularButton-' + id, '#', false, false)
+            +regularButton('перейти к оплате', 'registrationCard__regularButton-' + id, href[0], false, false)
             div(class='registrationCard__entryButtonContainer')
                 p(class='registrationCard__additionalText') Уже есть аккаунт на Toxin
-                +regularButton('войти', 'registrationCard__regularButton_short-' + id, '#', true, true)
+                +regularButton('войти', 'registrationCard__regularButton_short-' + id, href[1], true, true)

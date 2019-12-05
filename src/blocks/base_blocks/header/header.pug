@@ -1,13 +1,13 @@
 include ../buttons/regularButton/regularButton.pug
 
-mixin header (rus, loggedIn, userName)
+mixin header (rus, loggedIn, userName, ...href)
     if rus 
         -var menuPoints = ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения', 'войти', 'зарегистрироваться']
     else 
         -var menuPoints = ['Home', 'About Us', 'Services', 'Careers', 'News', 'Documentation', 'Login', 'REGISTER']
     
     header(class='header__container')
-        div(class='header__logoContainer')
+        a(class='header__logoContainer' href='./landingPage.html')
             img(class='header__logo' src='/assets/img/Logo.png')
         nav(class='header__navigationContainer')
             ul(class='header__menuList' lang= rus? 'ru':'en')
@@ -16,8 +16,8 @@ mixin header (rus, loggedIn, userName)
                         a(class='header__menuItemLink' href='#')= menuPoints[i]
             if !loggedIn
                 div(class='header__buttonsContainer')
-                    +regularButton(menuPoints[menuPoints.length-2], 'header__regularButton_short-entry', '#', true, true)
-                    +regularButton(menuPoints[menuPoints.length-1], 'header__regularButton-registration', '#', true, false)
+                    +regularButton(menuPoints[menuPoints.length-2], 'header__regularButton_short-entry', './signIn.html', true, true)
+                    +regularButton(menuPoints[menuPoints.length-1], 'header__regularButton-registration', './registration.html', true, false)
             else 
                 div(class='header__loggedInPanel')
                     p(class='header__userName')= userName

@@ -1,7 +1,7 @@
 include ../../inputs/textField/textField.pug
 include ../../buttons/radioButton/radioButton.pug
 
-mixin entryCard (id)
+mixin entryCard (id, ...href)
     div(class='entryCard__container')
         h1(class='entryCard__header') Войти
         div(class='entryCard__entryDataContainer')
@@ -9,8 +9,8 @@ mixin entryCard (id)
                 +textField('Email', 'entryCard__textField-Email-' + id, '', 'email', '')
             div(class='entryCard__textFieldContainer')
                 +textField('Пароль', 'entryCard__textField-Password-' + id, '', 'password', '')
-        +regularButton('войти', 'entryCard__regularButton-' + id, '#', false, false)
+        +regularButton('войти', 'entryCard__regularButton-' + id, href[0], false, false)
         div(class='entryCard__createAccountButtonContainer')
             p(class='entryCard__additionalText') Нет аккаунта на Toxin?
-            +regularButton('создать', 'entryCard__regularButton_short-' + id, '#', true, true)
+            +regularButton('создать', 'entryCard__regularButton_short-' + id, href[1], true, true)
             

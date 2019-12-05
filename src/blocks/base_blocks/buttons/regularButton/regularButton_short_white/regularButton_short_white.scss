@@ -1,8 +1,6 @@
 .regularButton_short_white__container {
-    // width: 99px;
     height: 44px;
-    padding: 2px;
-    color: #FFFFFF;
+    width: 99px;
     background: linear-gradient(180deg, rgb(188, 156, 255) 0%, #8BA4F9 100%);
     border-radius: 22px;
     &:hover {
@@ -17,6 +15,8 @@
     justify-content: center;
     background: #FFFFFF;
     border-radius: 22px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
 }
 .regularButton_short_white__text {
     text-transform: uppercase;

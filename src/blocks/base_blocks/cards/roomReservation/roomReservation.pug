@@ -2,7 +2,7 @@ include ../../inputs/dateDropdown/dateDropdown.pug
 include ../../inputs/dropdown/dropdown.pug
 include ../../buttons/regularButton/regularButton.pug
 
-mixin roomReservation (id, lux, price, roomNumber)
+mixin roomReservation (id, lux, price, roomNumber, href)
     div(class='roomReservation__container')
         header(class='roomReservation__headerArea')
             div(class='roomReservation__roomNumberLabels')
@@ -30,5 +30,5 @@ mixin roomReservation (id, lux, price, roomNumber)
                 div(class='roomReservation__separateLine')
                 h2(class='roomReservation__totalPriceSumNumber') 38 081₽
         div(class='roomReservation__regularButtonContainer')
-            +regularButton('забронировать', 'roomReservation__regularButton-' + id, '#', false, false)
+            +regularButton('забронировать', 'roomReservation__regularButton-' + id, href, false, false)
 

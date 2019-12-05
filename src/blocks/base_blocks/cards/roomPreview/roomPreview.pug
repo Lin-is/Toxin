@@ -1,6 +1,6 @@
 include ../../buttons/rateButton/rateButton.pug
 
-mixin roomPreview (id, lux, price, roomNumber, reviewNumber, ...src)
+mixin roomPreview (id, lux, price, roomNumber, reviewNumber, href, ...src)
     div(class='roomPreview__container')
     
         div(class='roomPreview__photoSliderContainer')
@@ -27,7 +27,7 @@ mixin roomPreview (id, lux, price, roomNumber, reviewNumber, ...src)
             
 
         header(class='roomPreview__headerArea')
-            div(class='roomPreview__roomNumberLabels')
+            a(class='roomPreview__roomNumberLabels' href= href)
                 h1(class='roomPreview__headerText') #[span № ]#{roomNumber}
                 if lux
                     h3(class='roomPreview__roomNumberLux') люкс

@@ -10,17 +10,27 @@
     padding-left: 140px;
     padding-right: 140px;
     align-items: center;
+    z-index: 1;
+    
 }
 
 .header__logo{
     width: 106px;
     height: 40px;
 }
+
+.header__logoContainer {
+    background-color: transparent;
+
+}
 .header__navigationContainer{
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    z-index: 10;
 }
 
 .header__navigationContainer .regularButton_short__link,
