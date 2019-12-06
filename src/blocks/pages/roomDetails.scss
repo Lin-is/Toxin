@@ -56,14 +56,6 @@
     align-items: flex-end;
     // align-items: baseline;
 }
-.roomDetails__pieDiagramBody {
-    margin-right: 45px;
-    width: 120px;
-    height: 120px;
-    border: 5px solid black;
-    border-radius: 50%;
-}
-
 .roomDetails__pieDiagramLegendListItem {
     position: relative;
     font-family: Montserrat;
@@ -149,3 +141,5 @@
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
 }
+
+@import "../base_blocks/pieDiagram/pieDiagram.scss";

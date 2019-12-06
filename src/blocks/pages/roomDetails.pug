@@ -3,6 +3,7 @@ include ../base_blocks/roomFeature/roomFeature.pug
 include ../base_blocks/cards/roomReservation/roomReservation.pug
 include ../base_blocks/reviewField/reviewField.pug
 include ../base_blocks/bulletList/bulletList.pug
+include ../base_blocks/pieDiagram/pieDiagram.pug
 include ../base_blocks/footers/footerWithNav/footerWithNav.pug
 
 <!DOCTYPE html>
@@ -36,7 +37,7 @@ html(lang="ru")
                         div(class='roomDetails__pieDiagramContainer')
                             h2(class='roomDetails__containerHeader') Впечатления от номера
                             div(class='roomDetails__pieDiagramAndLegend')
-                                div(class='roomDetails__pieDiagramBody')
+                                +pieDiagram('520', '260', '260', '0')
                                 div(class='roomDetails__pieDiagramLegend')
                                     ul(class='roomDetails__pieDiagramLegendList')
                                         li(class='roomDetails__pieDiagramLegendListItem') Великолепно
