@@ -1,56 +1,82 @@
 mixin pieDiagram (excellent, good, normal, disappointed)
-    -var roundLength = 2 * 60 * Math.PI
+    -var mainR = 100/(2 * Math.PI)
+    -var innerR = mainR - 2  /**радиус **/
+    -var roundLength = 100
+    -var innerRoundLength = 2 * Math.PI * innerR
 
     -var sum = Number(excellent) + Number(good) + Number(normal) + Number(disappointed)
+
     if (sum != 0)
-        -var excellentDash = ((roundLength * excellent) / sum)
-        -var excellentDash1 = excellentDash - 8
-        -var excellentDashempty = roundLength - excellentDash + 2 
+        -var excellentDash = ((roundLength * Number(excellent)) / sum)    
+        -var excellentDash1 = excellentDash - 1
+        -var excellentDashempty = roundLength - excellentDash + 1
 
-        -var goodDash = (roundLength * good) / sum
-        -var goodDash1 = goodDash - 8
-        -var goodDashempty = roundLength - goodDash + 2
+        -var goodDash = (roundLength * Number(good)) / sum
+        -var goodDash1 = goodDash - 1
+        -var goodDashempty = roundLength - goodDash + 1
 
-        -var normalDash = (roundLength * normal) / sum
-        -var normalDash1 = normalDash - 8
-        -var normalDashempty = roundLength - normalDash + 2
+        -var normalDash = (roundLength * Number(normal)) / sum
+        -var normalDash1 = normalDash - 1
+        -var normalDashempty = roundLength - normalDash + 1
 
-        -var disappointedDash = (roundLength * disappointed) / sum
-        -var disappointedDash1 = disappointedDash - 8
-        -var disappointedDashempty = roundLength - disappointedDash + 2
+        -var disappointedDash = (roundLength * Number(disappointed)) / sum
+        -var disappointedDash1 = disappointedDash - 1
+        -var disappointedDashempty = roundLength - disappointedDash + 1
+
+        -var innerExcellentDash = ((innerRoundLength * Number(excellent)) / sum)  
+        -var innerExcellentDashempty = innerRoundLength - innerExcellentDash 
+
+        -var innerGoodDash = ((innerRoundLength * Number(good)) / sum) 
+        -var innerGoodDashempty = innerRoundLength - innerGoodDash 
+
+        -var innerNormalDash = ((innerRoundLength * Number(normal)) / sum)  
+        -var innerNormalDashempty = innerRoundLength - innerNormalDash 
+
+        -var innerDisappointedDash = ((innerRoundLength * Number(disappointed)) / sum) 
+        -var innerDisappointedDashempty = innerRoundLength - innerDisappointedDash
 
 
     //- p= roundLength
-    //- p= sum 
-    //- p= excellentDash
-    //- p= excellentDashempty
+    //- p= innerNormalDashempty
+    //- p= innerNormalDash
+    //- p= innerRoundLenghth
 
     div(class='pieDiagram__container')
-        svg(clss='pieDiagram__diagramBody' viewBox='0 0 120px 120px')
+            svg(clss='pieDiagram__diagramBody' width='120' height='120' viewBox='0 0 36 36')
 
-            linearGradient(id='pieDiagram__gradient_excellent')
-                stop(offset="0%" stop-color="#FFE39C")
-                stop(offset="100%" stop-color="#FFBA9C")
+                linearGradient(id='pieDiagram__gradient_excellent' x1='0' y1='0%' x2='0' y2='100%')
+                    stop(offset="0%" stop-color="#FFE39C")
+                    stop(offset="100%" stop-color="#FFBA9C")
 
-            linearGradient(id='pieDiagram__gradient_good')
-                stop(offset="0%" stop-color="#6FCF97")
-                stop(offset="100%" stop-color="#66D2EA")
+                linearGradient(id='pieDiagram__gradient_good' x1='0' y1='50%' x2='0' y2='100%')
+                    stop(offset="0%" stop-color="#6FCF97")
+                    stop(offset="100%" stop-color="#66D2EA")
+                
+                linearGradient(id='pieDiagram__gradient_normal' x1='0' y1='0%' x2='0' y2='50%')
+                    stop(offset="0%" stop-color="#BC9CFF")
+                    stop(offset="100%" stop-color="#8BA4F9")
+
+                linearGradient(id='pieDiagram__gradient_disappointed' x1='0' y1='0%' x2='0' y2='100%')
+                    stop(offset="0%" stop-color="#3D4975")
+                    stop(offset="100%" stop-color="#919191")
+
+                circle(class='pieDiagram__pieDiagramCircle pieDiagram__pieDiagramCircle_excellent' cx="18" cy="18" r= mainR  fill="none" stroke="url(#pieDiagram__gradient_excellent)" stroke-width="3" stroke-dasharray= excellentDash1 + ' ' + excellentDashempty stroke-dashoffset='-25' )
+                circle(class='pieDiagram__pieDiagramCircleInner pieDiagram__pieDiagramCircle_excellentInner' cx="18" cy="18" r= innerR  fill="none" stroke="#FFFFFF" stroke-width="4" stroke-dasharray= innerExcellentDash + ' ' + innerExcellentDashempty stroke-dashoffset='-21' )
+                g(class="pieDiagram__text pieDiagram__text_excellent")
+                    text(x="50%" y="55%" class="pieDiagram__number")= excellent
+                    text(x="50%" y="55%" class="pieDiagram__label") голосов 
+        
+                circle(class='pieDiagram__pieDiagramCircle pieDiagram__pieDiagramCircle_good' cx="18" cy="18" r= mainR fill="none" stroke='url(#pieDiagram__gradient_good)' stroke-width= '3' stroke-dasharray= goodDash1 + ' ' + goodDashempty stroke-dashoffset='0') 
+                circle(class='pieDiagram__pieDiagramCircleInner pieDiagram__pieDiagramCircle_goodInner' cx="18" cy="18" r= innerR fill="none" stroke='#FFFFFF' stroke-width= '4' stroke-dasharray= innerGoodDash + ' ' + innerGoodDashempty stroke-dashoffset='0')
+                g(class="pieDiagram__text pieDiagram__text_good")
+                    text(x="50%" y="55%" class="pieDiagram__number")= good
+                    text(x="50%" y="55%" class="pieDiagram__label") голосов
             
-            linearGradient(id='pieDiagram__gradient_normal')
-                stop(offset="0%" stop-color="#BC9CFF")
-                stop(offset="100%" stop-color="#8BA4F9")
+                circle(class='pieDiagram__pieDiagramCircle pieDiagram__pieDiagramCircle_normal' cx="18" cy="18" r= mainR fill="none" stroke='url(#pieDiagram__gradient_normal)' stroke-width= '3' stroke-dasharray= normalDash1 + ' ' + normalDashempty stroke-dashoffset='25')
+                circle(class='pieDiagram__pieDiagramCircleInner pieDiagram__pieDiagramCircle_normalInner' cx="18" cy="18" r= innerR fill="none" stroke='#FFFFFF' stroke-width= '4' stroke-dasharray= innerNormalDash + ' ' + innerNormalDashempty stroke-dashoffset='22')
+                g(class="pieDiagram__text pieDiagram__text_normal")
+                    text(x="50%" y="55%" class="pieDiagram__number")= normal
+                    text(x="50%" y="55%" class="pieDiagram__label") голосов
 
-            linearGradient(id='pieDiagram__gradient_disappointed')
-                stop(offset="0%" stop-color="#919191")
-                stop(offset="100%" stop-color="#3D4975")
 
-            div(class='pieDiagram__circleContainer')
-                svg(clss='pieDiagram__diagramBody' viewBox='0 0 120px 120px')
-                    circle(class='pieDiagram__pieDiagramCircle pieDiagram__pieDiagramCircle_excellent' cx="60" cy="60" r="45"  fill="none" stroke="url(#pieDiagram__gradient_excellent)" stroke-width="15px" stroke-dasharray= excellentDash1 + ' ' + excellentDashempty stroke-dashoffset='-35' )
-            div(class='pieDiagram__circleContainer')
-                svg(clss='pieDiagram__diagramBody' viewBox='0 0 120px 120px')
-                    circle(class='pieDiagram__pieDiagramCircle pieDiagram__pieDiagramCircle_good' cx="60" cy="60" r="45" fill="none" stroke='url(#pieDiagram__gradient_good)' stroke-width= '15px' stroke-dasharray= goodDash1 + ' ' + goodDashempty stroke-dashoffset='5')
-            div(class='pieDiagram__circleContainer')
-                svg(clss='pieDiagram__diagramBody' viewBox='0 0 120px 120px')
-                    circle(class='pieDiagram__pieDiagramCircle pieDiagram__pieDiagramCircle_normal' cx="60" cy="60" r="45" fill="none" stroke='url(#pieDiagram__gradient_normal)' stroke-width= '15px' stroke-dasharray= normalDash1 + ' ' + normalDashempty stroke-dashoffset='90')
             //- circle(class='pieDiagram__pieDiagramCircle_disappointed' cx="60" cy="60" r="55" fill="none" stroke='url(#pieDiagram__gradient_disappointed)' stroke-width= '5px' stroke-dasharray= disappointedDash1 + ' ' + disappointedDashempty stroke-dashoffset= '-75')
