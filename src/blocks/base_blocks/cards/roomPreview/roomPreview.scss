@@ -215,7 +215,7 @@
     justify-content: space-between;
     align-items: baseline;
     max-width: 100%;
-    margin: 20px 20px 0px;
+    margin: 21px 20px 0px;
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(31, 32, 65, 0.1);  
 }
@@ -225,7 +225,8 @@
     align-items: baseline;
 }
 .roomPreview__headerText span {
-    font-size: 14px;
+    font-size: 12px;
+    margin-right: 3px;
 }
 .roomPreview__roomNumberLux {
     line-height: 100%;
@@ -238,6 +239,10 @@
     color: rgba(31, 32, 65, 0.5);
     font-size: 12px;
 }
+.roomPreview__headerText{
+    font-size: 18px;
+    line-height: 20px;
+}
 .roomPreview__priceText span {
     font-weight: bold;
     font-size: 14px;
@@ -249,7 +254,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 20px 20px;
+    margin: 10px 20px 18px;
 }
 
 .roomPreview__reviewNumber {

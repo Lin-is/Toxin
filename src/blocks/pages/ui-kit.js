@@ -17,3 +17,5 @@ import '../base_blocks/header/header'
 import 'nouislider'
 
 
+// $('.cards__air-datepickerContainer').datepicker().data('datepicker').startDate(new Date(2019, 7, 8));
+

@@ -28,7 +28,7 @@
     position: relative;
     cursor: pointer;
     background-color: #FFFFFF;
-    padding: 15px;
+    padding: 14px 15px 16px;
     z-index: 6;
     &::before {
         height: 44px;
@@ -36,8 +36,8 @@
         font-family: 'Material Icons';
         content: 'expand_more';
         position: absolute;
-        top: 0px;
-        right: 0px;
+        top: -1.5px;
+        right: 1.5px;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -9,6 +9,7 @@
 .textField__labelsContainer {
     width: 100%;
     display: flex;
+    position: relative;
     justify-content: space-between;
     margin-bottom: 5px;
 }
@@ -43,6 +44,9 @@
 }
 
 .textField__conditionLabel {
+    position: absolute;
+    top: -2px;
+    right: 0px;
     color: rgba(31, 32, 65, 0.5);
     font-weight: normal;
 }

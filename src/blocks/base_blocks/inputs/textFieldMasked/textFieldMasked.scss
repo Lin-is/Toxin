@@ -1,7 +1,7 @@
 .textFieldMasked__container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
     width: 320px;
     height: 67px;
 }
@@ -10,6 +10,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
 }
 
 .textFieldMasked__input {
