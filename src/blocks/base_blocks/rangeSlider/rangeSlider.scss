@@ -50,19 +50,13 @@
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     border-radius: 3px;
 }
-.noUi-touch-area {
-    margin: 0px;
-    width: 12px;
-    height: 12px;
-    background: transparent;
-    top: -12px;
-    box-sizing: content-box;
-}
+
 
 .noUi-handle {
     padding: 0px;
-    width: 12px !important; 
-    height: 12px !important;
+    // width: 12px !important; 
+    width: 45.3977982068% !important;
+    height: 0.75rem !important;
     box-shadow: none;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     border: 2px solid #FFFFFF;
@@ -74,15 +68,23 @@
     //background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 }
 
+
+
+.noUi-touch-area {
+    margin: 0px;
+    width: 150%;
+    height: 150%;
+    background: transparent !important;
+    top: -12px;
+    box-sizing: content-box;
+}
+
 .noUi-handle:before,
 .noUi-handle:after {
     display: none;
 }
 
-.noUi-horizontal .noUi-handle {
-    top: -5px;
-}
-html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
-    left: auto;
-    right: -7px;
-}
+ .noUi-horizontal .noUi-handle {
+     top: -5px;
+     right: -12px;
+ }

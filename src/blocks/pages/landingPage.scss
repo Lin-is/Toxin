@@ -5,12 +5,19 @@
     background-color: #FFFFFF;
     background: url('/assets/img/image3.jpg') no-repeat top center;
     background-size: 100% 100%;
-}
 
+}
+.landingPage__container{
+    width: 100%;
+    max-width: 1440px;
+    position: relative;
+}
 .landingPage__roomSearchContainer {
     position: absolute;
     top: 70px;
     left: 140px;
+    width: 26.3888888889%;
+    max-width: 380px;
 }
 
 .landingPage__text{

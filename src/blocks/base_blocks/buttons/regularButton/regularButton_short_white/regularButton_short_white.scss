@@ -1,6 +1,7 @@
 .regularButton_short_white__container {
     height: 44px;
-    // width: 99px;
+    // max-width: 99px;
+
     background: linear-gradient(180deg, rgb(188, 156, 255) 0%, #8BA4F9 100%);
     border-radius: 22px;
     &:hover {
@@ -21,7 +22,7 @@
 .regularButton_short_white__text {
     text-transform: uppercase;
     color: #BC9CFF;
-    margin-right: 18px;
-    margin-left: 18px;
+    margin-right: 1.125rem;
+    margin-left: 1.125rem;
     white-space: nowrap;
 }

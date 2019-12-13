@@ -1,12 +1,13 @@
 .radioButton__container {
     display: flex;
     align-content: center;
+    // width: 100%;
 }
 .radioButton__input {
     display: none;
 }
 .radioButton__label {
-    height: 20px;
+    height: 1.25rem;
     display: flex;
     justify-content: start;
     align-items: center;
