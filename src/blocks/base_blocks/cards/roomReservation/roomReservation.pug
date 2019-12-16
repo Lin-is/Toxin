@@ -11,8 +11,7 @@ mixin roomReservation (id, lux, price, roomNumber, href)
                     h3(class='roomReservation__roomNumberLux') люкс
             p(class='roomReservation__priceText') #[span #{price}₽] в сутки
         div(class='roomReservation__dateDropdownsContainer')
-            +dateDropdown('прибытие', 'roomReservation__dateDropdown-arrival-' + id)
-            +dateDropdown('выезд', 'roomReservation__dateDropdown-leaving-' + id)
+            +dateDropdown('прибытие', 'выезд', 'roomReservation__dateDropdown-' + id)
         div(class='roomReservation__dropdownContainer')
             +dropdown('Сколько гостей', 'roomReservation__dropdown-' + id, false, 'гости', '', 'Взрослые', 'Дети', 'Младенцы')
         div(class='roomReservation__totalPriceCalculation')

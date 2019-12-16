@@ -1,3 +1,17 @@
 $main-background-color: #E5E5E5;
 $main-header-color: #1F2041;
 $main-text-color: rgba(31, 32, 65, 0.75);
+
+$base-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$base-gradient-25: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+$base-gradient-50: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+
+$add-gradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+
+$colored-text-color: #BC9CFF;
+$colored-text-accent: #FFFFFF;
+
+
+$text-color-100: #1F2041;
+$text-color-75: rgba(31, 32, 65, 0.75);
+$text-color-50:  rgba(31, 32, 65, 0.5);

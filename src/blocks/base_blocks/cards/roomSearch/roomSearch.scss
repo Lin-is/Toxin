@@ -26,17 +26,13 @@
     line-height: 1.875rem;
 }
 
-.roomSearch__dateDropdownsContainer {
-    display: flex;
-    flex-direction: row;
+.roomSearch__dateDropdownContainer {
+    // display: flex;
+    // flex-direction: row;
     width: 100%;
-    justify-content: space-between;
+    // justify-content: space-between;
     // margin: 20px 0px;
     margin: 5.2631578947% 0%;
-}
-.roomSearch__dateDropdownContainer{
-    width: 46.875%;
-    max-width: 150px;
 }
 
 .roomSearch__dropdownContainer {
