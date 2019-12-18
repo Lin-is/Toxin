@@ -6,6 +6,9 @@ body {
 .page__container {
     margin-bottom: 50px;
     position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .page__containerLogo {
