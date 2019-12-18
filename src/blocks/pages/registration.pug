@@ -13,5 +13,6 @@ html(lang="en")
     body
         +header(true, false)
         main(class='registration__mainContainer')
-            +registrationCard('111', '#', './signIn.html')
+            div(class="registration__cardContainer")
+                +registrationCard('111', '#', './signIn.html')
         +footerWithNav(true)

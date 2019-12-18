@@ -27,4 +27,5 @@ mixin registrationCard (id, ...href)
             +regularButton('перейти к оплате', 'registrationCard__regularButton-' + id, href[0], false, false)
             div(class='registrationCard__entryButtonContainer')
                 p(class='registrationCard__additionalText') Уже есть аккаунт на Toxin
-                +regularButton('войти', 'registrationCard__regularButton_short-' + id, href[1], true, true)
+                div(class='registrationCard__entryRegularButtonContainer')
+                    +regularButton('войти', 'registrationCard__regularButton_short-' + id, href[1], true, true)

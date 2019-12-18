@@ -3,10 +3,9 @@ include ../../inputs/dropdown/dropdown.pug
 include ../../buttons/regularButton/regularButton.pug
 mixin roomSearch (id, href)
     div(class='roomSearch__container')
-        h1(class='roomSearch__header') Найдём номера под #[br] ваши пожелания
-        div(class='roomSearch__dateDropdownsContainer')
-            +dateDropdown('прибытие', 'roomSearch__dateDropdown-arrival-' + id)
-            +dateDropdown('выезд', 'roomSearch__dateDropdown-leaving-' + id)
+        h1(class='roomSearch__header') Найдём номера под ваши пожелания
+        div(class='roomSearch__dateDropdownContainer')
+            +dateDropdown('прибытие', 'выезд', 'roomSearch__dateDropdown-arrival-' + id)
         div(class='roomSearch__dropdownContainer')
             +dropdown('Сколько гостей', 'roomSearch__dropdown-' + id, false, 'гости', '', 'Взрослые', 'Дети', 'Младенцы')
         div(class='roomSearch__regularButtonContainer')

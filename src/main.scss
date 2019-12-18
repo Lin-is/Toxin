@@ -1,6 +1,8 @@
 @import "blocks/base_blocks/scss-basic/vars.scss";
 @import "../node_modules/nouislider/distribute/nouislider.css";
-@import "../node_modules/air-datepicker/dist/css/datepicker.css";
+
+// @import "../node_modules/air-datepicker/dist/css/datepicker.css";
+@import "blocks/base_blocks/scss-basic/airDatepicker.scss";
 @import "./all.css";
 @import "blocks/base_blocks/scss-basic/reset.scss";
 @import "blocks/pages/ui-kit.scss";

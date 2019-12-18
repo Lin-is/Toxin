@@ -1,14 +1,21 @@
 /*! not finished, something wrong with placeholder */
 .dateDropdown__container {
-    width: 150px;
-    height: 57px;
+    max-width: 320px;
+    width: 100%;
+    // height: 57px;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    
 }
 
-.dateDropdown__input {
-    width: 150px;
+.dateDropdown__input, .dateDropdown__secondDateInput {
+    // width: 150px;
+    width: 100%;
     height: 44px;
-    padding-left: 15px;
+    // padding-left: 15px;
+    padding-left: 10%;
+    margin-top: 3.3333333333%;
     position: relative;
 
     border: 1px solid rgba(31, 32, 65, 0.25);
@@ -18,14 +25,14 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 0.875rem;
 
     &::placeholder{
         text-transform: uppercase;
         font-family: Montserrat;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
+        font-size: 0.875em;
         opacity: 1;
         color: rgba(31, 32, 65, 0.75);
         background: transparent;
@@ -33,25 +40,32 @@
 }
 
 .dateDropdown__label {
-    position: absolute;
-    width: 100%;
+    position: relative;
+    max-width: 150px;
+    width: 46.875%;
     height: 100%;
     display: flex;
-    align-items: center;
-    &::after {
+    flex-direction: column;
+    box-sizing: border-box;
+    // align-items: center;
+    &::after {         
         font-family: 'Material Icons';
         content: 'expand_more';
-        width: 44px;
+        // width: 44px;
+        width: 29.3333333333%;
         height: 44px;
         position: absolute;
         right: 1px;
-        top: 7px;
+        bottom: 0px;
         display: flex;
         justify-content: center;
         align-items: center;
         color: rgba(31, 32, 65, 0.5);
-        font-size: 24px;
-        line-height: 24px;
+        font-size: 1.5rem;
+        // line-height: 1.5rem;
+        line-height: 2.75rem;
+        vertical-align: center;
+        
         cursor: pointer;
         z-index: 1;
     }

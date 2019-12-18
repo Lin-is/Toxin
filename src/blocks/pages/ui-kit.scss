@@ -4,11 +4,10 @@ body {
 }
 
 .page__container {
-    margin-bottom: 50px;
-    position: relative;
     width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
+    // max-width: 1440px;
+    margin-bottom: 50px;
+    position: relative; 
 }
 
 .page__containerLogo {
@@ -291,20 +290,31 @@ body {
 
 
 .cards__container {
-    width: 100%;
+    // width: 100%;
     background-color: #F4F4F6;
-    padding: 150px 140px 140px;
+    padding: 9.87361769352% 9.21537651395% 9.21537651395%;//150px/1519.2px 140px/1519.2px 140px/1519.2px;
     display: flex;
     flex-direction: row;
+    // box-sizing: border-box;
 
 }
 .cards__containersColumn {
-    min-height: calc(646px + 40px + 374px);
+    // min-height: calc(646px + 40px + 374px);
+    width: 32.7586206897%;  //380px/1160px
+    max-width: 380px;
     display: flex;
     flex-direction: column;
-    margin-right: 40px;
+    box-sizing: border-box;
+    margin-right: 3.44827586207%;  //40px / 1160px
+    &:last-child{
+        width: 27.5862068966%;//320px/1160px
+        max-width: 320px;
+        margin-right: 0px;
+    }
 }
 .cards__elementContainer {
+    width: 100%;
+    max-width: 380px;
     margin-bottom: 40px;
 }
 
