@@ -9,11 +9,15 @@ mixin header (rus, loggedIn, userName, ...href)
     header(class='header__container')
         a(class='header__logoContainer' href='./landingPage.html')
             img(class='header__logo' src='/assets/img/Logo.png')
-        nav(class='header__navigationContainer')
-            ul(class='header__menuList' lang= rus? 'ru':'en')
+
+        div(class='header__menuContainer')
+            nav(class='header__navigationContainer')
                 -for (var i = 0; i < menuPoints.length - 2; i++)
-                    li(class='header__menuItem')
-                        a(class='header__menuItemLink' href='#')= menuPoints[i]
+                    a(class='header__menuItemLink' href='#' lang= rus? 'ru':'en')= menuPoints[i]
+                //- ul(class='header__menuList' lang= rus? 'ru':'en')
+                //-     -for (var i = 0; i < menuPoints.length - 2; i++)
+                //-         li(class='header__menuItem')
+                //-             a(class='header__menuItemLink' href='#')= menuPoints[i]
             if !loggedIn
                 div(class='header__buttonsContainer')
                     div(class='header__navigationButton header__navigationButtonContainer')
