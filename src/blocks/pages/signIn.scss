@@ -1,18 +1,33 @@
 .signIn__mainContainer{
     width: 100%;
-    padding: 45,7% 0px;
-    // padding-bottom: 163px;
+    padding: 163px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     
     background: url('/assets/img/image4.1.jpg') no-repeat top center;
-    // background-size: 100% 100%;
     background-size: 100% 100%;
 }
 .signIn__cardContainer {
-    width: 26.3888888889%;
+    width: 100%;
     max-width: 380px;
     min-width: 270px;
-    // margin: 0px auto;
+}
+
+
+
+//----------------------//
+//----MEDIA-ЗАПРОСЫ-----//
+//----------------------//
+
+
+@media (max-width: 1440px){
+    .signIn__mainContainer{
+        background-size: cover;
+    }
+}
+@media (max-width: 440px) {
+    .signIn__mainContainer{
+        padding: 163px 20px;
+    }
 }
