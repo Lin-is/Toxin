@@ -244,13 +244,35 @@
 }
 
 @media (max-width: 370px) {
+    .footerWithNav__logoContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footerWithNav__logoImg {
+        margin-bottom: 10px;
+    }
+    .footerWithNav__logoText {
+        text-align: center;
+    }
+
     .footerWithNav__mainNavListItem {
         flex: 1 0 100%;
-        justify-content: flex-start;
-        padding-left: 25%;
+        // justify-content: flex-start;
+        justify-content: center;
+        // padding-left: 25%;
+        text-align: center;
         &:last-of-type {
             padding-left: 0%;
         }
+    }
+    .footerWithNav__subscriptionContainer {
+        align-items: center;
+    }
+    // .footerWithNav__subscriptionFieldHeader {
+    //     margin-right: 55px;
+    // }
+    .footerWithNav__subscriptionText {
+        text-align: center;
     }
 }
 
