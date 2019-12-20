@@ -1,0 +1,33 @@
+include ../../inputs/dateDropdown/dateDropdown.pug
+include ../../inputs/dropdown/dropdown.pug
+include ../../buttons/regularButton/regularButton.pug
+
+mixin roomReservation (id, lux, price, roomNumber, href)
+    div(class='roomReservation__container')
+        header(class='roomReservation__headerArea')
+            div(class='roomReservation__roomNumberLabels')
+                h1(class='roomReservation__headerText') #[span № ]#{roomNumber}
+                if lux
+                    h3(class='roomReservation__roomNumberLux') люкс
+            p(class='roomReservation__priceText') #[span #{price}₽] в сутки
+        div(class='roomReservation__dateDropdownsContainer')
+            +dateDropdown('прибытие', 'выезд', 'roomReservation__dateDropdown-' + id)
+        div(class='roomReservation__dropdownContainer')
+            +dropdown('Сколько гостей', 'roomReservation__dropdown-' + id, false, 'гости', '', 'Взрослые', 'Дети', 'Младенцы')
+        div(class='roomReservation__totalPriceCalculation')
+            div(class='roomReservation__pricePoint')
+                p(class='roomReservation__totalRoomPrice') #[span(class='roomReservation__priceForCalc') #{price}]₽ x #[span(class='roomReservation__numDaysForCalc') 4 суток]
+                p(class='roomReservation__totalPricePoint') 39 960₽
+            div(class='roomReservation__pricePoint')
+                p(class='roomReservation__serviceFeeText') Сбор за услуги: #[span(class='roomReservation__serviceFeeAddText') скидка ] #[span(class='roomReservation__serviceFeePrice') 2 179]₽ #[span(class='roomReservation__pricePointHint')]
+                p(class='roomReservation__totalPricePoint') 0₽
+            div(class='roomReservation__pricePoint')
+                p(class='roomReservation__addServiceFeeText') Сбор за дополнительные услуги #[span(class='roomReservation__pricePointHint')]
+                p(class='roomReservation__totalPricePoint') 300₽
+            div(class='roomReservation__totalPrice')
+                h2(class='roomReservation__totalPriceSumText') Итого
+                div(class='roomReservation__separateLine')
+                h2(class='roomReservation__totalPriceSumNumber') 38 081₽
+        div(class='roomReservation__regularButtonContainer')
+            +regularButton('забронировать', 'roomReservation__regularButton-' + id, href, false, false)
+

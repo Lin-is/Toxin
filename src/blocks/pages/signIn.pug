@@ -1,0 +1,18 @@
+include ../base_blocks/header/header.pug
+include ../base_blocks/cards/entryCard/entryCard.pug
+include ../base_blocks/footers/footerWithNav/footerWithNav.pug
+
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        title Sign In
+    body
+        +header(true, false)
+        main(class='signIn__mainContainer')
+            div(class="signIn__cardContainer")
+                +entryCard('111', '#', './registration.html')
+        +footerWithNav(true)

@@ -1,0 +1,45 @@
+@import '../../buttons/regularButton/regularButton.scss';
+@import '../../inputs/dropdown/dropdown.scss';
+@import '../../inputs/dateDropdown/dateDropdown.scss';
+
+.roomSearch__container {
+    max-width: 380px;
+    width: 100%;
+    min-width: 270px;
+    //min-height: 374px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 10.5263157895% 7.8947368421% 0%;
+}
+
+.roomSearch__header {
+    display: block;
+    align-items: center;
+    // width: 320px;
+    width: 84.2105263158%;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+}
+
+.roomSearch__dateDropdownContainer {
+    // display: flex;
+    // flex-direction: row;
+    width: 100%;
+    // justify-content: space-between;
+    // margin: 20px 0px;
+    margin: 5.2631578947% 0%;
+}
+
+.roomSearch__dropdownContainer {
+    // margin-bottom: 30px;
+    margin: 2.3684210526% 0% 7.8947368421%;
+    // margin-top: 9px;
+}
+.roomSearch__regularButtonContainer{
+    margin-bottom: 29px;
+}

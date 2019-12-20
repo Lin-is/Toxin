@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+
+}
+.searchRoom__mainContainer {
+     width: 100%;
+    // height: 1357px;
+    // background: #FFFFFF;
+    display: flex;
+    padding: 30px 140px 70px;
+    background-color: #FFFFFF;
+    margin-bottom: 1px;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+    
+}
+
+.searchRoom__settingsContainer {
+    height: 100%;
+    width: 268px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 60px;
+}
+
+.searchRoom__settingsItemContainer {
+    width: 100%;
+    margin-bottom: 30px;
+    &:first-child {
+       margin-bottom: 27px;
+    }
+    &:nth-child(4) {
+        margin-bottom: 47px;
+    }
+    &:nth-last-child(3) {
+        margin-bottom: 25px;
+    }
+    &:nth-last-child(2) {
+        margin-bottom: 25px;
+    }
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+.searchRoom__settingsContainer .dropdown__container {
+    width: 266px;
+}
+
+.searchRoom__richCheckboContainerHeader , .searchRoom__checkboxContainerHeader {
+    margin-bottom: 17px;
+}
+
+.searchRoom__checkboxItem, .searchRoom__richcheckboxItem {
+    margin-bottom: 10px;
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+.searchRoom__roomCardsContainer{
+    height: 100%;
+    // width: 834px;
+    // width: calc(100% - 326px);
+    // background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+}
+
+
+.searchRoom__roomPreviewCardsContainer {
+    margin-top: 20px;
+    margin-bottom: 19px;
+    width: 100%;
+    // height: calc(100% - 166px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    // align-content: space-between;
+}
+
+.searchRoom__roomPreviewCardsContainer .roomPreview__container {
+    margin-bottom: 21px;
+    margin-right: 12px;
+    &:nth-child(3n) {
+        margin-right: 0px;
+    }
+}
+
+.searchRoom__paginationContainer {
+     width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+    // margin-bottom: 70px;
+}
+
+ 

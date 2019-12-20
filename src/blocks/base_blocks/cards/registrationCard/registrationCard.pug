@@ -1,0 +1,31 @@
+include ../../inputs/textField/textField.pug
+include ../../inputs/textFieldMasked/textFieldMasked.pug
+include ../../buttons/radioButton/radioButton.pug
+include ../../buttons/toggle/toggle.pug
+include ../../buttons/regularButton/regularButton.pug
+
+mixin registrationCard (id, ...href)
+    div(class='registrationCard__container')
+        h1(class='registrationCard__header') Регистрация аккаунта
+        div(class='registrationCard__personalDataContainer')
+            div(class='registrationCard__textFieldContainer')
+                +textField('Имя', 'registrationCard__textField-Name-' + id, '', 'text', '')
+            div(class='registrationCard__textFieldContainer')
+                +textField('Фамилия', 'registrationCard__textField-Surname-' + id, '', 'text', '')
+            div(class='registrationCard__genderRadiobuttonContainer')
+                +radioButton('Мужчина', 'registrationCard__radiobutton-gender-' + id, '0')
+                +radioButton('Женщина', 'registrationCard__radiobutton-gender-' + id, '1')
+        div(class='registrationCard__birthDateContainer')
+            +textFieldMasked('дата рождения', 'registrationCard__textFieldMasked-' + id, '' )
+        div(class='registrationCard__entryDataContainer')
+            div(class='registrationCard__textFieldContainer')
+                +textField('Email', 'registrationCard__textField-Email-' + id, 'данные для входа в сервис', 'email', '')
+            div(class='registrationCard__textFieldContainer')
+                +textField('Пароль', 'registrationCard__textField-Password-' + id, '', 'password', '')
+            +toggle('Получать спецпредложения', 'registrationCard__toggle-' + id, '1')
+        div(class='registrationCard__buttonsContainer')
+            +regularButton('перейти к оплате', 'registrationCard__regularButton-' + id, href[0], false, false)
+            div(class='registrationCard__entryButtonContainer')
+                p(class='registrationCard__additionalText') Уже есть аккаунт на Toxin
+                div(class='registrationCard__entryRegularButtonContainer')
+                    +regularButton('войти', 'registrationCard__regularButton_short-' + id, href[1], true, true)

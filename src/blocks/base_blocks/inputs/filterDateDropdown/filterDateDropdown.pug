@@ -1,0 +1,6 @@
+mixin filterDateDropdown (name, id)       
+    div(class= 'filterDateDropdown__container')
+        div(class='filterDateDropdown__labelsContainer' )
+            h3(class='filterDateDropdown__nameText' )= name
+        label(for='filterDateDropdown-' + `${id}` class='filterDateDropdown__label')
+            input(type='text' placeholder='дд ммм - дд ммм' class="filterDateDropdown__input" id='filterDateDropdown-' + `${id}`)

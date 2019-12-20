@@ -1,14 +1,35 @@
-function changeDateLabel() { 
-    let date = document.querySelector(".dateDropdown__input").value.toString(); 
-    console.log(date);
-    console.log(3 + 5);
-    var year = date.slice(0,4);
-    var month = date.slice(5,7);
-    var day = date.slice(8, date.length);
-    var newDate = day + '.' + month + '.' + year;
-    console.log(newDate);
-    document.querySelector('.dateDropdown__label').innerHTML = newDate;
+import 'air-datepicker'
+
+let elements = document.querySelectorAll('.dateDropdown__input')
+let dateDropdowns = []
+let secondInputs = []
+
+for (let i = 0; i < elements.length; i++) {
+    let temp = $(elements[i]).parent().siblings('.dateDropdown__label').children('.dateDropdown__secondDateInput')[0];
+    let firstInput =  elements[i].getAttribute('id');
+    let secondInput = temp.getAttribute('id');
+    dateDropdowns.push(firstInput);
+    secondInputs.push(secondInput);
 }
 
-document.querySelector(".dateDropdown__input").addEventListener("change", changeDateLabel());
-document.querySelector(".dateDropdown__input").addEventListener("click", document.querySelector(".dateDropdown__input").removeEventListener());
+for(let i = 0; i < dateDropdowns.length; i++){
+    $('#' + dateDropdowns[i]).datepicker({
+        classes: 'added_datepicker',
+        nextHtml: '<i class="material-icons">arrow_forward</i>',
+        prevHtml: '<i class="material-icons">arrow_back</i>',
+        navTitles: {
+            days: 'MM <i>yyyy</i>',
+        },
+        range: true,
+        multipleDatesSeparator: '-',
+        onSelect: function (fd, d, picker) { 
+            $('#' + dateDropdowns[i]).val(fd.split("-")[0]);
+            $('#' + secondInputs[i]).val(fd.split("-")[1]);
+        },
+        clearButton: true,
+    })
+    let dp = $('#' + dateDropdowns[i]).datepicker().data('datepicker');
+    $('#' + secondInputs[i]).click(function (){
+        dp.show();
+    })
+}

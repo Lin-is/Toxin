@@ -1,16 +1,10 @@
-mixin rateButton (name)
+mixin rateButton (name, rate)
     div(class='rateButton__container')
-        input(type='radio' class='rateButton__scaleSelect' name= name value='5' id= 'rateButton-' + `${name}` + '-5')
-        label(class='rateButton__symbol' for='rateButton-' + `${name}` + '-5')
+        -for (var i = 5; i >= 1; i--)
+            if i == rate
+                input(checked readonly type='radio' class='rateButton__scaleSelect' name= name value= i id= 'rateButton-' + `${name}` + '-' + i)
+            else
+                input(type='radio' readonly class='rateButton__scaleSelect' name= name value= i id= 'rateButton-' + `${name}` + '-' + i)
+            label(class='rateButton__symbol' for='rateButton-' + `${name}` + '-' + i)
             
-        input(type='radio' class='rateButton__scaleSelect' name= name value='4' id= 'rateButton-' + `${name}` + '-4')
-        label(class='rateButton__symbol' for='rateButton-' + `${name}` + '-4')
-            
-        input(type='radio' class='rateButton__scaleSelect' name= name value='3' id= 'rateButton-' + `${name}` + '-3')
-        label(class='rateButton__symbol' for='rateButton-' + `${name}` + '-3')
-            
-        input(type='radio' class='rateButton__scaleSelect' name= name value='2' id= 'rateButton-' + `${name}` + '-2')
-        label(class='rateButton__symbol' for='rateButton-' + `${name}` + '-2')
-            
-        input(type='radio' class='rateButton__scaleSelect' name= name value='1' id= 'rateButton-' + `${name}` + '-1')
-        label(class='rateButton__symbol' for='rateButton-' + `${name}` + '-1')
+        

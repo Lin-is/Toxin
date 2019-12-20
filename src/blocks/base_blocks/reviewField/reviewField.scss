@@ -1,0 +1,52 @@
+.reviewField__container {
+    width: 711px;
+    height: 133px;
+    display: flex;
+    flex-direction: column;
+}
+.reviewField__headerContainer {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.reviewField__photo {
+    width: 48px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    border-radius: 32px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+}
+.reviewField__personInfoContainer {
+    height: 100%;
+    width: calc(100% - 58px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.reviewField__personName{
+    font-weight: bold;
+}
+.reviewField__contentContainer {
+    display: flex;
+}
+.reviewField__likeButtonArea {
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+.reviewField__reviewTextArea {
+    width: calc(100% - 58px);
+}
+
+.reviewField__text{
+    line-height: 24px;
+}

@@ -1,14 +1,23 @@
 @import "blocks/base_blocks/scss-basic/vars.scss";
+@import "../node_modules/nouislider/distribute/nouislider.css";
+
+// @import "../node_modules/air-datepicker/dist/css/datepicker.css";
+@import "blocks/base_blocks/scss-basic/airDatepicker.scss";
+@import "./all.css";
 @import "blocks/base_blocks/scss-basic/reset.scss";
 @import "blocks/pages/ui-kit.scss";
+@import "blocks/pages/landingPage.scss";
+@import "blocks/pages/searchRoom.scss";
+@import 'blocks/pages/roomDetails.scss';
+@import "blocks/pages/registration.scss";
+@import "blocks/pages/signIn.scss";
 @import "blocks/base_blocks/scss-basic/fonts.scss";
 
-body {
-    background-color: #E5E5E5;
-}
+
+
 
 h1, h2 {
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', 'OpenSans', sans-serif;
     font-weight: bold;
     color: $main-header-color;
 }
@@ -18,7 +27,8 @@ h3, p {
 }
 
 h1 {
-    font-size: 24px;  
+    font-size: 24px;
+    line-height: 30px;  
 }
 
 h2 {

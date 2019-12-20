@@ -1,0 +1,9 @@
+mixin rangeSlider (id, name, additionalLabel)
+    div(class='rangeSlider__container')
+        div(class='rangeSlider__label' id= 'rangeSlider__label-' + id) 
+            h3(class='rangeSlider__header')= name
+            p(class='rangeSlider__labelText') #[span(class='rangeSlider__lowNumberText') 5000]₽ - #[span(class='rangeSlider__hightNumberText') 10000]₽
+        div(class='rangeSlider__slider' id= id)
+    if additionalLabel != ''
+        p(class='rangeSlider__additionalLabel')= additionalLabel
+    

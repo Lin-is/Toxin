@@ -1,66 +1,104 @@
+
+body {
+    background-color: #E5E5E5;
+}
+
+.page__container {
+    width: 100%;
+    // max-width: 1440px;
+    margin-bottom: 50px;
+    position: relative; 
+}
+
+.page__containerLogo {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 30px;
+    left: 30px;
+
+}
+
 .colorsAndType__container {
     height: 900px;
     width: 100%;
     display: flex;
     /*justify-content: space-around;*/
-    padding-top: 145px;
-    padding-left: 150px;
+    padding-top: 143.5px;
+    padding-left: 149.5px;
     background-color: #FFFFFF;
+    margin-top: 50px;
 }
 
 .colorsAndType__palette {
     height: 610px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;  
+    // justify-content: space-around;  
     margin-right: 435px;
+}
+
+.colorsAndType__palette .colorItem__container{
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
 }
 
 .colorAndTypes__headers{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    // justify-content: space-around;
     width: 403px;
     height: 321px;
 }
 .colorsAndType__fontExampleItem {
     display: flex;
+    margin-bottom: 50px;
+}
+.colorsAndType__fontExampleTag {
+    margin-right: 30px;
+    text-align: right;
+    text-transform: capitalize;
+    color: rgba(31, 32, 65, 0.25);
+    font-family: Montserrat;
+    font-weight: normal;
+}
+.colorsAndType__fontExampleText {
+    width: 336px;
+}
+.colorsAndType__fontExampleItem:nth-child(3) .colorsAndType__fontExampleTag {
+    margin-left: 15px;
+    margin-right: 27px;
+
+}
+.colorsAndType__fontExampleItem:nth-child(4) .colorsAndType__fontExampleTag {
+    margin-left: -7px;
+    margin-right: 27px;
+}
+.colorsAndType__fontExampleItem:nth-child(4) .colorsAndType__fontExampleText {
+    width: 301px;
+    margin-top: -3px;
+    line-height: 24px;
 }
 
-.colorsAndType__fontExampleTag {
-  margin-right: 30px;
-  width: 37px;
-  text-align: right;
-  text-transform: capitalize;
-  color: rgba(31, 32, 65, 0.25);
-  font-family: Montserrat;
-  font-weight: normal;
-}
 
 
 
 .formElements__container {
     width: 100%;
-    height: 1853px;
+    //height: 1853px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     background-color: #FFFFFF;
+    padding: 145px 140px 0px;
 }
 
 .formElements__buttonsNatureContainer {
     width: 100%;
-    height: 100%;
     display: flex;
-    justify-content: space-evenly;
-}
-
-.formElements__modifiteComponentsContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 
 .formElements__areaHeader {
@@ -68,26 +106,42 @@
 }
 
 .formElements__inputTypeContainer {
-    height: 589px;
+    width: 320px;
+   // height: 589px;
     display: flex;
     flex-direction: column;
+    margin-right: 126px;
 }
 .formElements__inputTypeElement {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
     &:last-child {
         margin-bottom: none;
     }
 }
 
+.formElements__dateDropdownArea {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.formElements__filterDateDropdownArea {
+    margin-top: 28px;
+}
+
+.formElements__textFieldSubscriptionArea {
+    margin-top: 26.5px;
+}
+
 .formElements__checkboxTypeContainer {
     height: 100%;
     width: 260px;
+    margin-right: 132px;
 }
 
 .formElements__ElementContainer {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
+    margin-bottom: 37.5px;
 }
 
 .formElements__checkboxesArea {
@@ -101,7 +155,7 @@
     flex-direction: column; 
 }
 .formElements__checkboxesContainerItem {
-    margin-bottom: 12px;
+    margin-bottom: 11px;
     &:last-child {
         margin-bottom: none;
     }
@@ -124,6 +178,7 @@
 
 .formElements__likeButtonArea {
     height: 51px;
+    margin-top: 45px;
 } 
 .formElements__likeButtonContainer {
     width: 90px;
@@ -158,16 +213,42 @@
     width: 217px;
 }
 
-.formElements__richCheckboxesArea{
-    height: 145px;
-    width: 264px;
-}
-.formElements__richCheckboxContainer {
-    width: 100%;
-    height: 100%;
+.formElements__modifiteComponentsContainer {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    width: 100%;
+}
+
+.formElements__listElementsContainer{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+.formElements__expandableElementsArea {
+    display: flex;
+    width: 280px;
+    flex-direction: column;
+    margin-right: 167px;
+    //margin-left: 140px;
+}
+.formElements__shortDropdownArea {
+    margin-bottom: 20px;
+}
+
+
+.formElements__richCheckboxesArea{
+    height: 145px;
+    width: 266px;
+    margin-right: 126px;
+}
+.formElements__richCheckboxesArea h3 {
+    margin-bottom: 16px;
+}
+.formElements__richCheckboxContainer {
+    height: 114px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .formElements__bulletListArea {
@@ -179,9 +260,19 @@
     height: 100%;
 }
 
+.formElements__textElementsContainer {
+    width: 100%;
+    margin-top: 44px;
+    margin-bottom: 132px;
+   // margin-left: 140px;
+  //  padding: inherit;
+    display: flex;
+}
+
 .formElements__roomFeaturesArea {
     width: 280px;
     height: 158px;
+    margin-right: 167px;
 }
 .formElements__roomFeaturesContainer {
     width: 100%;
@@ -190,16 +281,71 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.formElements__rangeSliderArea {
+    height: 48px;
+    width: 266px;
+}
 
 
 
 
-@import './blocks/base_blocks/scss-basic/fonts.scss';
+.cards__container {
+    // width: 100%;
+    background-color: #F4F4F6;
+    padding: 9.87361769352% 9.21537651395% 9.21537651395%;//150px/1519.2px 140px/1519.2px 140px/1519.2px;
+    display: flex;
+    flex-direction: row;
+    // box-sizing: border-box;
+
+}
+.cards__containersColumn {
+    // min-height: calc(646px + 40px + 374px);
+    width: 32.7586206897%;  //380px/1160px
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-right: 3.44827586207%;  //40px / 1160px
+    &:last-child{
+        width: 27.5862068966%;//320px/1160px
+        max-width: 320px;
+        margin-right: 0px;
+    }
+}
+.cards__elementContainer {
+    width: 100%;
+    max-width: 380px;
+    margin-bottom: 40px;
+}
+
+
+
+.headersAndFooters__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    padding-bottom: 130px; 
+    background: #F4F4F6;
+}
+.headersAndFooters__elementContainer{
+    margin-bottom: 40px;
+    &:last-child {
+        margin-bottom: none;
+    }
+}
+
+
+
+
+
+// @import './blocks/base_blocks/scss-basic/fonts.scss';
 @import '../base_blocks/colorItem/colorItem.scss';
 @import '../base_blocks/inputs/textField/textField.scss';
 @import '../base_blocks/inputs/textFieldSubscription/textFieldSubscription.scss';
 @import '../base_blocks/inputs/textFieldMasked/textFieldMasked.scss';
 @import '../base_blocks/inputs/dateDropdown/dateDropdown.scss';
+@import '../base_blocks/inputs/filterDateDropdown/filterDateDropdown.scss';
 @import '../base_blocks/inputs/dropdown/dropdown.scss';
 @import '../base_blocks/buttons/radioButton/radioButton.scss';
 @import '../base_blocks/buttons/checkbox/checkbox.scss';
@@ -213,3 +359,13 @@
 @import '../base_blocks/roomFeature/roomFeature.scss';
 @import '../base_blocks/expandableCheckboxList/expandableCheckboxList.scss';
 @import '../base_blocks/pagination/pagination.scss';
+@import '../base_blocks/rangeSlider/rangeSlider.scss';
+@import '../base_blocks/reviewField/reviewField.scss';
+@import '../base_blocks/cards/roomSearch/roomSearch.scss';
+@import '../base_blocks/cards/registrationCard/registrationCard.scss';
+@import '../base_blocks/cards/entryCard/entryCard.scss';
+@import '../base_blocks/cards/roomReservation/roomReservation.scss';
+@import '../base_blocks/cards/roomPreview/roomPreview.scss';
+@import '../base_blocks/header/header.scss';
+@import '../base_blocks/footers/footerWithNav/footerWithNav.scss';
+@import '../base_blocks/footers/footerWithLogo/footerWithLogo.scss';

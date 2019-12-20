@@ -1,0 +1,13 @@
+include ../../inputs/dateDropdown/dateDropdown.pug
+include ../../inputs/dropdown/dropdown.pug
+include ../../buttons/regularButton/regularButton.pug
+mixin roomSearch (id, href)
+    div(class='roomSearch__container')
+        h1(class='roomSearch__header') Найдём номера под ваши пожелания
+        div(class='roomSearch__dateDropdownContainer')
+            +dateDropdown('прибытие', 'выезд', 'roomSearch__dateDropdown-arrival-' + id)
+        div(class='roomSearch__dropdownContainer')
+            +dropdown('Сколько гостей', 'roomSearch__dropdown-' + id, false, 'гости', '', 'Взрослые', 'Дети', 'Младенцы')
+        div(class='roomSearch__regularButtonContainer')
+            +regularButton('подобрать номер', 'roomSearch__regularButton-' + id, href, false, false)
+        

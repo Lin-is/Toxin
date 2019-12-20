@@ -1,6 +1,9 @@
-mixin dateDropdown (name)
+mixin dateDropdown (name1, name2, id)       
     div(class= 'dateDropdown__container')
-        div(class='dateDropdown__labelsContainer' )
-            h3(class='dateDropdown__nameText' )= name
-        label(for='dateDropdown-' + `${name}` class='dateDropdown__label')= 'ДД.ММ.ГГГГ'
-            input(type= 'date' class="dateDropdown__input" pattern= '[1-3]{1}[0-9]{1}.[0-1]{1}[0-9]{1}.[0-2]{1}[0-9]{3}' id='dateDropdown-' + `${name}`)
+        label(for='dateDropdown-' + `${id}` + '_start-date' class='dateDropdown__label')
+            h3(class='dateDropdown__nameText' )= name1
+            input(type='text' placeholder='ДД.ММ.ГГГГ' class="dateDropdown__input" pattern= '[0-3]{1}[0-9]{1}.[0-1]{1}[0-9]{1}.[0-2]{1}[0-9]{3}' id='dateDropdown-' + `${id}`+'_start-date')
+        label(for='dateDropdown-' + `${id}` + '_end-date' class='dateDropdown__label')
+            h3(class='dateDropdown__nameText' )= name2
+            input(type='text' placeholder='ДД.ММ.ГГГГ' class="dateDropdown__secondDateInput" pattern= '[0-3]{1}[0-9]{1}.[0-1]{1}[0-9]{1}.[0-2]{1}[0-9]{3}' id='dateDropdown-' + `${id}`+'_end-date')
+

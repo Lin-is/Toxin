@@ -1,0 +1,39 @@
+include ../../buttons/rateButton/rateButton.pug
+
+mixin roomPreview (id, lux, score, price, roomNumber, reviewNumber, href, ...src)
+    div(class='roomPreview__container')
+    
+        div(class='roomPreview__photoSliderContainer')
+            each item, index in src
+                if index == 0
+                    input(checked class='roomPreview__sliderRadioSwitcher' type='radio' name='roomPreview__sliderRadioSwitcher-' + id  id='roomPreview__sliderRadioSwitcher-' + id + '-' + (index + 1))
+                else
+                    input(class='roomPreview__sliderRadioSwitcher' type='radio' name='roomPreview__sliderRadioSwitcher-' + id  id='roomPreview__sliderRadioSwitcher-' + id + '-' + (index + 1))
+            //- each item, index in src 
+                    input(checked= index==0 ? 'checked': 'false' class='roomPreview__sliderRadioSwitcher' type='radio' name='roomPreview__sliderRadioSwitcher-' + id  id='roomPreview__sliderRadioSwitcher-' + id + '-' + (index + 1))
+            div(class='roomPreview__slidesContainer')
+                each item, index in src 
+                    img(class='roomPreview__photo' alt= 'photo', src= item, id='roomPreview__photo-' + id + '-' + (index + 1) )
+            div(class='roomPreview__sliderRadioLabelContainer')
+                each item, index in src 
+                    label(class='roomPreview__sliderRadioLabel' for='roomPreview__sliderRadioSwitcher-' + id + '-' + (index + 1))
+            div(class='roomPreview__sliderArrowSwitchersContainer')
+                div(class='roomPreview__sliderArrowPrevSwitcher')
+                    each item, index in src 
+                        label(class='roomPreview__prevArrowSwitcherLabel' for= 'roomPreview__sliderRadioSwitcher-' + id + '-' + (index + 1))
+                div(class='roomPreview__sliderArrowNextSwitcher')
+                    each item, index in src 
+                        label(class='roomPreview__nextArrowSwitcherLabel' for= 'roomPreview__sliderRadioSwitcher-' + id + '-' + (index + 1))
+            
+
+        header(class='roomPreview__headerArea')
+            a(class='roomPreview__roomNumberLabels' href= href)
+                h1(class='roomPreview__headerText') #[span № ]#{roomNumber}
+                if lux
+                    h3(class='roomPreview__roomNumberLux') люкс
+            p(class='roomPreview__priceText') #[span #{price}₽] в сутки
+        div(class='roomPreview__ratingInfoContainer')
+            div(class='roomPreview__rateButtonContainer')
+                +rateButton('room' + roomNumber, score)
+            div(class='roomPreview__reviewNumberContainer')
+                p(class='roomPreview__reviewNumber') #[span #{reviewNumber}] Отзывов
