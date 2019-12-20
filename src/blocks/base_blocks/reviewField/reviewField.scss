@@ -1,6 +1,7 @@
 .reviewField__container {
-    width: 711px;
-    height: 133px;
+    max-width: 711px;
+    width: 100%;
+    // height: 133px;
     display: flex;
     flex-direction: column;
 }

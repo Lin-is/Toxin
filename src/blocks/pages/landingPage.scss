@@ -18,7 +18,8 @@
 .landingPage__roomSearchContainer {
     // margin: 70px 0px 386px;
     // width: 26.3888888889%;
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
 }
 
 .landingPage__text{
@@ -53,19 +54,11 @@
         justify-content: center;
         padding: 70px 2% 386px;
     }
-    .landingPage__roomSearchContainer {
-       width: 100%;
-       max-width: 380px;
-    }
 }
 
 @media (max-width: 550px) {
     .landingPage__roomSearchContainer {
         justify-content: center;
-    }
-    .landingPage__roomSearchContainer {
-        width: 100%;
-        max-width: 380px;
     }
     .landingPage__text {
         width: 54%;
