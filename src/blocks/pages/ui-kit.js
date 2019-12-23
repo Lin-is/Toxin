@@ -22,4 +22,22 @@ $('#uiKit-datepicker').datepicker({
     navTitles: {
         days: 'MM <i>yyyy</i>',
     },
+    // onShow (inst, animationCompleted) {
+    //     if (animationCompleted) {
+    //         if (!inst.$datepicker.find('.datepicker--buttons .datepicker--button-apply').length) {
+    //             $('<span class="datepicker--button datepicker--button-apply">Применить</span>').on('click', function (e) {
+    //                 e.stopPropagation();
+    //                 inst.hide();
+    //             }).appendTo(inst.$datepicker.find('.datepicker--buttons'));
+    //         }
+    //     }
+    // }
+    onShow (inst, animationCompleted) {
+        if (!inst.$datepicker.find('.datepicker--buttons .datepicker--button-apply').length) {
+            $('<span class="datepicker--button datepicker--button-apply">Применить</span>').on('click', function (e) {
+                e.stopPropagation();
+                inst.hide();
+            }).appendTo(inst.$datepicker.find('.datepicker--buttons'));
+        }
+    }
 })

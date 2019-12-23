@@ -311,7 +311,8 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 320px;
+    // max-width: 320px;
+    // width: 100%;
     
 }
 
@@ -327,7 +328,7 @@
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-radius: 4px;
     // box-sizing: content-box;
-    width: 320px;
+    // max-width: 320px;
 
     font-family: Quicksand, 'OpenSans', sans-serif;
     font-style: normal;
@@ -336,8 +337,8 @@
     line-height: 24px;
     color: $text-color-100;
 
-    width: 100%;
     max-width: 320px;
+    width: 100%;
     padding: 6.25%;
     position: absolute;
     left: -100000px;
@@ -629,10 +630,12 @@
 }
 
 .datepicker--button {
-    width: 50%;
+    // width: 50%;
     color: $colored-text-color;
     cursor: pointer;
+
     // border-radius: 4px;
+    max-width: 84px;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -645,22 +648,25 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    box-sizing: content-box;
 
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
+    // text-align: right;
 
     &[data-action='clear']{
         color: rgba(31, 32, 65, 0.5);
+        
     }
 }
 
 
 .datepicker--button:hover {
     color: #4a4a4a;
-    background: #f0f0f0;
+    // background: #f0f0f0;
 }
 
 .datepicker--cell-day.-other-month-,
@@ -727,6 +733,7 @@
     -ms-flex: 0 1 138px;
     flex: 0 1 138px;
     max-width: 138px;
+
 }
 
 .-only-timepicker- .datepicker--time {

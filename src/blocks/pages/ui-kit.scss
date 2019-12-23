@@ -3,37 +3,26 @@ body {
     width: 100%;
 }
 .body__container{
-
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #E5E5E5;
 }
-
-.main__container {
-    width: 100%; 
-    margin-bottom: 3.4722222222%; 
-}  
-
-.main__colorsAndTypes, .main__formElements {
-    background-color: #FFFFFF;
-}
-
-.main__cards, .main__headersAndFooters {
-    background-color: #F4F4F6;;
-}
-
-.page__container{
-    max-width: 1440px;
-    min-width: 320px;
+.main__container{
     width: 100%;
-    position: relative;
-    margin: 0 auto;
+}
+
+.page__container {
+    width: 100%;
+    max-width: 1440px;
+    margin-bottom: 50px;
+    position: relative; 
 }
 
 .page__containerLogo {
     position: absolute;
-    width: 3.3333333333%;   // 48px / 1440px;
+    width: 48px;   // 48px / 1440px;
     height: 48px;
     top: 30px;
     left: 30px;
@@ -45,10 +34,11 @@ body {
     width: 100%;  //1440px;
     display: flex;
     /*justify-content: space-around;*/
-    padding-top: 9.9652777778%; // 143.5px/1440px;
-    padding-left: 10.3819444444%; // 149.5px/1440px;
+    padding-top: 143.5px; // 143.5px/1440px;
+    padding-bottom: 145px;
+    padding-left: 149.5px; // 149.5px/1440px;
     background-color: #FFFFFF;
-    margin-top: 3.4722222222%; // 50px/1440px;
+    margin-top: 50px; // 50px/1440px;
 }
 
 .colorsAndType__palette {
@@ -56,7 +46,7 @@ body {
     display: flex;
     flex-direction: column;
     // justify-content: space-around;  
-    margin-right: 30.2083333333%; // 435px/1440px
+    margin-right: 435px; // 435px/1440px
 }
 
 .colorsAndType__palette .colorItem__container{
@@ -71,37 +61,35 @@ body {
     display: flex;
     flex-direction: column;
     // justify-content: space-around;
-    width: 27.9861111111%; // 403px/1440px
+    width: 403px; // 403px/1440px
     // height: 321px;
 }
 .colorsAndType__fontExampleItem {
     display: flex;
     width: 100%;  //403px;
-    margin-bottom: 12.4069478908%; // 50px/403px
+    margin-bottom: 50px; // 50px/403px
 }
 .colorsAndType__fontExampleTag {
-    // width: 16.6253101737%;  // 67px/403px 
-    margin-right: 7.44416873449%; // 30px/403px
+    margin-right: 30px; // 30px/403px
     text-align: right;
+    font-weight: normal;
     text-transform: capitalize;
     color: rgba(31, 32, 65, 0.25);
-    font-family: Montserrat;
-    font-weight: normal;
 }
 .colorsAndType__fontExampleText {
-    width: 83.3746898263%; //336px/403px;
+    width: 336px; //336px/403px;
 }
 .colorsAndType__fontExampleItem:nth-child(3) .colorsAndType__fontExampleTag {
-    margin-left: 3.72208436725%; // 15px/403px
-    margin-right: 6.69975186104%; // 27px/403px;
+    margin-left: 15px; // 15px/403px
+    margin-right: 27px; // 27px/403px;
 }
 .colorsAndType__fontExampleItem:nth-child(4) .colorsAndType__fontExampleTag {
-    margin-left: -1.73697270471%; // -7px/403px;
-    margin-right: 6.69975186104%; // 27px/403px;
+    margin-left: -7px; // -7px/403px;
+    margin-right: 27px; // 27px/403px;
 }
 .colorsAndType__fontExampleItem:nth-child(4) .colorsAndType__fontExampleText {
-    width: 74.6898263027%; //301px;
-    margin-top: -0.89285714285%; // -3px/336px;
+    width: 301px; //301px;
+    margin-top: -3px; // -3px/336px;
     line-height: 24px;
 }
 
@@ -114,13 +102,13 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #FFFFFF;
-    padding: 10.0694444444% 9.7222222222% 0%; //145px 140px 0px;
+    padding: 145px 140px 0px; //145px 140px 0px;
 }
 
 .formElements__buttonsNatureContainer {
     width: 100%;
     display: flex;
-    margin-bottom: 6.9444444444%; //100px;
+    margin-bottom: 100px; //100px;
 }
 
 .formElements__areaHeader {
@@ -128,15 +116,15 @@ body {
 }
 
 .formElements__inputTypeContainer {
-    width: 22.2222222222%; //320px;
+    width: 320px; //320px;
    // height: 589px;
     display: flex;
     flex-direction: column;
-    margin-right: 39.375%; //126px;
+    margin-right: 126px; //126px;
 }
 .formElements__inputTypeElement {
-    width: 100%; //320px;
-    margin-bottom: 6.5625%; //21px;
+    width: 320px; //320px;
+    margin-bottom: 21px; //21px;
     &:last-child {
         margin-bottom: none;
     }
@@ -145,32 +133,32 @@ body {
 .formElements__dateDropdownArea {
     display: flex;
     justify-content: space-between;
-    margin-top: 4.6875%;//15px;
+    margin-top: 15px;//15px;
 }
 .formElements__filterDateDropdownArea {
-    margin-top: 8.75% //28px;
+    margin-top: 28px; //28px;
 }
 
 .formElements__textFieldSubscriptionArea {
-    margin-top: 8.28125%; //26.5px;
+    margin-top: 26.5px; //26.5px;
 }
 
 .formElements__checkboxTypeContainer {
     // height: 100%;
-    width: 18.0555555556%; //260px;
-    margin-right: 50.7692307692%; //132px;  
+    width: 260px; //260px;
+    margin-right: 132px; //132px;  
 }
 
 .formElements__ElementContainer {
-    width: 100%; //260px;  
+    width: 260px; //260px;  
 
     display: flex;
     flex-direction: column;
-    margin-bottom: 14.4230769231%; //37.5px;
+    margin-bottom: 37.5px; //37.5px;
 }
 
 .formElements__checkboxesArea {
-    width: 85.3846153846%; //222px; 
+    width: 222px; //222px; 
     // height: 130px;
 }
 .formElements__checkboxesContainer {
@@ -181,7 +169,7 @@ body {
 }
 .formElements__checkboxesContainerItem {
     width: 100%;
-    margin-bottom: 4.954954955%; //11px;
+    margin-bottom: 11px; //11px;
     &:last-child {
         margin-bottom: none;
     }
@@ -190,10 +178,10 @@ body {
 
 .formElements__radiobuttonsArea {
     // height: 55px;
-    width: 100%; //260px;  
+    width: 260px; //260px;  
 }
 .formElements__radiobuttonsContainer {
-    width: 85%; //221px;
+    width: 221px; //221px;
     display: flex;
     justify-content: space-between;
 }
@@ -204,12 +192,12 @@ body {
 }
 
 .formElements__likeButtonArea {
-    width: 100%; //260px;
+    width: 260px; //260px;
     // height: 51px;
-    margin-top: 17.3076923077%; //45px;
+    margin-top: 45px; //45px;
 } 
 .formElements__likeButtonContainer {
-    width: 34.6153846154%; //90px;
+    width: 90px; //90px;
     display: flex;
     justify-content: space-between;
 }
@@ -225,12 +213,12 @@ body {
 }
 
 .formElements__buttonTypeContainer{
-    width: 22.2222222222%; //320px;
+    width: 320px; //320px;
 }
 
 .formElements__rangeSliderArea {
     // height: 48px;
-    width: 83.125%; //266px;
+    width: 266px; //266px;
 }
 
 .formElements__regularButtonsArea {
@@ -247,12 +235,13 @@ body {
 .formElements__regularButtonShort {
     display: flex;
     justify-content: space-between;
-    width: 67.8125%; //217px;
+    width: 217px; //217px;
 }
 
 .formElements__modifiteComponentsContainer {
     display: flex;
     flex-direction: column;
+    max-width: 1440px;
     width: 100%; //1440px
 }
 
@@ -263,21 +252,21 @@ body {
 }
 .formElements__expandableElementsArea {
     display: flex;
-    width: 19.4444444444%; //280px;
+    width: 280px; //280px;
     flex-direction: column;
-    margin-right: 59.6428571429%; //167px;
+    margin-right: 167px; //167px;
     //margin-left: 140px;
 }
 .formElements__shortDropdownArea {
     width: 100%; //
-    margin-bottom: 7.14285714286%; //20px;
+    margin-bottom: 20px; //20px;
 }
 
 
 .formElements__richCheckboxesArea{
     // height: 145px;
-    width: 18.4722222222%; //266px;
-    margin-right: 47.3684210526%; //126px;
+    width: 266px; //266px;
+    margin-right: 126px; //126px;
 }
 .formElements__richCheckboxesArea h3 {
     margin-bottom: 16px;
@@ -290,7 +279,7 @@ body {
 }
 
 .formElements__bulletListArea {
-    width: 20.2777777778%; //292px;
+    width: 292px; //292px;
     // height: 147px;
 }
 .formElements__bulletListContainer {
@@ -300,17 +289,17 @@ body {
 
 .formElements__textElementsContainer {
     width: 100%;  //1440px;
-    margin-top: 3.05555555556%; //44px;
-    margin-bottom: 9.16666666667%; //132px;
+    margin-top: 44px; //44px;
+    margin-bottom: 132px; //132px;
    // margin-left: 140px;
   //  padding: inherit;
     display: flex;
 }
 
 .formElements__roomFeaturesArea {
-    width: 19.4444444444%; //280px;
+    width: 280px; //280px;
     // height: 158px;
-    margin-right: 59.6428571429%; //167px;
+    margin-right: 167px; //167px;
 }
 .formElements__roomFeaturesContainer {
     width: 100%;
@@ -325,20 +314,31 @@ body {
 
 
 .cards__container {
-    width: 100%;
+    // width: 100%;
     background-color: #F4F4F6;
-    padding: 150px 140px 140px;
+    padding: 9.87361769352% 9.21537651395% 9.21537651395%;//150px/1519.2px 140px/1519.2px 140px/1519.2px;
     display: flex;
     flex-direction: row;
+    // box-sizing: border-box;
 
 }
 .cards__containersColumn {
-    min-height: calc(646px + 40px + 374px);
+    // min-height: calc(646px + 40px + 374px);
+    width: 380px;  //380px/1160px
+    max-width: 380px;
     display: flex;
     flex-direction: column;
-    margin-right: 40px;
+    box-sizing: border-box;
+    margin-right: 40px;  //40px / 1160px
+    &:last-child{
+        width: 320px;//320px/1160px
+        max-width: 320px;
+        margin-right: 0px;
+    }
 }
 .cards__elementContainer {
+    width: 100%;
+    max-width: 380px;
     margin-bottom: 40px;
 }
 
