@@ -1,18 +1,28 @@
 
 body {
+    width: 100%;
+}
+.body__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #E5E5E5;
+}
+.main__container{
+    width: 100%;
 }
 
 .page__container {
     width: 100%;
-    // max-width: 1440px;
+    max-width: 1440px;
     margin-bottom: 50px;
     position: relative; 
 }
 
 .page__containerLogo {
     position: absolute;
-    width: 48px;
+    width: 48px;   // 48px / 1440px;
     height: 48px;
     top: 30px;
     left: 30px;
@@ -20,22 +30,23 @@ body {
 }
 
 .colorsAndType__container {
-    height: 900px;
-    width: 100%;
+    // height: 900px;
+    width: 100%;  //1440px;
     display: flex;
     /*justify-content: space-around;*/
-    padding-top: 143.5px;
-    padding-left: 149.5px;
+    padding-top: 143.5px; // 143.5px/1440px;
+    padding-bottom: 145px;
+    padding-left: 149.5px; // 149.5px/1440px;
     background-color: #FFFFFF;
-    margin-top: 50px;
+    margin-top: 50px; // 50px/1440px;
 }
 
 .colorsAndType__palette {
-    height: 610px;
+    // height: 610px;
     display: flex;
     flex-direction: column;
     // justify-content: space-around;  
-    margin-right: 435px;
+    margin-right: 435px; // 435px/1440px
 }
 
 .colorsAndType__palette .colorItem__container{
@@ -50,36 +61,35 @@ body {
     display: flex;
     flex-direction: column;
     // justify-content: space-around;
-    width: 403px;
-    height: 321px;
+    width: 403px; // 403px/1440px
+    // height: 321px;
 }
 .colorsAndType__fontExampleItem {
     display: flex;
-    margin-bottom: 50px;
+    width: 100%;  //403px;
+    margin-bottom: 50px; // 50px/403px
 }
 .colorsAndType__fontExampleTag {
-    margin-right: 30px;
+    margin-right: 30px; // 30px/403px
     text-align: right;
+    font-weight: normal;
     text-transform: capitalize;
     color: rgba(31, 32, 65, 0.25);
-    font-family: Montserrat;
-    font-weight: normal;
 }
 .colorsAndType__fontExampleText {
-    width: 336px;
+    width: 336px; //336px/403px;
 }
 .colorsAndType__fontExampleItem:nth-child(3) .colorsAndType__fontExampleTag {
-    margin-left: 15px;
-    margin-right: 27px;
-
+    margin-left: 15px; // 15px/403px
+    margin-right: 27px; // 27px/403px;
 }
 .colorsAndType__fontExampleItem:nth-child(4) .colorsAndType__fontExampleTag {
-    margin-left: -7px;
-    margin-right: 27px;
+    margin-left: -7px; // -7px/403px;
+    margin-right: 27px; // 27px/403px;
 }
 .colorsAndType__fontExampleItem:nth-child(4) .colorsAndType__fontExampleText {
-    width: 301px;
-    margin-top: -3px;
+    width: 301px; //301px;
+    margin-top: -3px; // -3px/336px;
     line-height: 24px;
 }
 
@@ -92,13 +102,13 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #FFFFFF;
-    padding: 145px 140px 0px;
+    padding: 145px 140px 0px; //145px 140px 0px;
 }
 
 .formElements__buttonsNatureContainer {
     width: 100%;
     display: flex;
-    margin-bottom: 100px;
+    margin-bottom: 100px; //100px;
 }
 
 .formElements__areaHeader {
@@ -106,14 +116,15 @@ body {
 }
 
 .formElements__inputTypeContainer {
-    width: 320px;
+    width: 320px; //320px;
    // height: 589px;
     display: flex;
     flex-direction: column;
-    margin-right: 126px;
+    margin-right: 126px; //126px;
 }
 .formElements__inputTypeElement {
-    margin-bottom: 21px;
+    width: 320px; //320px;
+    margin-bottom: 21px; //21px;
     &:last-child {
         margin-bottom: none;
     }
@@ -122,40 +133,43 @@ body {
 .formElements__dateDropdownArea {
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
+    margin-top: 15px;//15px;
 }
 .formElements__filterDateDropdownArea {
-    margin-top: 28px;
+    margin-top: 28px; //28px;
 }
 
 .formElements__textFieldSubscriptionArea {
-    margin-top: 26.5px;
+    margin-top: 26.5px; //26.5px;
 }
 
 .formElements__checkboxTypeContainer {
-    height: 100%;
-    width: 260px;
-    margin-right: 132px;
+    // height: 100%;
+    width: 260px; //260px;
+    margin-right: 132px; //132px;  
 }
 
 .formElements__ElementContainer {
+    width: 260px; //260px;  
+
     display: flex;
     flex-direction: column;
-    margin-bottom: 37.5px;
+    margin-bottom: 37.5px; //37.5px;
 }
 
 .formElements__checkboxesArea {
-    width: 222px;
-    height: 130px;
+    width: 222px; //222px; 
+    // height: 130px;
 }
 .formElements__checkboxesContainer {
-    height: 98px;
+    // height: 98px;
     width: 100%;
     display: flex;
     flex-direction: column; 
 }
 .formElements__checkboxesContainerItem {
-    margin-bottom: 11px;
+    width: 100%;
+    margin-bottom: 11px; //11px;
     &:last-child {
         margin-bottom: none;
     }
@@ -163,31 +177,33 @@ body {
 
 
 .formElements__radiobuttonsArea {
-    height: 55px;
+    // height: 55px;
+    width: 260px; //260px;  
 }
 .formElements__radiobuttonsContainer {
-    width: 221px;
+    width: 221px; //221px;
     display: flex;
     justify-content: space-between;
 }
 
 .formElements__toggleArea {
     width: 100%;
-    height: 51px;
+    // height: 51px;
 }
 
 .formElements__likeButtonArea {
-    height: 51px;
-    margin-top: 45px;
+    width: 260px; //260px;
+    // height: 51px;
+    margin-top: 45px; //45px;
 } 
 .formElements__likeButtonContainer {
-    width: 90px;
+    width: 90px; //90px;
     display: flex;
     justify-content: space-between;
 }
 
 .formElements__rateButtonArea{
-    height: 55px;
+    // height: 55px;
     width: 100%;
 }
 .formElements__rateButtonContainer {
@@ -196,13 +212,22 @@ body {
     justify-content: space-between;
 }
 
+.formElements__buttonTypeContainer{
+    width: 320px; //320px;
+}
+
+.formElements__rangeSliderArea {
+    // height: 48px;
+    width: 266px; //266px;
+}
+
 .formElements__regularButtonsArea {
-    height: 196px;
-    width: 320px;
+    // height: 196px;
+    width: 100%;
 }
 .formElements__regularButtonContainer {
     display: flex;
-    height: 165px;
+    // height: 165px;
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -210,13 +235,14 @@ body {
 .formElements__regularButtonShort {
     display: flex;
     justify-content: space-between;
-    width: 217px;
+    width: 217px; //217px;
 }
 
 .formElements__modifiteComponentsContainer {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    max-width: 1440px;
+    width: 100%; //1440px
 }
 
 .formElements__listElementsContainer{
@@ -226,53 +252,54 @@ body {
 }
 .formElements__expandableElementsArea {
     display: flex;
-    width: 280px;
+    width: 280px; //280px;
     flex-direction: column;
-    margin-right: 167px;
+    margin-right: 167px; //167px;
     //margin-left: 140px;
 }
 .formElements__shortDropdownArea {
-    margin-bottom: 20px;
+    width: 100%; //
+    margin-bottom: 20px; //20px;
 }
 
 
 .formElements__richCheckboxesArea{
-    height: 145px;
-    width: 266px;
-    margin-right: 126px;
+    // height: 145px;
+    width: 266px; //266px;
+    margin-right: 126px; //126px;
 }
 .formElements__richCheckboxesArea h3 {
     margin-bottom: 16px;
 }
 .formElements__richCheckboxContainer {
-    height: 114px;
+    // height: 114px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .formElements__bulletListArea {
-    width: 292px;
-    height: 147px;
+    width: 292px; //292px;
+    // height: 147px;
 }
 .formElements__bulletListContainer {
     width: 100%;
-    height: 100%;
+    // height: 100%;
 }
 
 .formElements__textElementsContainer {
-    width: 100%;
-    margin-top: 44px;
-    margin-bottom: 132px;
+    width: 100%;  //1440px;
+    margin-top: 44px; //44px;
+    margin-bottom: 132px; //132px;
    // margin-left: 140px;
   //  padding: inherit;
     display: flex;
 }
 
 .formElements__roomFeaturesArea {
-    width: 280px;
-    height: 158px;
-    margin-right: 167px;
+    width: 280px; //280px;
+    // height: 158px;
+    margin-right: 167px; //167px;
 }
 .formElements__roomFeaturesContainer {
     width: 100%;
@@ -281,10 +308,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-.formElements__rangeSliderArea {
-    height: 48px;
-    width: 266px;
-}
+
 
 
 
@@ -300,14 +324,14 @@ body {
 }
 .cards__containersColumn {
     // min-height: calc(646px + 40px + 374px);
-    width: 32.7586206897%;  //380px/1160px
+    width: 380px;  //380px/1160px
     max-width: 380px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    margin-right: 3.44827586207%;  //40px / 1160px
+    margin-right: 40px;  //40px / 1160px
     &:last-child{
-        width: 27.5862068966%;//320px/1160px
+        width: 320px;//320px/1160px
         max-width: 320px;
         margin-right: 0px;
     }

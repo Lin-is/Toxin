@@ -5,7 +5,7 @@
     background-color: #FFFFFF;
     background: url('/assets/img/image3.jpg') no-repeat top center;
     background-size: 100% 100%;
-    // background-size: cover;
+    
 }
 .landingPage__container{
     max-width: 1440px;
@@ -18,7 +18,8 @@
 .landingPage__roomSearchContainer {
     // margin: 70px 0px 386px;
     // width: 26.3888888889%;
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
 }
 
 .landingPage__text{
@@ -39,16 +40,12 @@
 //----------------------//
 
 
-// @media (max-width: 1440px)  {  //and (min-width: 550px)
-//     .landingPage__container{
-//         // margin: 0 0;
-//         // padding: 0px 140px;
+@media (max-width: 1440px) {
+    .landingPage__main {
+        background-size: cover;
+    }
+}
 
-//     }
-//     .landingPage__roomSearchContainer {
-//         // margin: 70px 0% 386px;
-//     }
-// }
 @media (max-width: 660px) {
     .landingPage__container{
         width: 100%;
@@ -57,25 +54,11 @@
         justify-content: center;
         padding: 70px 2% 386px;
     }
-    .landingPage__roomSearchContainer {
-       width: 100%;
-       max-width: 380px;
-    //     // margin-top: 70px;
-    //     // margin-bottom: 386px;
-    //     // margin: 70px 21.2121212121% 386px;
-    //     // margin: 70px 21.2121212121% 386px;// 70px 140px/660px;
-    //     // margin: 70px auto 386px;
-    }
 }
 
 @media (max-width: 550px) {
     .landingPage__roomSearchContainer {
         justify-content: center;
-    }
-    .landingPage__roomSearchContainer {
-        width: 100%;
-        max-width: 380px;
-        // margin: 70px auto;
     }
     .landingPage__text {
         width: 54%;

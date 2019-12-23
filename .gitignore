@@ -4,7 +4,7 @@
 # Edit at https://www.gitignore.io/?templates=windows,visualstudiocode,font,git,less,sass,visualstudio
 
 node_modules
-dist
+
 
 ### Font ###
 *.fnt

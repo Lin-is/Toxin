@@ -37,165 +37,182 @@ html(lang="en")
         link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
         title Document
     body 
-        div(class='colorsAndType__container page__container')
-            img(class='page__containerLogo' src='/assets/img/Group.png' alt='logo')
-            div(class='colorsAndType__palette')
-                +colorItem('#1F2041', 'Dark Shade 100%', '#1F2041')
-                +colorItem('rgba(31, 32, 65, 0.75)', 'Dark Shade 75%', '#1F2041')
-                +colorItem('rgba(31, 32, 65, 0.50)', 'Dark Shade 50%', '#1F2041')
-                +colorItem('rgba(31, 32, 65, 0.25)', 'Dark Shade 25%', '#1F2041')
-                +colorItem('rgba(31, 32, 65, 0.05)', 'Dark Shade 5%', '#1F2041')
-                +colorItem('#BC9CFF', 'Purple', '#BC9CFF')
-                +colorItem('#6FCF97', 'Green', '#6FCF97')
-            div(class='colorAndTypes__headers')
-                div(class='colorsAndType__fontExampleItem')
-                    h1(class='colorsAndType__fontExampleTag') h1
-                    h1(class='colorsAndType__fontExampleText') This one is the sub-section or widget title
-                div(class='colorsAndType__fontExampleItem')
-                    h2(class='colorsAndType__fontExampleTag') h2
-                    h2(class='colorsAndType__fontExampleText') Next one is the item title inside widgets
-                div(class='colorsAndType__fontExampleItem')
-                    h3(class='colorsAndType__fontExampleTag') h3
-                    h3(class='colorsAndType__fontExampleText') This is a label or CTA text 
-                div(class='colorsAndType__fontExampleItem')
-                    p(class='colorsAndType__fontExampleTag') body
-                    p(class='colorsAndType__fontExampleText') This is the body text which is used for most of the design, like paragraphs, lists, etc.
-        
-        div(class='formElements__container page__container')
-            img(class='page__containerLogo' src='/assets/img/Group.png' alt='logo')
 
-            div(class= 'formElements__buttonsNatureContainer')
-                div(class= 'formElements__TypeContainer formElements__inputTypeContainer')
-                    div(class='formElements__inputTypeElement')
-                        +textField('Email', 'tuiKit_textField', 'Text Field', 'text', 'default')
-                    div(class='formElements__inputTypeElement')
-                        +dropdown('Сколько гостей', 'guestsNumber', false, 'dropdown', 'default', 'Взрослые', 'Дети', 'Младенцы')
-                    div(class='formElements__inputTypeElement')
-                        +textFieldMasked('masked text feld', 'masked-1', 'default')
-                    div(class='formElements__inputTypeElement formElements__dateDropdownArea')
-                        +dateDropdown('date dropdown', 'date dropdown', 'first_date_dropdown')
-                    div(class='formElements__inputTypeElement formElements__filterDateDropdownArea')
-                        +filterDateDropdown('filter date dropdown', 'first_filterDateDropdown') //- (h3, id)
-                    // div(class='formElements__inputTypeElement formElements__shortDropdownArea')
-                        +dropdown('2 спальни, 2 кровати...', 'guestsNumber', true, 'dropdown', 'default', 'спальни', 'кровати', 'ванные комнаты')
-                    div(class='formElements__inputTypeElement formElements__textFieldSubscriptionArea')
-                        +textFieldSubscription('Email', 'subscription text field')
+        div(class='body__container')
+
+
+            //** COLORS AND TYPES **//
+
+
+            div(class='main__container main__colorsAndTypes')
+                div(class='page__container colorsAndType__container')
+                    img(class='page__containerLogo' src='/assets/img/Group.png' alt='logo')
+                    div(class='colorsAndType__palette')
+                        +colorItem('#1F2041', 'Dark Shade 100%', '#1F2041')
+                        +colorItem('rgba(31, 32, 65, 0.75)', 'Dark Shade 75%', '#1F2041')
+                        +colorItem('rgba(31, 32, 65, 0.50)', 'Dark Shade 50%', '#1F2041')
+                        +colorItem('rgba(31, 32, 65, 0.25)', 'Dark Shade 25%', '#1F2041')
+                        +colorItem('rgba(31, 32, 65, 0.05)', 'Dark Shade 5%', '#1F2041')
+                        +colorItem('#BC9CFF', 'Purple', '#BC9CFF')
+                        +colorItem('#6FCF97', 'Green', '#6FCF97')
+                    div(class='colorAndTypes__headers')
+                        div(class='colorsAndType__fontExampleItem')
+                            h1(class='colorsAndType__fontExampleTag') h1
+                            h1(class='colorsAndType__fontExampleText') This one is the sub-section or widget title
+                        div(class='colorsAndType__fontExampleItem')
+                            h2(class='colorsAndType__fontExampleTag') h2
+                            h2(class='colorsAndType__fontExampleText') Next one is the item title inside widgets
+                        div(class='colorsAndType__fontExampleItem')
+                            h3(class='colorsAndType__fontExampleTag') h3
+                            h3(class='colorsAndType__fontExampleText') This is a label or CTA text 
+                        div(class='colorsAndType__fontExampleItem')
+                            p(class='colorsAndType__fontExampleTag') body
+                            p(class='colorsAndType__fontExampleText') This is the body text which is used for most of the design, like paragraphs, lists, etc.
+
+            //** FORM ELEMENTS **//
                         
-                    
-                    
-                div(class= 'formElements__TypeContainer formElements__checkboxTypeContainer')
-                    div(class= 'formElements__ElementContainer formElements__checkboxesArea')
-                        h3(class='formElements__areaHeader') Checkbox Buttons
-                        div(class='formElements__checkboxesContainer')
-                            div(class='formElements__checkboxesContainerItem')
-                                +checkbox('Можно курить', 'allowed', '1')
-                            div(class='formElements__checkboxesContainerItem')
-                                +checkbox('Можно с питомцами', 'allowed', '2')
-                            div(class='formElements__checkboxesContainerItem')
-                                +checkbox('Можно пригласить гостей (до 10 человек)', 'allowed', '3')
-                    div(class= 'formElements__ElementContainer formElements__radiobuttonsArea')
-                        h3(class='formElements__areaHeader') Radio Buttons
-                        div(class= 'formElements__radiobuttonsContainer')
-                            +radioButton('Мужчина', 'sex', '0')
-                            +radioButton('Женщина', 'sex', '1')
-                    div(class= 'formElements__ElementContainer formElements__toggleArea')
-                        h3(class='formElements__areaHeader') toggle
-                        div(class= 'formElements__toggleContainer')
-                            +toggle('Получать спецпредложения', 'specialOffers', '1')
-                    div(class= 'formElements__ElementContainer formElements__likeButtonArea')
-                        h3(class='formElements__areaHeader') like Button
-                        div(class= 'formElements__likeButtonContainer')
-                            +likeButton('2', 'likeNumber', '1')
-                            +likeButton('12', 'likeNumber', '2')
-                    div(class= 'formElements__ElementContainer formElements__rateButtonArea')
-                        h3(class='formElements__areaHeader') rate Button
-                        div(class= 'formElements__rateButtonContainer')
-                            +rateButton('room-123', '4')
-                            +rateButton('room-135', '5')
+            div(class='main__container main__formElements')
+                div(class='page__container formElements__container')
+                    img(class='page__containerLogo' src='/assets/img/Group.png' alt='logo')
 
-                div(class= 'formElements__TypeContainer formElements__buttonTypeContainer')
-                    div(class= 'formElements__ElementContainer formElements__rangeSliderArea')
-                        //- h3(class='formElements__areaHeader') range Slider
-                        div(class= 'formElements__rangeSliderContainer')
-                            +rangeSlider('amount', 'range slider')
-                    div(class= 'formElements__ElementContainer formElements__regularButtonsArea')
-                        h3(class='formElements__areaHeader') Buttons
-                        div(class= 'formElements__regularButtonContainer')
-                            div(class='formElements__regularButtonShort')
-                                +regularButton('CLICK ME', 'clickMe', '#', true, false)
-                                +regularButton('CLICK ME', 'clickMe', '#', true, true)
-                            div(class='formElements__regularButtonText')
-                                +textButton('click me', 'clickMe', "#")
-                            +regularButton('перейти к оплате', 'goToPayment', '#', false, false)
-                    div(class= 'formElements__ElementContainer formElements__paginationArea')
-                        h3(class='formElements__areaHeader') pagination
-                        div(class= 'formElements__paginationContainer')
-                            +pagination('#', '#', '#', '#')
-                            
-            div(class='formElements__modifiteComponentsContainer')  
-
-                div(class='formElements__TypeContainer formElements__listElementsContainer')   
-                    div(class='formElements__ElementContainer formElements__expandableElementsArea')
-                        div(class='formElements__modifiteComponentContainer formElements__shortDropdownArea')
-                            div(class='formElements__shortDropdownContainer')
+                    div(class= 'formElements__buttonsNatureContainer')
+                        div(class= 'formElements__TypeContainer formElements__inputTypeContainer')
+                            div(class='formElements__inputTypeElement')
+                                +textField('Email', 'tuiKit_textField', 'Text Field', 'text', 'default')
+                            div(class='formElements__inputTypeElement')
+                                +dropdown('Сколько гостей', 'guestsNumber', false, 'dropdown', 'default', 'Взрослые', 'Дети', 'Младенцы')
+                            div(class='formElements__inputTypeElement')
+                                +textFieldMasked('masked text feld', 'masked-1', 'default')
+                            div(class='formElements__inputTypeElement formElements__dateDropdownArea')
+                                +dateDropdown('date dropdown', 'date dropdown', 'first_date_dropdown')
+                            div(class='formElements__inputTypeElement formElements__filterDateDropdownArea')
+                                +filterDateDropdown('filter date dropdown', 'first_filterDateDropdown') //- (h3, id)
+                            // div(class='formElements__inputTypeElement formElements__shortDropdownArea')
                                 +dropdown('2 спальни, 2 кровати...', 'guestsNumber', true, 'dropdown', 'default', 'спальни', 'кровати', 'ванные комнаты')
-                        div(class='formElements__modifiteComponentContainer formElements__expandableCheckboxListArea')
-                            div(class='formElements__expandableCheckboxListContainer')
-                                +expandableCheckboxList('expandable Checkbox List', 'facilities', 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь')
-                    div(class='formElements__modifiteComponentContainer formElements__richCheckboxesArea')
-                        h3(class='formElements__areaHeader') rich checkbox buttons
-                        div(class='formElements__richCheckboxContainer')
-                            +richCheckbox('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'add_options', '1')
-                            +richCheckbox('Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера.', 'add_options', '2')
-                    div(class='formElements__modifiteComponentContainer formElements__bulletListArea')
-                        h3(class='formElements__areaHeader') bullet list
-                        div(class='formElements__bulletListContainer')
-                            +bulletList('Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00')
+                            div(class='formElements__inputTypeElement formElements__textFieldSubscriptionArea')
+                                +textFieldSubscription('Email', 'subscription text field')
+                                
+                            
+                            
+                        div(class= 'formElements__TypeContainer formElements__checkboxTypeContainer')
+                            div(class= 'formElements__ElementContainer formElements__checkboxesArea')
+                                h3(class='formElements__areaHeader') Checkbox Buttons
+                                div(class='formElements__checkboxesContainer')
+                                    div(class='formElements__checkboxesContainerItem')
+                                        +checkbox('Можно курить', 'allowed', '1')
+                                    div(class='formElements__checkboxesContainerItem')
+                                        +checkbox('Можно с питомцами', 'allowed', '2')
+                                    div(class='formElements__checkboxesContainerItem')
+                                        +checkbox('Можно пригласить гостей (до 10 человек)', 'allowed', '3')
+                            div(class= 'formElements__ElementContainer formElements__radiobuttonsArea')
+                                h3(class='formElements__areaHeader') Radio Buttons
+                                div(class= 'formElements__radiobuttonsContainer')
+                                    +radioButton('Мужчина', 'sex', '0')
+                                    +radioButton('Женщина', 'sex', '1')
+                            div(class= 'formElements__ElementContainer formElements__toggleArea')
+                                h3(class='formElements__areaHeader') toggle
+                                div(class= 'formElements__toggleContainer')
+                                    +toggle('Получать спецпредложения', 'specialOffers', '1')
+                            div(class= 'formElements__ElementContainer formElements__likeButtonArea')
+                                h3(class='formElements__areaHeader') like Button
+                                div(class= 'formElements__likeButtonContainer')
+                                    +likeButton('2', 'likeNumber', '1')
+                                    +likeButton('12', 'likeNumber', '2')
+                            div(class= 'formElements__ElementContainer formElements__rateButtonArea')
+                                h3(class='formElements__areaHeader') rate Button
+                                div(class= 'formElements__rateButtonContainer')
+                                    +rateButton('room-123', '4')
+                                    +rateButton('room-135', '5')
+
+                        div(class= 'formElements__TypeContainer formElements__buttonTypeContainer')
+                            div(class= 'formElements__ElementContainer formElements__rangeSliderArea')
+                                //- h3(class='formElements__areaHeader') range Slider
+                                div(class= 'formElements__rangeSliderContainer')
+                                    +rangeSlider('amount', 'range slider')
+                            div(class= 'formElements__ElementContainer formElements__regularButtonsArea')
+                                h3(class='formElements__areaHeader') Buttons
+                                div(class= 'formElements__regularButtonContainer')
+                                    div(class='formElements__regularButtonShort')
+                                        +regularButton('CLICK ME', 'clickMe', '#', true, false)
+                                        +regularButton('CLICK ME', 'clickMe', '#', true, true)
+                                    div(class='formElements__regularButtonText')
+                                        +textButton('click me', 'clickMe', "#")
+                                    +regularButton('перейти к оплате', 'goToPayment', '#', false, false)
+                            div(class= 'formElements__ElementContainer formElements__paginationArea')
+                                h3(class='formElements__areaHeader') pagination
+                                div(class= 'formElements__paginationContainer')
+                                    +pagination('#', '#', '#', '#')
+                                    
+                    div(class='formElements__modifiteComponentsContainer')  
+                        div(class='formElements__TypeContainer formElements__listElementsContainer')   
+                            div(class='formElements__ElementContainer formElements__expandableElementsArea')
+                                div(class='formElements__modifiteComponentContainer formElements__shortDropdownArea')
+                                    div(class='formElements__shortDropdownContainer')
+                                        +dropdown('2 спальни, 2 кровати...', 'guestsNumber', true, 'dropdown', 'default', 'спальни', 'кровати', 'ванные комнаты')
+                                div(class='formElements__modifiteComponentContainer formElements__expandableCheckboxListArea')
+                                    div(class='formElements__expandableCheckboxListContainer')
+                                        +expandableCheckboxList('expandable Checkbox List', 'facilities', 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь')
+                            div(class='formElements__modifiteComponentContainer formElements__richCheckboxesArea')
+                                h3(class='formElements__areaHeader') rich checkbox buttons
+                                div(class='formElements__richCheckboxContainer')
+                                    +richCheckbox('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'add_options', '1')
+                                    +richCheckbox('Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера.', 'add_options', '2')
+                            div(class='formElements__modifiteComponentContainer formElements__bulletListArea')
+                                h3(class='formElements__areaHeader') bullet list
+                                div(class='formElements__bulletListContainer')
+                                    +bulletList('Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00')
+                        
+                        div(class='formElements__TypeContainer formElements__textElementsContainer')  
+                            div(class='formElements__modifiteComponentContainer formElements__roomFeaturesArea')
+                                div(class='formElements__roomFeaturesContainer')
+                                    +roomFeature('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
+                                    +roomFeature('location_city', 'Удобство', 'Окно в каждой из спален')
+                            div(class='formElements__modifiteComponentContainer formElements__reviewFieldArea')
+                                div(class='formElements__reviewFieldContainer')
+                                    +reviewField('Мурад Сарафанов', '5 дней назад', 'muradreview', '/assets/img/images.png', '11', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+            
+            //** CARDS **//
+
+            div(class='main__container main__cards')
+                div(class='page__container cards__container') 
+                    img(class='page__containerLogo' src='/assets/img/Group.png' alt='logo')
+                    div(class='cards__containersColumn') 
+                        div(class='cards__elementContainer cards__roomSearchContainer')
+                            +roomSearch('219', '#')   
+                        div(class='cards__elementContainer cards__registrationCardContainer')
+                            +registrationCard('219', '#', '#')
+                    div(class='cards__containersColumn')
+                        div(class='cards__elementContainer cards__roomReservationContainer')
+                            +roomReservation('888', true, '9 990', '888')
+                        div(class='cards__elementContainer cards__entryCardContainer')
+                            +entryCard('219', '#', '#')
+                    div(class='cards__containersColumn')
+                        div(class='cards__elementContainer cards__air-datepickerContainer datepicker-here' data-multiple-dates-aeparator=' - ', data-range='true',  data-clear-button='true', data-next-HTML="<i class='material-icons'>arrow_forward</i>", data-prev-HTML="<i class='material-icons'>arrow_back</i>" id='uiKit-datepicker')
+                        div(class='cards__elementContainer cards__roomPreviewContainer')
+                            +roomPreview('888', true, '5', '9 990', '888', '145', '#', '/assets/img/room888.png', '/assets/img/room888-1.png', '/assets/img/room888-2.png', '/assets/img/room888-3.png')
+                        div(class='cards__elementContainer cards__roomPreviewContainer')
+                            +roomPreview('840', false, '4', '9 900', '840', '65', '#', '/assets/img/room880.png', '/assets/img/room880-1.png', '/assets/img/room880-2.png', '/assets/img/room880-3.png')
                 
-                div(class='formElements__TypeContainer formElements__textElementsContainer')  
-                    div(class='formElements__modifiteComponentContainer formElements__roomFeaturesArea')
-                        div(class='formElements__roomFeaturesContainer')
-                            +roomFeature('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
-                            +roomFeature('location_city', 'Удобство', 'Окно в каждой из спален')
-                    div(class='formElements__modifiteComponentContainer formElements__reviewFieldArea')
-                        div(class='formElements__reviewFieldContainer')
-                            +reviewField('Мурад Сарафанов', '5 дней назад', 'muradreview', '/assets/img/images.png', '11', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
-        
-        div(class='cards__container page__container') 
-            img(class='page__containerLogo' src='/assets/img/Group.png' alt='logo')
-            div(class='cards__containersColumn') 
-                div(class='cards__elementContainer cards__roomSearchContainer')
-                    +roomSearch('219', '#')   
-                div(class='cards__elementContainer cards__registrationCardContainer')
-                    +registrationCard('219', '#', '#')
-            div(class='cards__containersColumn')
-                div(class='cards__elementContainer cards__roomReservationContainer')
-                    +roomReservation('888', true, '9 990', '888')
-                div(class='cards__elementContainer cards__entryCardContainer')
-                    +entryCard('219', '#', '#')
-            div(class='cards__containersColumn')
-                div(class='cards__elementContainer cards__air-datepickerContainer datepicker-here' data-multiple-dates-aeparator=' - ', data-range='true', data-clear-button='true', data-next-HTML="<i class='material-icons'>arrow_forward</i>", data-prev-HTML="<i class='material-icons'>arrow_back</i>" id='uiKit-datepicker')
-                div(class='cards__elementContainer cards__roomPreviewContainer')
-                    +roomPreview('888', true, '5', '9 990', '888', '145', '#', '/assets/img/room888.png', '/assets/img/room888-1.png', '/assets/img/room888-2.png', '/assets/img/room888-3.png')
-                div(class='cards__elementContainer cards__roomPreviewContainer')
-                    +roomPreview('840', false, '4', '9 900', '840', '65', '#', '/assets/img/room880.png', '/assets/img/room880-1.png', '/assets/img/room880-2.png', '/assets/img/room880-3.png')
+            
+            //** HEADERS AND FOOTERS **//
 
-        div(class='headersAndFooters__container page__container')
-            img(class='page__containerLogo' src='/assets/img/Group.png' alt='logo')
-            div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
-                +header(false, false)
-            div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
-                +header(false, true, 'Cosmin Negoita')
-            div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
-                +footerWithNav(false)
-            div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
-                +footerWithLogo
+            div(class='main__container main__headersAndFooters')
+                div(class='page__container headersAndFooters__container')
+                    img(class='page__containerLogo' src='/assets/img/Group.png' alt='logo')
+                    div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
+                        +header(false, false)
+                    div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
+                        +header(false, true, 'Cosmin Negoita')
+                    div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
+                        +footerWithNav(false)
+                    div(class='headersAndFooters__elementContainer headersAndFooters__headerContainer')
+                        +footerWithLogo
 
 
 
 
+
+                
 
             
-
-          
 

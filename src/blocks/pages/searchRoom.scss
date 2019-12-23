@@ -1,21 +1,21 @@
 body {
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     align-items: center;
     background-color: #FFFFFF;
-
+}
+.searchRoom__main {
+    width: 100%;
 }
 .searchRoom__mainContainer {
-     width: 100%;
-    // height: 1357px;
-    // background: #FFFFFF;
+    max-width: 1440px;
+    width: 100%;
     display: flex;
+    flex-direction: row;
     padding: 30px 140px 70px;
     background-color: #FFFFFF;
     margin-bottom: 1px;
-    border-bottom: 1px solid rgba(31, 32, 65, 0.25);
-    
+    border-bottom: 1px solid rgba(31, 32, 65, 0.25);   
 }
 
 .searchRoom__settingsContainer {
@@ -63,12 +63,8 @@ body {
 
 .searchRoom__roomCardsContainer{
     height: 100%;
-    // width: 834px;
-    // width: calc(100% - 326px);
-    // background-color: lightgrey;
     display: flex;
     flex-direction: column;
-    // align-items: center;
 }
 
 
@@ -76,12 +72,13 @@ body {
     margin-top: 20px;
     margin-bottom: 19px;
     width: 100%;
-    // height: calc(100% - 166px);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    // justify-content: space-between;
-    // align-content: space-between;
+}
+
+.searchRoom__roomCardsContainerHeader {
+    width: 100%;
 }
 
 .searchRoom__roomPreviewCardsContainer .roomPreview__container {
@@ -93,14 +90,65 @@ body {
 }
 
 .searchRoom__paginationContainer {
-     width: 100%;
-    
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding-right: 15px;
-    // margin-bottom: 70px;
 }
 
- 
+
+//----------------------//
+//----MEDIA-ЗАПРОСЫ-----//
+//----------------------//
+
+
+@media (max-width: 1439px) {
+    .searchRoom__roomPreviewCardsContainer {
+        justify-content: space-evenly;
+    }
+    .searchRoom__roomPreviewCardsContainer .roomPreview__container {
+        margin-right: 0px;
+        &:nth-child(3n) {
+            margin-right: 0px;
+        }
+    }
+    .searchRoom__settingsContainer {
+        margin-right: 6.81818181818%;
+    }
+}
+
+@media (max-width: 1150px) {
+    .searchRoom__roomPreviewCardsContainer {
+        justify-content: center;
+    }
+    .searchRoom__roomPreviewCardsContainer .roomPreview__container {
+        margin-right: 0px;
+    }
+    .searchRoom__roomCardsContainerHeader {
+        text-align: center;
+    }  
+}
+
+@media (max-width: 880px) {
+    .searchRoom__mainContainer {
+        padding: 30px 9.72222222222% 70px;
+        justify-content: space-between;
+    }
+    .searchRoom__settingsContainer {
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 635px) {
+    .searchRoom__mainContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .searchRoom__settingsContainer {
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+    
+}
