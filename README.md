@@ -1,4 +1,4 @@
-# FSD_Project
+# Toxin
 
 
   [Landing Page](https://lin-is.github.io/FSD_Project/dist/landingPage.html)
