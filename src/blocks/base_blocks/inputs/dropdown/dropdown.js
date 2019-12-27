@@ -8,6 +8,7 @@ for (let elem of elements) {
 for(let elem of inputs){
     elem.onchange = function(){
         if (elem.checked) {
+            $(elem).parent().parent().css({"z-index": "5", "transition-delay": "0s"})
             if ($(elem).parent().parent().children('.dropdown__lablesContainer').children('.dropdown__conditionLabel').text() != '') {
                 $(elem).parent().parent().children('.dropdown__lablesContainer').children('.dropdown__conditionLabel').text('expanded')}
             // if ($(elem).parents('.dropdown_short').length) {
@@ -16,6 +17,7 @@ for(let elem of inputs){
             //     $(elem).parent().parent().css('height', '222px')
             // }
         } else {
+            $(elem).parent().parent().css({"z-index": "0", "transition-delay": "0.4s"})
             if ($(elem).parent().parent().children('.dropdown__lablesContainer').children('.dropdown__conditionLabel').text() != ''){
                 $(elem).parent().parent().children('.dropdown__lablesContainer').children('.dropdown__conditionLabel').text('default')}
             // $(elem).parent().parent().css('height', '64px')
