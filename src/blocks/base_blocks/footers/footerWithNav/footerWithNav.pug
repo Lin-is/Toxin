@@ -10,6 +10,7 @@ mixin footerWithNav (rus)
         -var copyright = "Copyright © 2018 Toxin UI Kit. All rights reserved."
         -var logoText = "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
         -var placeholder = "Your email address"
+
     footer(class="footerWithNav__container")
         div(class="footerWithNav__mainContentContainer")
             div(class='footerWithNav__navContainer')
@@ -30,15 +31,16 @@ mixin footerWithNav (rus)
                                 p(class="footerWithNav__subscriptionText")= navigation[3][1]
                                 div(class='footerWithNav__textFieldSubscriptionContainer')
                                     +textFieldSubscription(placeholder, '')
-                
-        div(class='footerWithNav__copyrightContainer')
-            p(class='footerWithNav__copyrightText')= copyright
-            div(class='footerWithNav__socialButtonsContainer')
-                a(class='footerWithNav__socialLink' href='#')
-                    i(class="footerWithNav__socialIcon fab fa-twitter")
-                a(class='footerWithNav__socialLink' href='#')
-                    i(class="footerWithNav__socialIcon fab fa-facebook-square")
-                a(class='footerWithNav__socialLink' href='#')
-                    i(class="footerWithNav__socialIcon fab fa-instagram")
+                    
+            div(class='footerWithNav__copyrightContainer')
+                div(class='footerWithNav__copyrightContainerWrapper')
+                    p(class='footerWithNav__copyrightText')= copyright
+                    div(class='footerWithNav__socialButtonsContainer')
+                        a(class='footerWithNav__socialLink' href='#')
+                            i(class="footerWithNav__socialIcon fab fa-twitter")
+                        a(class='footerWithNav__socialLink' href='#')
+                            i(class="footerWithNav__socialIcon fab fa-facebook-square")
+                        a(class='footerWithNav__socialLink' href='#')
+                            i(class="footerWithNav__socialIcon fab fa-instagram")
                         
             

@@ -7,20 +7,22 @@ mixin header (rus, loggedIn, userName, ...href)
         -var menuPoints = ['Home', 'About Us', 'Services', 'Careers', 'News', 'Documentation', 'Login', 'REGISTER']
     
     header(class='header__container')
-        a(class='header__logoContainer' href='./landingPage.html')
-            img(class='header__logo' src='/assets/img/Logo.png')
+        div(class='header__wrapper')
+            a(class='header__logoContainer' href='./landingPage.html')
+                img(class='header__logo' src='/assets/img/Logo.png')
 
-        div(class='header__menuContainer')
-            nav(class='header__navigationContainer')
-                -for (var i = 0; i < menuPoints.length - 2; i++)
-                    a(class='header__menuItemLink' href='#' lang= rus? 'ru':'en')= menuPoints[i]
-            if !loggedIn
-                div(class='header__buttonsContainer')
-                    div(class='header__navigationButton header__navigationButtonContainer')
-                    div(class='header__navigationButtonContainer')
-                        +regularButton(menuPoints[menuPoints.length-2], 'header__regularButton_short-entry', './signIn.html', true, true)
-                    div(class='header__navigationButtonContainer')
-                        +regularButton(menuPoints[menuPoints.length-1], 'header__regularButton-registration', './registration.html', true, false)
-            else 
-                div(class='header__loggedInPanel')
-                    p(class='header__userName')= userName
+            div(class='header__menuContainer')
+                div(class='header__navigationButton header__navigationButtonContainer')
+                    span(class='header__navButtonDash')
+                nav(class='header__navigationContainer')
+                    -for (var i = 0; i < menuPoints.length - 2; i++)
+                        a(class='header__menuItemLink' href='#' lang= rus? 'ru':'en')= menuPoints[i]
+                    if !loggedIn
+                        div(class='header__buttonsContainer')
+                            div(class='header__navigationButtonContainer')
+                                +regularButton(menuPoints[menuPoints.length-2], 'header__regularButton_short-entry', './signIn.html', true, true)
+                            div(class='header__navigationButtonContainer')
+                                +regularButton(menuPoints[menuPoints.length-1], 'header__regularButton-registration', './registration.html', true, false)
+                    else 
+                        div(class='header__loggedInPanel')
+                            p(class='header__userName')= userName

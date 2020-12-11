@@ -51,31 +51,24 @@
     border-radius: 3px;
 }
 
-
 .noUi-handle {
     padding: 0px;
-    // width: 12px !important; 
-    width: 45.3977982068% !important;
-    height: 0.75rem !important;
+    width: 12px !important; 
+    height: 12px !important;
     box-shadow: none;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     border: 2px solid #FFFFFF;
     border-radius: 10px;
     box-sizing: content-box;
-    
-    
-    
-    //background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    cursor: pointer;
 }
-
-
 
 .noUi-touch-area {
     margin: 0px;
     width: 150%;
     height: 150%;
     background: transparent !important;
-    top: -12px;
+    top: -11px;
     box-sizing: content-box;
 }
 

@@ -6,6 +6,8 @@ body {
 }
 .searchRoom__main {
     width: 100%;
+    margin-bottom: 1px;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.25);
 }
 .searchRoom__mainContainer {
     max-width: 1440px;
@@ -14,8 +16,8 @@ body {
     flex-direction: row;
     padding: 30px 140px 70px;
     background-color: #FFFFFF;
-    margin-bottom: 1px;
-    border-bottom: 1px solid rgba(31, 32, 65, 0.25);   
+    margin: 0px auto;
+       
 }
 
 .searchRoom__settingsContainer {
@@ -150,5 +152,4 @@ body {
         margin-right: 0px;
         margin-bottom: 15px;
     }
-    
 }

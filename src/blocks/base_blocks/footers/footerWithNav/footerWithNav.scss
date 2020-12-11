@@ -2,27 +2,24 @@
 
 .footerWithNav__container {
     width: 100%;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    position: relative;
     background-color: #FFFFFF;
     box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+    z-index: 50;
 }
-
 .footerWithNav__mainContentContainer {
     width: 100%;
     box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
 }
-
-.footerWithNav__navContainer{
+.footerWithNav__navContainer {
     max-width: 1440px;
     width: 100%;
-    // height: 100%;
     display: flex;
     position: relative;
     margin: 0 auto;
-    padding: 6.94444444444% 9.72222222222% 5.55555555556%; //100px/1440px 140px/1440px 80px/1440px;
-    
+    padding: 6.94444444444% 9.72222222222% 5.55555555556%; 
 }
 .footerWithNav__logoContainer {
     margin-right: 40px;
@@ -41,7 +38,7 @@
     vertical-align: middle;
 }
 
-.footerWithNav__mainNavList{
+.footerWithNav__mainNavList {
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -49,18 +46,10 @@
 }
 .footerWithNav__mainNavListItem {
     font-size: 12px;
-    // margin-right: 118px;
-    // &:nth-last-child(2) {
-         // margin-right: 87px;
-    // }
-    // &:last-child {
-    //     margin-right: 0px;
-    // }
 }
 .footerWithNav_navigationContainer {
     display: flex;
     width: calc(100% - 300px);
-    // margin-right: 140px;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
@@ -85,7 +74,7 @@
         margin-bottom: none;
     }
 }
-.footerWithNav__navSectionListItemText{
+.footerWithNav__navSectionListItemText {
     font-family: Montserrat;
     font-style: normal;
     font-weight: inherit;
@@ -101,15 +90,15 @@
     align-items: flex-start;
     padding-top: 4px;
 }
-.footerWithNav__textFieldSubscriptionContainer .textFieldSubscription__container{
+.footerWithNav__textFieldSubscriptionContainer .textFieldSubscription__container {
     width: 260px;
 }
-.footerWithNav__subscriptionFieldHeader{
+.footerWithNav__subscriptionFieldHeader {
     margin-bottom: 17px;
     font-size: 12px;
     line-height: 15px;
 }
-.footerWithNav__subscriptionText{
+.footerWithNav__subscriptionText {
     display: flex;
     width: 245px;
     word-wrap: normal;
@@ -118,20 +107,23 @@
     margin-bottom: 20px;
     color: rgba(31, 32, 65, 0.75);
 }
+.footerWithNav__copyrightContainer {
+    margin-top: 1px;
+    width: 100%;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    border-top: 1px solid #E5E5E5;
+}
 
-
-.footerWithNav__copyrightContainer{
+.footerWithNav__copyrightContainerWrapper {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    // height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-    padding: 0% 9.72222222222%//0px 140px/1440px;
+    padding: 0% 9.72222222222%;
 }
-.footerWithNav__socialButtonsContainer{
+.footerWithNav__socialButtonsContainer {
     display: flex;
     height: 70px;
     align-items: center;
@@ -149,7 +141,7 @@
     }
 }
 
-.footerWithNav__socialIcon{
+.footerWithNav__socialIcon {
     width: 24px;
     height: 24px;
 
@@ -168,8 +160,7 @@
 //----------------------//
 
 
-@media (max-width: 1350px){
-
+@media (max-width: 1350px) {
     .footerWithNav__navContainer {
         flex-direction: column;
         align-items: center;
@@ -177,7 +168,7 @@
     .footerWithNav_navigationContainer {
         width: 100%;
     }
-    .footerWithNav__logoContainer{
+    .footerWithNav__logoContainer {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -194,10 +185,10 @@
 }
 
 @media (max-width: 1000px) {
-    .footerWithNav_navigationContainer, .footerWithNav__mainNavList{
+    .footerWithNav_navigationContainer, .footerWithNav__mainNavList {
         flex-wrap: wrap;
     }
-    .footerWithNav__mainNavList{
+    .footerWithNav__mainNavList {
         justify-content: space-around;
     }
     .footerWithNav__mainNavListItem {
@@ -205,45 +196,30 @@
         display: flex;
         justify-content: space-around;
     }
-
 }
 
-
 @media (max-width: 780px) {
-    .footerWithNav__copyrightContainer{
-        flex-direction: column;
-        align-items: center;
-    }
     .footerWithNav__copyrightText {
         display: inline-flex;
         margin-top: 15px;
         margin-bottom: 15px;
         width: 100%;
-        justify-content: center;
         text-align: center;
     }
     .footerWithNav__socialButtonsContainer {
-        width: 100%;
+        width: 100px;
+        margin-left: 20px;
         justify-content: center;
     }
     .footerWithNav__socialLink:first-of-type {
         margin-left: 0px;
     }
-    .footerWithNav__socialButtonsContainer {
-        height: 45px;
-        margin-bottom: 15px;
+    .footerWithNav__copyrightContainerWrapper {
+        padding: 0px 10px;
     }
 }
 
-@media (max-width: 550px) {
-    .footerWithNav__mainNavListItem {
-        flex: 1 0 50%;
-        justify-content: space-around;
-    }
-    
-}
-
-@media (max-width: 370px) {
+@media (max-width: 559px) {
     .footerWithNav__logoContainer {
         flex-direction: column;
         align-items: center;
@@ -254,12 +230,9 @@
     .footerWithNav__logoText {
         text-align: center;
     }
-
     .footerWithNav__mainNavListItem {
         flex: 1 0 100%;
-        // justify-content: flex-start;
         justify-content: center;
-        // padding-left: 25%;
         text-align: center;
         &:last-of-type {
             padding-left: 0%;
@@ -268,9 +241,6 @@
     .footerWithNav__subscriptionContainer {
         align-items: center;
     }
-    // .footerWithNav__subscriptionFieldHeader {
-    //     margin-right: 55px;
-    // }
     .footerWithNav__subscriptionText {
         text-align: center;
     }

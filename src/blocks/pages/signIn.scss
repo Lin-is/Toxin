@@ -14,8 +14,6 @@
     min-width: 270px;
 }
 
-
-
 //----------------------//
 //----MEDIA-ЗАПРОСЫ-----//
 //----------------------//
@@ -26,8 +24,19 @@
         background-size: cover;
     }
 }
+@media (max-width: 900px) {
+    .signIn__mainContainer{
+        padding: 103px 0px;
+    }
+}
+
+@media (max-width: 660px) {
+    .signIn__mainContainer{
+        padding: 73px 0px;
+    }
+}
 @media (max-width: 440px) {
     .signIn__mainContainer{
-        padding: 163px 20px;
+        padding: 33px 20px;
     }
 }
