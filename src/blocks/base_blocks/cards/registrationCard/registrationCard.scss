@@ -8,10 +8,8 @@
     max-width: 380px;
     min-width: 270px;
     width: 100%;
-    // min-height: 646px;
     display: flex;
     flex-direction: column;
-    //align-items: center;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
@@ -21,10 +19,9 @@
     padding: 10.5263157895% 7.89473684211% 7.89473684211%;
 }
 
-.registrationCard__header{
+.registrationCard__header {
     font-size: 1.5em;
     line-height: 1.875rem;
-    // height: 1.875rem;
     margin-bottom: 15px;
 }
 
@@ -41,11 +38,11 @@
         margin-bottom: 5px;
     }        
 }
-.registrationCard__genderRadiobuttonContainer{
-    width: 69.0625%;
+.registrationCard__genderRadiobuttonContainer {
+    max-width: 69.0625%;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    // width: 221px;
     justify-content: space-between;
 }
 
@@ -66,15 +63,20 @@
     justify-content: space-between;
     margin-top: 31px;
 }
-.registrationCard__additionalText{
+.registrationCard__additionalText {
     color: #000000;
-    // margin-right: 35px;
-    // width: 186px;
     width: 58.4905660377%;
 }
-.registrationCard__entryRegularButtonContainer{
+.registrationCard__entryRegularButtonContainer {
     width: 31.1320754717%;
     max-width: 99px;
+}
+
+@media (max-width: 420px) {
+    .registrationCard__genderRadiobuttonContainer{
+        max-width: 100%;
+        justify-content: space-between;
+    }
 }
 
 

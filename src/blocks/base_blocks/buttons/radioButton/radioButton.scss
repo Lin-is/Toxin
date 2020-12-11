@@ -7,11 +7,10 @@
     display: none;
 }
 .radioButton__label {
-    height: 1.25rem;
+    // height: 1.25rem;
     display: flex;
     justify-content: start;
     align-items: center;
-
     color: rgba(31, 32, 65, 0.5);
 
     &::before {
