@@ -12,6 +12,6 @@
   
   [Регистрация](https://lin-is.github.io/Toxin/dist/registration.html)
   
-  [Подбор номреа](https://lin-is.github.io/Toxin/dist/searchRoom.html)
+  [Подбор номера](https://lin-is.github.io/Toxin/dist/searchRoom.html)
   
-  [Страница с обзором номера](https://lin-is.github.io/Toxin/dist/roomDetails.html)
+  [Обзор номера](https://lin-is.github.io/Toxin/dist/roomDetails.html)
