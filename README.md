@@ -3,9 +3,7 @@
 
 Многостраничный сайт, сверстанный по макету Figma (адаптивная верстка)	
 
-Использовались Pug, Scss (с Flexbox), JQuery, несколько сторонних плагинов (air datepicker, nouislider). Сборка с помощью Webpack	
-
-При верстке я пыталась понять и применить методологию БЭМ 	
+Использовались Pug, Scss (с Flexbox), JQuery, несколько сторонних плагинов (air datepicker, nouislider). Сборка с помощью Webpack		
 
   [Главная страница](https://lin-is.github.io/Toxin/dist/landingPage.html)	
 
