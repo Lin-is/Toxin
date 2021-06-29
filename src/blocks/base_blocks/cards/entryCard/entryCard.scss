@@ -15,10 +15,21 @@
     border-radius: 4px;
     padding: 10.5263157895% 7.8947368421% 0%;
 }
+
+.entryCard__header {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+}
+
 .entryCard__entryDataContainer {
     width: 100%;
     margin: 20px 0px;
+    box-sizing: border-box;
 }
+
 .entryCard__regularButtonContainer {
     margin: 0px;
     padding: 0px;
@@ -27,6 +38,7 @@
 }
 .entryCard__textFieldContainer:first-child {
     margin-bottom: 5px;
+    box-sizing: border-box;
 }
 
 .entryCard__createAccountButtonContainer {
