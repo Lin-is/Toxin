@@ -1,17 +1,18 @@
 .registration__mainContainer{
     width: 100%;
-    padding-top: 30px;
-    padding-bottom: 26px;
+    padding-top: 19px;
+    padding-bottom: 19px;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     
-    background: url('/assets/img/image4.jpeg') no-repeat top center;
+    background: url('/assets/img/image4.jpeg') no-repeat center -70px;
     background-size: 100% 100%;
 }
 .registration__cardContainer {
     width: 100%;
     max-width: 380px;
     min-width: 270px;
+    margin-left: 533px;
 }
 
 
