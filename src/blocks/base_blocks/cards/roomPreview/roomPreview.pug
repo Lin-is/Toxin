@@ -2,7 +2,6 @@ include ../../buttons/rateButton/rateButton.pug
 
 mixin roomPreview (id, lux, score, price, roomNumber, reviewNumber, href, ...src)
     div(class='roomPreview__container')
-    
         div(class='roomPreview__photoSliderContainer')
             each item, index in src
                 if index == 0

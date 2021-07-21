@@ -1,4 +1,4 @@
-.header__container{
+.header__container {
     width: 100%;
     min-height: 70px;
     position: relative;
@@ -7,15 +7,15 @@
     // z-index: 20;
 }
 
-
 .header__wrapper {
-    max-width: 1440px;
+    width: 100%;
+    max-width: 1920px;
     min-width: 320px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0% 9.72222222222%;//140px/1440x
+    padding: 0% 9.72222222222%;  //140px/1440x
     align-items: center;
     margin: 0px auto;
     position: relative;
@@ -128,12 +128,14 @@
 
 
 @media (max-width: 1160px) {
+
     .header__menuContainer {
         height: 100%;
         flex-direction: column;
         background: #ffffff; 
         overflow: hidden;
     }
+
     .header__navigationButton {
         display: block;
         width: 30px;
@@ -157,6 +159,7 @@
             bottom: 0;
         }
     }
+
     .header__navButtonDash {
         position: absolute;
         display: block;
@@ -168,6 +171,7 @@
         top: 9px;
         transition: all 0.2s ease;
     }
+
     .header__navigationContainer {
         position: fixed;
         top: -150%;
@@ -194,17 +198,20 @@
             transition: transform 0.3s ease;
         }
     }
+
     .header__navigationContainer_open {
         transition: all 0.3s ease;
         top: 0px;
         overflow: auto;
     }
+
     .header__menuItemLink {
         display: inline-flex;
         font-size: 26px;
         margin: 0;
         margin-top: 40px;
     }
+
     .header__buttonsContainer {
         margin-top: 35px;
         flex-direction: column;

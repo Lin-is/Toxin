@@ -42,7 +42,7 @@ mixin pieDiagram (excellent, good, normal, disappointed)
     //- p= innerRoundLenghth
 
     div(class='pieDiagram__container')
-            svg(clss='pieDiagram__diagramBody' width='120' height='120' viewBox='0 0 36 36')
+            svg(clss='pieDiagram__diagramBody' width='124' height='124' viewBox='0 0 36 36')
 
                 linearGradient(id='pieDiagram__gradient_excellent' x1='0' y1='0%' x2='0' y2='100%')
                     stop(offset="0%" stop-color="#FFE39C")
@@ -77,6 +77,10 @@ mixin pieDiagram (excellent, good, normal, disappointed)
                 g(class="pieDiagram__text pieDiagram__text_normal")
                     text(x="50%" y="55%" class="pieDiagram__number")= normal
                     text(x="50%" y="55%" class="pieDiagram__label") голосов
-
+                
+                g(class="pieDiagram__text_filler")
+                    text(x="50%" y="55%" class="pieDiagram__number")= normal
+                    text(x="50%" y="55%" class="pieDiagram__label") голосов
+                
 
             //- circle(class='pieDiagram__pieDiagramCircle_disappointed' cx="60" cy="60" r="55" fill="none" stroke='url(#pieDiagram__gradient_disappointed)' stroke-width= '5px' stroke-dasharray= disappointedDash1 + ' ' + disappointedDashempty stroke-dashoffset= '-75')

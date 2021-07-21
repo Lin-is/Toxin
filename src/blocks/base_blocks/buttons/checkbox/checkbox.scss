@@ -1,12 +1,20 @@
 .checkbox__container {
     display: flex;
     align-content: center;
+
+    &:hover {
+        .checkbox__label {
+            cursor: pointer;
+            &::before {
+                border-color: #BC9CFF;
+            }
+        }
+    }
 }
 .checkbox__input {
     display: none;
 }
 .checkbox__label {
-    
     width: 100%;
     display: flex;
     justify-content: start;

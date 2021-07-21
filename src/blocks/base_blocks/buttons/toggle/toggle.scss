@@ -1,6 +1,15 @@
 .toggle__container {
     display: flex;
     align-content: center;
+
+    &:hover {
+        .toggle__label {
+            cursor: pointer;
+            &::before {
+                border-color: #BC9CFF;
+            }
+        }
+    }
 }
 .toggle__input {
     display: none;

@@ -19,11 +19,40 @@ html(lang="ru")
         +header(true, false)
         main(class='roomDetails__main')
             div(class='roomDetails__mainContainer')
+
+
+                div(class='roomDetails__photoSliderContainer')
+                    input(checked class='roomDetails__sliderRadioSwitcher' type='radio' name='roomDetails__sliderRadioSwitcher-888'  id='roomDetails__sliderRadioSwitcher-888-1')
+                    input(class='roomDetails__sliderRadioSwitcher' type='radio' name='roomDetails__sliderRadioSwitcher-888'  id='roomDetails__sliderRadioSwitcher-888-2')
+                    input(class='roomDetails__sliderRadioSwitcher' type='radio' name='roomDetails__sliderRadioSwitcher-888'  id='roomDetails__sliderRadioSwitcher-888-3')
+                    
+                    div(class='roomDetails__slidesContainer') 
+                        img(class='roomDetails__roomSlide' alt='roomSlide', src='/assets/img/room-888-image1.jpg', id='roomDetails__roomSlide-888-1')
+                        img(class='roomDetails__roomSlide' alt='roomSlide', src='/assets/img/room-888-image2.jpg', id='roomDetails__roomSlide-888-2')
+                        img(class='roomDetails__roomSlide' alt='roomSlide', src='/assets/img/room-888-image3.jpeg', id='roomDetails__roomSlide-888-3')
+                    div(class='roomDetails__sliderRadioLabelContainer')
+                        label(class='roomDetails__sliderRadioLabel' for='roomDetails__sliderRadioSwitcher-888-1')
+                        label(class='roomDetails__sliderRadioLabel' for='roomDetails__sliderRadioSwitcher-888-2')
+                        label(class='roomDetails__sliderRadioLabel' for='roomDetails__sliderRadioSwitcher-888-3')
+                    div(class='roomDetails__sliderArrowSwitchersContainer')
+                        div(class='roomDetails__sliderArrowPrevSwitcher')
+                            label(class='roomDetails__prevArrowSwitcherLabel' for= 'roomDetails__sliderRadioSwitcher-888-1')
+                            label(class='roomDetails__prevArrowSwitcherLabel' for= 'roomDetails__sliderRadioSwitcher-888-2')
+                            label(class='roomDetails__prevArrowSwitcherLabel' for= 'roomDetails__sliderRadioSwitcher-888-3')
+                        div(class='roomDetails__sliderArrowNextSwitcher')
+                            label(class='roomDetails__nextArrowSwitcherLabel' for= 'roomDetails__sliderRadioSwitcher-888-1')
+                            label(class='roomDetails__nextArrowSwitcherLabel' for= 'roomDetails__sliderRadioSwitcher-888-2')
+                            label(class='roomDetails__nextArrowSwitcherLabel' for= 'roomDetails__sliderRadioSwitcher-888-3')
+
+
                 div(class='roomDetails__roomPhotoContainer')
                     img(class='roomDetails__roomPhoto' src='/assets/img/room-888-image1.jpg' alt='roomPhoto')
                     div(class='roomDetails__asidePhotos')
                         img(class='roomDetails__roomPhoto' src='/assets/img/room-888-image2.jpg' alt='roomPhoto')
                         img(class='roomDetails__roomPhoto' src='/assets/img/room-888-image3.jpeg' alt='roomPhoto')
+
+
+                
 
                 div(class='roomDetails__roomDescriptionContainer')
                     div(class='roomDetails__roomDescriptionItemsContainer')
@@ -52,9 +81,9 @@ html(lang="ru")
                                 h2(class='roomDetails__containerHeader') Отзывы посетителей номера
                                 p(class='roomDetails__numberOfRewews') 2 отзыва
                             div(class='roomDetails__reviewFieldContainer')
-                                +reviewField('Мурад Сарафанов', '5 дней назад', 'roomDetails__muradreview', '/assets/img/images.png', '11', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+                                +reviewField('Мурад Сарафанов', '5 дней назад', 'roomDetails__muradreview', '/assets/img/userpic1.png', '11', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
                             div(class='roomDetails__reviewFieldContainer')
-                                +reviewField('Патрисия Стёклышкова', 'Неделю назад', 'roomDetails__patriciareview', '/assets/img/images.png', '2', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
+                                +reviewField('Патрисия Стёклышкова', 'Неделю назад', 'roomDetails__patriciareview', '/assets/img/userpic2.png', '2', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
                         div(class='roomDetails__addInfoContainer roomDetails__roomDescriptionItemContainer')
                             div(class='roomDetails__rulesListContainer')
                                 h2(class='roomDetails__containerHeader') Правила

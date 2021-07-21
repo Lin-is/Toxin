@@ -1,6 +1,15 @@
 .radioButton__container {
     display: flex;
     align-content: center;
+
+    &:hover {
+        .radioButton__label {
+            cursor: pointer;
+            &::before {
+                border-color: #BC9CFF;
+            }
+        }
+    }
     // width: 100%;
 }
 .radioButton__input {

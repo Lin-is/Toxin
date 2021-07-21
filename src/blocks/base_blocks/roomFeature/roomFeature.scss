@@ -10,7 +10,7 @@
         font-family: 'Material Icons';
         content: attr(name)'';
         font-size: 48px;
-        line-height: 41px;
+        line-height: 48px;
         color: transparent;
         background-clip: text;
         background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -20,10 +20,12 @@
 }
 .roomFeature__textContainer {
     width: calc(100% - 58px);
-    height: calc(100% - 20px);
+    height: 48px;
+    justify-content: space-between;
+    padding-top: 3px;
+    padding-bottom: 3px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     margin-bottom: 20px;
 }
 .roomFeature__featureName {

@@ -1,9 +1,7 @@
 .pieDiagram__container {
-    width: 120px;
-    height: 120px;
+    width: 128px;
+    height: 128px;
     margin-right: 30px;
-    width: 120px;
-    height: 120px;
     position: relative;
 }
 .pieDiagram__circleContainer {
@@ -31,16 +29,15 @@
 .pieDiagram__pieDiagramCircle:hover + .pieDiagram__pieDiagramCircleInner, .pieDiagram__pieDiagramCircleInner:hover {
     display: none;
     transition: display 0.4s;
-
 }
+
 .pieDiagram__text_excellent {
     fill: #FFBA9C;
 }
 .pieDiagram__text_good {
     fill: #66D2EA;
 }
-
-.pieDiagram__text_normal {
+.pieDiagram__text_normal, .pieDiagram__text_filler {
     fill: #BC9CFF;
 }
 
@@ -51,20 +48,26 @@
     font-size: 24px;
 }
 
-.pieDiagram__number{
-    font: normal 8px Quicksand;
+.pieDiagram__number {
+    font: normal 7px Montserrat;
     fill: inherit;
     text-anchor: middle;
     transform: translateY(-0.25em);
     font-weight: bold;
-    margin-top: 5px;
+    margin-top: 0px;
 }
 
-.pieDiagram__label{
-    font: normal 5px Montserrat;
+.pieDiagram__label {
+    font: normal 4.5px Montserrat;
     fill: inherit;
     text-anchor: middle;
     transform: translateY(0.7em);
+}
+
+.pieDiagram__diagramBody:hover {
+    .pieDiagram__text_filler {
+        display: none;
+    }
 }
 
 .pieDiagram__pieDiagramCircle:hover + .pieDiagram__pieDiagramCircleInner + .pieDiagram__text, .pieDiagram__pieDiagramCircleInner:hover + .pieDiagram__text {
@@ -74,5 +77,9 @@
     align-items: center;
     padding-top: 6px;
 } 
+
+.pieDiagram__pieDiagramCircle:hover ~ .pieDiagram__text_filler, .pieDiagram__pieDiagramCircleInner:hover ~ .pieDiagram__text_filler {
+    display: none;
+}
 
 

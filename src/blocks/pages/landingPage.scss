@@ -1,27 +1,23 @@
 .landingPage__main {
     position: relative;
+    max-width: 1920px;
     width: 100%;
     background-color: #FFFFFF;
-    background: url('/assets/img/image3.jpeg') no-repeat center -70px;
-    background-size: 100% 100%;
-    
+    background: url('/assets/img/image3.jpeg') no-repeat center 100%;
+    background-size: cover;
 }
-.landingPage__container{
-    max-width: 1440px;
+.landingPage__container {
     width: 100%;
     margin: 0 auto;
     position: relative;
-    padding: 70px 9.72222222222% 386px;//0px 140px;
-    
+    padding: 70px 9.72222222222% 386px; //0px 140px;
 }
 .landingPage__roomSearchContainer {
-    // margin: 70px 0px 386px;
-    // width: 26.3888888889%;
     width: 100%;
     max-width: 380px;
 }
 
-.landingPage__text{
+.landingPage__text {
     display: inline-block;
     position: absolute;
     width: 297px;
@@ -38,10 +34,14 @@
 //----MEDIA-ЗАПРОСЫ-----//
 //----------------------//
 
-
-@media (max-width: 1440px) {
-    .landingPage__main {
-        background-size: cover;
+@media (min-width: 1441px) {
+    .landingPage__container {
+        padding-top: 140px;
+        padding-bottom: 530px;
+    }
+    .landingPage__text {
+        bottom: 6.7%;
+        font-size: 16px;
     }
 }
 
@@ -51,6 +51,7 @@
         padding-bottom: 286px;
     }
 }
+
 @media (max-width: 660px) {
     .landingPage__container{
         width: 100%;
@@ -72,5 +73,4 @@
         width: 90%;
         right: 10%;
     }
-
 }

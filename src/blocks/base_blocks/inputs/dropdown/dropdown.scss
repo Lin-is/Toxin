@@ -1,4 +1,4 @@
-.dropdown__container{
+.dropdown__container {
     width: 100%;
     max-width: 320px;
     // min-width: 300px;
@@ -22,10 +22,10 @@
     width: 100%;
     overflow: hidden;
 }
-.dropdown__headerInput{
+.dropdown__headerInput {
     display: none;
 }
-.dropdown__headerLabel{
+.dropdown__headerLabel {
     width: 100%;
     height: 44px;
     display: flex;
@@ -64,6 +64,12 @@
         border: 1px solid rgba(31, 32, 65, 0.25);
         transition-delay: border-bottom-right-radius 1s, border-bottom-left-radius 1s;
         border-radius: 4px;
+
+    }
+    &:hover {
+        &::after {
+            border: 1px solid rgba(31, 32, 65, 0.5);
+        }
     }
 }
 .dropdown__text {
@@ -174,7 +180,7 @@
     right: 0px;
     color: #BC9CFF;
 }
-.dropdown__buttonName{
+.dropdown__buttonName {
     color: inherit;
 }
 .dropdown__buttonReset_disable {
